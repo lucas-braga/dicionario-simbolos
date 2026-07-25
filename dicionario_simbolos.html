@@ -72,6 +72,9 @@
     padding: 16px 24px;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0; /* atualizado via JS */
+    z-index: 90;
   }
   .search-wrap {
     position: relative;
@@ -367,6 +370,67 @@
     font-size: 0.9rem;
   }
 
+  /* CLEAR SEARCH BUTTON */
+  .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 1rem;
+    display: none;
+    padding: 2px 8px;
+    line-height: 1;
+    border-radius: 4px;
+  }
+  .search-clear.visible { display: block; }
+  .search-clear:hover { color: var(--text); background: var(--surface2); }
+
+  /* MODAL BACK BUTTON */
+  .modal-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+  .modal-back:hover { color: #fff; border-color: var(--accent); }
+
+  /* SCROLL TO TOP */
+  .scroll-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.2s;
+    z-index: 150;
+    box-shadow: 0 4px 16px rgba(108,99,255,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: auto; }
+  .scroll-top:hover { transform: translateY(-2px); }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -384,7 +448,8 @@
 <div class="controls">
   <div class="search-wrap">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input id="search" type="text" placeholder="Buscar símbolo, nome, conceito…" autocomplete="off">
+    <input id="search" type="text" placeholder="Buscar símbolo, nome, conceito… (tecle / para focar)" autocomplete="off">
+    <button class="search-clear" id="searchClear" title="Limpar busca">✕</button>
   </div>
   <div class="filters">
     <label>Filtrar:</label>
@@ -410,6 +475,8 @@
 
 <div class="grid" id="grid"></div>
 
+<button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
+
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" id="modal">
     <div class="modal-top-bar" id="modalBar"></div>
@@ -427,6 +494,24 @@ const CATS = {
   historico: { label: 'Figura Histórica', color: '#aed581', bg: 'var(--tag-hist)', text: 'var(--tag-hist-text)', icon: '👤' },
   cinema:    { label: 'Cinema / Mídia', color: '#ce93d8', bg: 'var(--tag-cin)', text: 'var(--tag-cin-text)', icon: '🎬' },
 };
+
+// --- STICKY CONTROLS ---
+const headerEl = document.querySelector('.header');
+const controlsEl = document.querySelector('.controls');
+function updateControlsTop() {
+  controlsEl.style.top = headerEl.offsetHeight + 'px';
+}
+updateControlsTop();
+window.addEventListener('resize', updateControlsTop);
+
+// --- SCROLL TO TOP ---
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+});
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // --- ÍNDICE DE REFS BIDIRECIONAL ---
 // Calculado uma vez ao carregar: backRefsMap[id] = [ids que referenciam este id]
@@ -458,6 +543,7 @@ const grid = document.getElementById('grid');
 const countEl = document.getElementById('count');
 let activeFilter = 'all';
 let searchTerm = '';
+let modalHistory = []; // stack de navegação interna do modal
 
 function getCatColor(cat) {
   const colors = {
@@ -533,11 +619,14 @@ function renderCards() {
   });
 }
 
-function openModal(id) {
+function openModal(id, pushHistory = true) {
   const d = DATA.find(x => x.id === id);
   if (!d) return;
   const cat = CATS[d.cat];
   const color = getCatColor(d.cat);
+
+  // Scroll do modal ao topo a cada nova entrada
+  document.getElementById('modal').scrollTop = 0;
 
   document.getElementById('modalBar').style.background = color;
 
@@ -568,11 +657,21 @@ function openModal(id) {
 
   const scriptures = (d.scriptures || []).map(s => `<span class="scripture-ref">📖 ${s}</span>`).join('');
 
+  // Histórico de navegação interna
+  if (pushHistory) modalHistory.push(id);
+
   // Deep link: atualiza URL com hash desta entrada
   history.replaceState(null, '', '#' + id);
 
+  const backBtn = modalHistory.length > 1
+    ? `<button class="modal-back" id="modalBackBtn">← Voltar</button>`
+    : '';
+
   document.getElementById('modalBody').innerHTML = `
-    <button class="modal-close" id="modalCloseBtn">✕ Fechar</button>
+    <div style="display:flex;align-items:center;margin-bottom:4px">
+      ${backBtn}
+      <button class="modal-close" id="modalCloseBtn">✕ Fechar</button>
+    </div>
     <h2>${d.icon} ${d.name}</h2>
     ${d.aliases ? `<div class="modal-aliases">Nomes alternativos: ${d.aliases.join(' · ')}</div>` : ''}
     <span class="cat-tag" style="background:${cat.bg};color:${cat.text};margin-bottom:16px;display:inline-block">${cat.icon} ${cat.label}</span>
@@ -590,6 +689,16 @@ function openModal(id) {
   `;
 
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+
+  const backBtnEl = document.getElementById('modalBackBtn');
+  if (backBtnEl) {
+    backBtnEl.addEventListener('click', () => {
+      modalHistory.pop(); // remove entrada atual
+      const prevId = modalHistory.pop(); // pega anterior (será re-adicionado por openModal)
+      if (prevId) openModal(prevId);
+    });
+  }
+
   document.querySelectorAll('#modalBody .ref-link').forEach(el => {
     el.addEventListener('click', () => openModal(el.dataset.ref));
   });
@@ -600,6 +709,7 @@ function openModal(id) {
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
   history.replaceState(null, '', window.location.pathname + window.location.search);
+  modalHistory = []; // limpa histórico ao fechar
 }
 
 document.getElementById('modalOverlay').addEventListener('click', (e) => {
@@ -626,13 +736,43 @@ document.querySelectorAll('.src-btn').forEach(btn => {
 });
 */
 
-document.getElementById('search').addEventListener('input', (e) => {
+const searchInput = document.getElementById('search');
+const searchClear = document.getElementById('searchClear');
+
+searchInput.addEventListener('input', (e) => {
   searchTerm = e.target.value;
+  searchClear.classList.toggle('visible', searchTerm.length > 0);
+  renderCards();
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchTerm = '';
+  searchClear.classList.remove('visible');
+  searchInput.focus();
   renderCards();
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') {
+    if (document.getElementById('modalOverlay').classList.contains('open')) {
+      closeModal();
+    } else {
+      // Esc fora do modal limpa a busca se houver texto
+      if (searchTerm) {
+        searchInput.value = '';
+        searchTerm = '';
+        searchClear.classList.remove('visible');
+        renderCards();
+      }
+    }
+  }
+  // Tecla / foca a busca (se não estiver em input)
+  if (e.key === '/' && document.activeElement !== searchInput && !document.getElementById('modalOverlay').classList.contains('open')) {
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+  }
 });
 
 // Inicializa
