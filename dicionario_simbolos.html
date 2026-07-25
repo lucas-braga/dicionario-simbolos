@@ -428,6 +428,30 @@ const CATS = {
   cinema:    { label: 'Cinema / Mídia', color: '#ce93d8', bg: 'var(--tag-cin)', text: 'var(--tag-cin-text)', icon: '🎬' },
 };
 
+// --- ÍNDICE DE REFS BIDIRECIONAL ---
+// Calculado uma vez ao carregar: backRefsMap[id] = [ids que referenciam este id]
+const backRefsMap = {};
+DATA.forEach(d => {
+  (d.refs || []).forEach(ref => {
+    if (!backRefsMap[ref]) backRefsMap[ref] = [];
+    backRefsMap[ref].push(d.id);
+  });
+});
+
+// --- CONTAGEM POR CATEGORIA ---
+function updateFilterCounts() {
+  const counts = {};
+  DATA.forEach(d => { counts[d.cat] = (counts[d.cat] || 0) + 1; });
+  document.querySelectorAll('.filter-btn[data-cat]').forEach(btn => {
+    const cat = btn.dataset.cat;
+    if (cat === 'all') {
+      btn.textContent = `Todos (${DATA.length})`;
+    } else if (counts[cat]) {
+      const label = btn.textContent.replace(/ \(\d+\)$/, '');
+      btn.textContent = `${label} (${counts[cat]})`;
+    }
+  });
+}
 
 // --- RENDER ---
 const grid = document.getElementById('grid');
@@ -442,6 +466,7 @@ function getCatColor(cat) {
     moderno: '#80cba6',
     biblico: '#f4a261',
     historico: '#aed581',
+    cinema: '#ce93d8',
   };
   return colors[cat] || '#6c63ff';
 }
@@ -450,10 +475,13 @@ function renderCards() {
   const filtered = DATA.filter(d => {
     const matchCat = activeFilter === 'all' || d.cat === activeFilter;
     const term = searchTerm.toLowerCase();
+    // Busca expandida: nome, aliases, resumo, fatos e interpretações
     const matchSearch = !term ||
       d.name.toLowerCase().includes(term) ||
       (d.aliases || []).some(a => a.toLowerCase().includes(term)) ||
-      d.summary.toLowerCase().includes(term);
+      d.summary.toLowerCase().includes(term) ||
+      (d.facts || []).some(f => f.toLowerCase().includes(term)) ||
+      (d.interps || []).some(i => i.toLowerCase().includes(term));
     return matchCat && matchSearch;
   });
 
@@ -532,7 +560,16 @@ function openModal(id) {
     return refData ? `<span class="ref-link" data-ref="${ref}">${refData.icon} ${refData.name}</span>` : '';
   }).filter(Boolean).join('');
 
+  // Refs bidirecionais: quem referencia esta entrada
+  const backRefs = (backRefsMap[id] || []).map(ref => {
+    const refData = DATA.find(x => x.id === ref);
+    return refData ? `<span class="ref-link" data-ref="${ref}">${refData.icon} ${refData.name}</span>` : '';
+  }).filter(Boolean).join('');
+
   const scriptures = (d.scriptures || []).map(s => `<span class="scripture-ref">📖 ${s}</span>`).join('');
+
+  // Deep link: atualiza URL com hash desta entrada
+  history.replaceState(null, '', '#' + id);
 
   document.getElementById('modalBody').innerHTML = `
     <button class="modal-close" id="modalCloseBtn">✕ Fechar</button>
@@ -549,6 +586,7 @@ function openModal(id) {
     ${interps ? `<div class="section-block"><h3>Interpretação (apresentador)</h3>${interps}</div>` : ''}
     ${scriptures ? `<div class="section-block"><h3>Referências bíblicas</h3><div>${scriptures}</div></div>` : ''}
     ${refs ? `<div class="section-block"><h3>Símbolos relacionados</h3><div class="ref-list">${refs}</div></div>` : ''}
+    ${backRefs ? `<div class="section-block"><h3>Referenciado por</h3><div class="ref-list">${backRefs}</div></div>` : ''}
   `;
 
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
@@ -561,6 +599,7 @@ function openModal(id) {
 
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
+  history.replaceState(null, '', window.location.pathname + window.location.search);
 }
 
 document.getElementById('modalOverlay').addEventListener('click', (e) => {
@@ -596,7 +635,15 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
+// Inicializa
+updateFilterCounts();
 renderCards();
+
+// Deep link: abre modal se URL tiver hash ao carregar
+const initialHash = window.location.hash.slice(1);
+if (initialHash && DATA.find(x => x.id === initialHash)) {
+  openModal(initialHash);
+}
 </script>
 </body>
 </html>
