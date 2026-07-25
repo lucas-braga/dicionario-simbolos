@@ -573,17 +573,22 @@ function getCatColor(cat) {
   return colors[cat] || '#6c63ff';
 }
 
+// Normaliza string removendo acentos para busca sem acento encontrar resultados acentuados
+function norm(str) {
+  return (str || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
 function renderCards() {
   const filtered = DATA.filter(d => {
     const matchCat = activeFilter === 'all' || d.cat === activeFilter;
-    const term = searchTerm.toLowerCase();
-    // Busca expandida: nome, aliases, resumo, fatos e interpretações
+    const term = norm(searchTerm);
+    // Busca expandida: nome, aliases, resumo, fatos e interpretações (sem acento obrigatório)
     const matchSearch = !term ||
-      d.name.toLowerCase().includes(term) ||
-      (d.aliases || []).some(a => a.toLowerCase().includes(term)) ||
-      d.summary.toLowerCase().includes(term) ||
-      (d.facts || []).some(f => f.toLowerCase().includes(term)) ||
-      (d.interps || []).some(i => i.toLowerCase().includes(term));
+      norm(d.name).includes(term) ||
+      (d.aliases || []).some(a => norm(a).includes(term)) ||
+      norm(d.summary).includes(term) ||
+      (d.facts || []).some(f => norm(f).includes(term)) ||
+      (d.interps || []).some(i => norm(i).includes(term));
     return matchCat && matchSearch;
   });
 
