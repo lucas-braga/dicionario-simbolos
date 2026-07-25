@@ -10,10 +10,11 @@ MSG="${1:-Atualização do dicionário}"
 echo "📦 Copiando arquivos..."
 cp "$OUTPUTS/simbolos.js" "$REPO/simbolos.js"
 cp "$OUTPUTS/dicionario_simbolos.html" "$REPO/dicionario_simbolos.html"
+cp "$OUTPUTS/sobre.html" "$REPO/sobre.html"
 
 echo "🔀 Fazendo commit..."
 cd "$REPO"
-git add simbolos.js dicionario_simbolos.html
+git add simbolos.js dicionario_simbolos.html sobre.html
 git commit -m "$MSG"
 git push
 
