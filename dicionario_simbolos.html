@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dicionário de Símbolos e Crenças Bíblicas</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d2e;
+    --surface2: #242840;
+    --border: #2e3256;
+    --accent: #6c63ff;
+    --accent2: #4caf87;
+    --warn: #e8a838;
+    --text: #e2e4f0;
+    --text-dim: #8890b0;
+    --tag-myth: #2a4a6b;
+    --tag-myth-text: #7ec8e3;
+    --tag-sym: #3b2a6b;
+    --tag-sym-text: #b39ddb;
+    --tag-mod: #1e4a35;
+    --tag-mod-text: #80cba6;
+    --tag-bib: #5c2a1e;
+    --tag-bib-text: #f4a261;
+    --tag-hist: #2a3a20;
+    --tag-hist-text: #aed581;
+    --tag-conc: #4a2a40;
+    --tag-conc-text: #f48fb1;
+    --tag-cin: #2a1a3a;
+    --tag-cin-text: #ce93d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1a1d2e 0%, #242840 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+  .header h1 span { color: var(--accent); }
+  .header p { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
+  .source-badge {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2px 10px;
+    color: var(--text-dim);
+  }
+
+  /* CONTROLS */
+  .controls {
+    padding: 16px 24px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-wrap {
+    position: relative;
+    margin-bottom: 12px;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+  }
+  #search {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  #search:focus { border-color: var(--accent); }
+  #search::placeholder { color: var(--text-dim); }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .filters label { font-size: 0.75rem; color: var(--text-dim); margin-right: 4px; }
+  .filter-btn {
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .count-badge {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    padding: 20px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--cat-color, var(--accent));
+    border-radius: 12px 12px 0 0;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(108,99,255,0.15);
+  }
+  .card.hidden { display: none; }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .card-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    background: var(--surface2);
+  }
+  .card-title h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .card-title .aliases {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+  .cat-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+
+  .card-summary {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .refs-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .ref-chip {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .ref-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+    position: relative;
+  }
+  .modal-top-bar {
+    height: 4px;
+    background: var(--cat-color, var(--accent));
+    border-radius: 16px 16px 0 0;
+  }
+  .modal-body { padding: 24px; }
+  .modal-close {
+    position: sticky;
+    top: 0;
+    float: right;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    z-index: 10;
+  }
+  .modal-close:hover { color: #fff; border-color: var(--accent); }
+  .modal h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .modal .modal-aliases {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .section-block {
+    margin-bottom: 20px;
+  }
+  .section-block h3 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .fact-block {
+    background: rgba(76,175,135,0.08);
+    border-left: 3px solid var(--accent2);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+  }
+  .interp-block {
+    background: rgba(232,168,56,0.08);
+    border-left: 3px solid var(--warn);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+  }
+  .fact-block p, .interp-block p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .fact-label, .interp-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  .fact-label { color: var(--accent2); }
+  .interp-label { color: var(--warn); }
+
+  .ref-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ref-link {
+    font-size: 0.78rem;
+    padding: 4px 12px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--accent);
+    cursor: pointer;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .ref-link:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .scripture-ref {
+    font-size: 0.78rem;
+    color: var(--tag-bib-text);
+    background: rgba(244,162,97,0.1);
+    border-radius: 4px;
+    padding: 2px 8px;
+    display: inline-block;
+    margin: 2px;
+  }
+
+  .empty-state {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📖 Dicionário de <span>Símbolos e Crenças</span></h1>
+  <p>Sistema de referência cruzada — símbolos, entidades e conceitos bíblicos</p>
+</div>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="search" type="text" placeholder="Buscar símbolo, nome, conceito…" autocomplete="off">
+  </div>
+  <div class="filters">
+    <label>Filtrar:</label>
+    <button class="filter-btn active" data-cat="all">Todos</button>
+    <button class="filter-btn" data-cat="divindade">🏛️ Divindades</button>
+    <button class="filter-btn" data-cat="simbolo">🔣 Símbolos</button>
+    <button class="filter-btn" data-cat="moderno">💻 Manifestações Modernas</button>
+    <button class="filter-btn" data-cat="biblico">📖 Conceitos Bíblicos</button>
+    <button class="filter-btn" data-cat="historico">👤 Figuras Históricas</button>
+    <button class="filter-btn" data-cat="cinema">🎬 Cinema</button>
+    <span class="count-badge" id="count"></span>
+  </div>
+  <!-- FILTRO POR FONTE (desativado — descomentar quando necessário)
+  <div class="filters" style="margin-top:8px">
+    <label>Fonte:</label>
+    <button class="filter-btn src-btn active" data-src="all">Todas</button>
+    <button class="filter-btn src-btn" data-src="1">📺 Live #1 · Greenman</button>
+    <button class="filter-btn src-btn" data-src="2">📺 Live #2 · Segunda Besta</button>
+    <button class="filter-btn src-btn" data-src="3">📺 Live #3 · Deus Destruirá o Sistema</button>
+  </div>
+  -->
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-top-bar" id="modalBar"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="simbolos.js"></script>
+<script>
+const CATS = {
+  divindade: { label: 'Divindade / Mitologia', color: '#7ec8e3', bg: 'var(--tag-myth)', text: 'var(--tag-myth-text)', icon: '🏛️' },
+  simbolo:   { label: 'Símbolo', color: '#b39ddb', bg: 'var(--tag-sym)', text: 'var(--tag-sym-text)', icon: '🔣' },
+  moderno:   { label: 'Manifestação Moderna', color: '#80cba6', bg: 'var(--tag-mod)', text: 'var(--tag-mod-text)', icon: '💻' },
+  biblico:   { label: 'Conceito Bíblico / Espiritual', color: '#f4a261', bg: 'var(--tag-bib)', text: 'var(--tag-bib-text)', icon: '📖' },
+  historico: { label: 'Figura Histórica', color: '#aed581', bg: 'var(--tag-hist)', text: 'var(--tag-hist-text)', icon: '👤' },
+  cinema:    { label: 'Cinema / Mídia', color: '#ce93d8', bg: 'var(--tag-cin)', text: 'var(--tag-cin-text)', icon: '🎬' },
+};
+
+
+// --- RENDER ---
+const grid = document.getElementById('grid');
+const countEl = document.getElementById('count');
+let activeFilter = 'all';
+let searchTerm = '';
+
+function getCatColor(cat) {
+  const colors = {
+    divindade: '#7ec8e3',
+    simbolo: '#b39ddb',
+    moderno: '#80cba6',
+    biblico: '#f4a261',
+    historico: '#aed581',
+  };
+  return colors[cat] || '#6c63ff';
+}
+
+function renderCards() {
+  const filtered = DATA.filter(d => {
+    const matchCat = activeFilter === 'all' || d.cat === activeFilter;
+    const term = searchTerm.toLowerCase();
+    const matchSearch = !term ||
+      d.name.toLowerCase().includes(term) ||
+      (d.aliases || []).some(a => a.toLowerCase().includes(term)) ||
+      d.summary.toLowerCase().includes(term);
+    return matchCat && matchSearch;
+  });
+
+  grid.innerHTML = '';
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-state">Nenhum símbolo encontrado para essa busca.</div>';
+    countEl.textContent = '0 resultados';
+    return;
+  }
+
+  countEl.textContent = `${filtered.length} símbolo${filtered.length !== 1 ? 's' : ''}`;
+
+  filtered.forEach(d => {
+    const cat = CATS[d.cat];
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.setProperty('--cat-color', getCatColor(d.cat));
+    card.dataset.id = d.id;
+
+    const refChips = (d.refs || []).slice(0, 4).map(ref => {
+      const refData = DATA.find(x => x.id === ref);
+      return refData ? `<span class="ref-chip" data-ref="${ref}">${refData.icon} ${refData.name.split(' ')[0]}</span>` : '';
+    }).join('');
+
+    card.innerHTML = `
+      <div class="card-header">
+        <div class="card-icon">${d.icon}</div>
+        <div class="card-title">
+          <h2>${d.name}</h2>
+          ${d.aliases ? `<div class="aliases">Também: ${d.aliases.join(', ')}</div>` : ''}
+          <span class="cat-tag" style="background:${cat.bg};color:${cat.text}">${cat.icon} ${cat.label}</span>
+        </div>
+      </div>
+      <p class="card-summary">${d.summary}</p>
+      ${refChips ? `<div class="refs-preview">${refChips}</div>` : ''}
+    `;
+
+    card.addEventListener('click', (e) => {
+      if (e.target.classList.contains('ref-chip')) {
+        e.stopPropagation();
+        openModal(e.target.dataset.ref);
+      } else {
+        openModal(d.id);
+      }
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+function openModal(id) {
+  const d = DATA.find(x => x.id === id);
+  if (!d) return;
+  const cat = CATS[d.cat];
+  const color = getCatColor(d.cat);
+
+  document.getElementById('modalBar').style.background = color;
+
+  const facts = (d.facts || []).map(f => `
+    <div class="fact-block">
+      <div class="fact-label">📚 Fato histórico / documentado</div>
+      <p>${f}</p>
+    </div>
+  `).join('');
+
+  const interps = (d.interps || []).map(i => `
+    <div class="interp-block">
+      <div class="interp-label">💬 Interpretação do apresentador</div>
+      <p>${i}</p>
+    </div>
+  `).join('');
+
+  const refs = (d.refs || []).map(ref => {
+    const refData = DATA.find(x => x.id === ref);
+    return refData ? `<span class="ref-link" data-ref="${ref}">${refData.icon} ${refData.name}</span>` : '';
+  }).filter(Boolean).join('');
+
+  const scriptures = (d.scriptures || []).map(s => `<span class="scripture-ref">📖 ${s}</span>`).join('');
+
+  document.getElementById('modalBody').innerHTML = `
+    <button class="modal-close" id="modalCloseBtn">✕ Fechar</button>
+    <h2>${d.icon} ${d.name}</h2>
+    ${d.aliases ? `<div class="modal-aliases">Nomes alternativos: ${d.aliases.join(' · ')}</div>` : ''}
+    <span class="cat-tag" style="background:${cat.bg};color:${cat.text};margin-bottom:16px;display:inline-block">${cat.icon} ${cat.label}</span>
+
+    <div class="section-block">
+      <h3>Resumo</h3>
+      <p style="font-size:0.9rem;line-height:1.6;color:var(--text)">${d.summary}</p>
+    </div>
+
+    ${facts ? `<div class="section-block"><h3>Fatos históricos / documentados</h3>${facts}</div>` : ''}
+    ${interps ? `<div class="section-block"><h3>Interpretação (apresentador)</h3>${interps}</div>` : ''}
+    ${scriptures ? `<div class="section-block"><h3>Referências bíblicas</h3><div>${scriptures}</div></div>` : ''}
+    ${refs ? `<div class="section-block"><h3>Símbolos relacionados</h3><div class="ref-list">${refs}</div></div>` : ''}
+  `;
+
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  document.querySelectorAll('#modalBody .ref-link').forEach(el => {
+    el.addEventListener('click', () => openModal(el.dataset.ref));
+  });
+
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+});
+
+document.querySelectorAll('.filter-btn:not(.src-btn)').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn:not(.src-btn)').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.cat;
+    renderCards();
+  });
+});
+
+/* LISTENER FONTE (desativado — descomentar junto com os botões acima)
+document.querySelectorAll('.src-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.src-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeSource = btn.dataset.src;
+    renderCards();
+  });
+});
+*/
+
+document.getElementById('search').addEventListener('input', (e) => {
+  searchTerm = e.target.value;
+  renderCards();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+renderCards();
+</script>
+</body>
+</html>
