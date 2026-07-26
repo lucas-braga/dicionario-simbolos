@@ -20,6 +20,7 @@ const SOURCES = {
   15: { label: 'Gaia Cap 04 · 25/07/2026', topic: 'Porton Down, a Área 51 Britânica' },
   16: { label: 'Macacos do Caos · 25/07/2026', topic: 'IA, Disrupção e Ordem a Partir do Caos' },
   17: { label: 'Global Future 2045 Cap 01 · 25/07/2026', topic: 'Projeto Avatar, Imortalidade Cibernética e Transhumanismo de Elite' },
+  18: { label: 'Global Future 2045 Cap 02 · 25/07/2026', topic: 'Cosmismo Russo e a Religião do Transhumanismo' },
 };
 
 const DATA = [
@@ -3851,6 +3852,84 @@ const DATA = [
     scriptures: [],
   },
 
+  // === GLOBAL FUTURE 2045 · Cap 02 · 25/07/2026 ===
+  {
+    id: 'cosmismo-russo',
+    name: 'Cosmismo Russo',
+    aliases: ['Russian Cosmism', 'cosmismo', 'cosmovisão cosmista', 'ressurreição tecnológica'],
+    cat: 'historico',
+    icon: '🌌',
+    source: 18,
+    summary: 'Cosmovisão científica e espiritual de origem russa que emerge na virada do século XX. Sintetiza ortodoxia heterodoxa, ocultismo, teosofia, ciência e filosofia especulativa em torno de uma missão central: a humanidade deve assumir a tarefa da própria ressurreição — o que na visão cosmista equivale ao transhumanismo. É o solo intelectual do Projeto Avatar e do GF2045, e a raiz espiritual do transhumanismo russo.',
+    facts: [
+      'Principais representantes: Nikolai Fedorov (fundador), Konstantin Tsiolkovsky (foguetes), Vladimir Vernadsky (noosfera) e Aleksandr Chizhevsky (biologia solar).',
+      'Surgiu na Rússia na virada do século XIX para o XX; desprestigiado durante Stalin, mas influenciou profundamente a indústria espacial soviética.',
+      'Tsiolkovsky, pai dos foguetes modernos e cosmonauta conceitual, era cosmista — daí o termo "cosmonauta" (russo) em vez de "astronauta" (ocidental).',
+      'George M. Young (Universidade da Nova Inglaterra), em "The Russian Cosmists", descreve o movimento como "mistura de especulações ativistas, tradicionalismo futurista, ciência religiosa, esoterismo esotérico, pragmatismo utópico e magia elevada em parceria com matemática avançada."',
+      'Temas centrais: evolução cósmica guiada pelo homem, criação de novas formas de vida, imortalidade prática, ressurreição física dos mortos, colonização do cosmos e noosfera.',
+      'George M. Young: "Essa visão é totalitária no sentido de que precisa ser explicada a todos sem exceção."',
+      'O cosmismo tem dimensão geopolítica: é visto como "antídoto continental e eurasiano à crescente ameaça do atlanticismo cultural e intelectual."',
+      'Dmitry Itskov passou por uma crise espiritual na meia-idade e foi influenciado pelos ensinamentos de Tsiolkovsky antes de fundar a Iniciativa 2045.',
+      'Akop Nazaretyan, futurista russo e palestrante no GF2045, admitiu seguir a cosmovisão cosmista.',
+    ],
+    interps: [
+      '"Como Cristo morreu pela humanidade, assim deve a humanidade adotar a tarefa da auto-ressurreição" — o cosmismo não rejeita o cristianismo: ele o confisca, substituindo a graça divina pelo esforço tecnológico humano.',
+      'O cosmismo é o transhumanismo com alma eslava: onde o Silicon Valley vende disrupção, a escola russa vende missão cósmica e redenção coletiva — o produto final é o mesmo.',
+      'A dimensão anti-ocidental do cosmismo é estratégica: apresenta o transhumanismo russo como alternativa soberana ao "atlanticismo", tornando-o palatável ao nacionalismo russo e ao eixo Eurasiano.',
+      '"Nunca conseguimos inventar algo genuinamente novo debaixo do sol. O que fazemos é repetir o tema antigo de que, por meio de conhecimento especial, você também pode se tornar semelhante a Deus" — Gn 3:5 em código científico.',
+    ],
+    refs: ['nikolai-fedorov', 'noosfera', 'global-future-2045', 'dmitry-itskov', 'transhumanismo', 'imortalidade-cibernetica', 'projeto-avatar-2045', 'grande-obra'],
+    scriptures: ['Gn 3:5', 'Ec 1:9', '2Ts 2:3-4'],
+  },
+  {
+    id: 'nikolai-fedorov',
+    name: 'Nikolai Fedorov',
+    aliases: ['Nikolai Fyodorov', 'Федоров', 'filósofo da ressurreição', 'pai do cosmismo'],
+    cat: 'historico',
+    icon: '👤',
+    source: 18,
+    summary: 'Filósofo russo (1829–1903) considerado o pai fundador do cosmismo. Desenvolveu a "Filosofia da Tarefa Comum": a humanidade tem a obrigação moral e científica de ressuscitar todos os mortos que já existiram, usando tecnologia. Sua teologia heterodoxa converte a ressurreição de Cristo de dádiva gratuita em modelo a ser replicado pelo esforço humano coletivo — fundando assim a linhagem intelectual do transhumanismo russo.',
+    facts: [
+      'Viveu de 1829 a 1903; trabalhou como bibliotecário em Moscou e nunca publicou um livro em vida — sua obra foi compilada postumamente.',
+      'Obra principal: "A Filosofia da Tarefa Comum" (Filosofiya obshchego dela), compilada por discípulos após sua morte.',
+      'Tese central: a morte não é inevitável — é um problema técnico que a ciência um dia resolverá. A imortalidade e a ressurreição dos mortos são obrigações da humanidade.',
+      'Influenciou profundamente Tsiolkovsky, Vernadsky e outros cosmistas, além de escritores como Tolstói e Dostoiévski.',
+      'Propôs a regulação do clima, o controle do cosmos e a colonização do espaço como etapas do projeto de ressurreição universal.',
+      'Sua visão de ressurreição era literal e física: os átomos dos corpos decompostos seriam reassemblados pela ciência futura.',
+    ],
+    interps: [
+      'Fedorov é o elo teológico entre o cristianismo ortodoxo e o transhumanismo: ele pega a ressurreição de Cristo como fato e a transforma em mandato técnico para a humanidade, esvaziando a graça e a necessidade do Redentor.',
+      'A "Tarefa Comum" é a inversão perfeita do Evangelho: em vez de Deus salvando o homem, o homem salva a si mesmo e a todos os seus ancestrais. Auto-salvação coletiva em escala cósmica.',
+      'A ideia de "reassemblar os átomos dos mortos" é a versão científica da necromancia — uma tentativa de usurpar o poder da ressurreição descrito em Jo 5:28-29.',
+    ],
+    refs: ['cosmismo-russo', 'transhumanismo', 'imortalidade-cibernetica', 'noosfera', 'grande-obra'],
+    scriptures: ['Jo 5:28-29', 'Rm 6:23', '1Co 15:21-22', 'Ap 20:6'],
+  },
+  {
+    id: 'noosfera',
+    name: 'Noosfera',
+    aliases: ['noosphere', 'esfera do pensamento', 'mente global', 'consciência planetária'],
+    cat: 'moderno',
+    icon: '🧠',
+    source: 18,
+    summary: 'Conceito desenvolvido pelo cosmista Vladimir Vernadsky (e paralelamente por Teilhard de Chardin) para descrever uma nova camada da Terra — a esfera do pensamento humano coletivo — que emergirá após a biosfera, envolvendo o planeta como a inteligência coletiva da humanidade. No contexto transhumanista do GF2045, a noosfera é o horizonte espiritual-tecnológico: a fusão das consciências individuais em uma mente coletiva global, potencializada pela IA e pela internet.',
+    facts: [
+      'Termo cunhado por Vladimir Vernadsky (geoquímico russo) e desenvolvido independentemente por Pierre Teilhard de Chardin (jesuíta paleontólogo francês) nos anos 1920-1930.',
+      'Vernadsky propôs que a biosfera (camada da vida) seria sucedida pela noosfera (camada do pensamento) como nova fase geológica da Terra.',
+      'Teilhard de Chardin chamou o ponto de convergência máxima da noosfera de "Ponto Ômega" — que ele identificava com Cristo cósmico.',
+      'No cosmismo russo, a noosfera é o destino evolutivo coletivo: a humanidade unificada em uma só mente que controla o cosmos.',
+      'O conceito ressoa diretamente com a internet, a IA e o metaverso: plataformas que conectam bilhões de mentes em tempo real são lidas como proto-noosfera.',
+      'A Iniciativa 2045 e o GF2045 usam a noosfera como horizonte espiritual — a "iluminação coletiva" que o transhumanismo produziria.',
+    ],
+    interps: [
+      'A noosfera é a versão científica da torre de Babel: "façamos para nós um nome" (Gn 11:4) — a humanidade unificada em uma só mente, sem Deus acima.',
+      'O "Ponto Ômega" de Teilhard de Chardin confunde Cristo com a singularidade tecnológica — uma das falsificações teológicas mais sofisticadas do século XX, hoje presente no núcleo intelectual do transhumanismo.',
+      'A IA conectando todas as mentes humanas é lida como a realização técnica da noosfera — e o controlador da IA seria, na prática, o controlador do pensamento coletivo planetário.',
+    ],
+    refs: ['cosmismo-russo', 'transhumanismo', 'ia-como-besta', 'global-future-2045', 'torre-de-babel', 'imortalidade-cibernetica'],
+    scriptures: ['Gn 11:4', 'Ap 13:7', 'Ap 17:13'],
+  },
+
   // === GLOBAL FUTURE 2045 · Cap 01 · 25/07/2026 ===
   {
     id: 'global-future-2045',
@@ -3869,6 +3948,9 @@ const DATA = [
       'James Martin previu a ascensão de uma tecnocracia internacional para gerenciar a sociedade global por volta de 2045.',
       'O congresso apelava à "superação das diferenças religiosas em nome da unidade global" — convergência espiritual como parte do projeto transhumanista.',
       'Propostas práticas incluíam: fechar usinas térmicas, reduzir o rebanho bovino mundial de 1,5 bilhão para 200 mil e criar "cidades de mudança climática" alimentadas por energia solar.',
+      'Painel Interfaith incluiu Swami Vishnu Devananda Giri (fundador da única escola de yogues avançados da Rússia) e Pilot Baba (ex-tenente coronel da Força Aérea Indiana, mestre yogi).',
+      'Swami Vishnu Devananda Giri declarou: "Estamos alcançando o transhumanismo transcendental para formar uma raça de homens-deuses imortais e desenvolver uma civilização semelhante a deuses."',
+      'Intelectualmente enraizado no cosmismo russo — Itskov reconheceu que sua jornada ocorreu por meio de experiência espiritual influenciada pelos ensinamentos de Tsiolkovsky.',
     ],
     interps: [
       'O GF2045 é a face "espiritual" do transhumanismo de elite: usa linguagem de paz, iluminação e evolução para apresentar a fusão homem-máquina como salvação voluntária.',
@@ -3876,7 +3958,7 @@ const DATA = [
       '"Em vez de competirem uns com os outros, os novos membros da espécie super-humana se inundarão de iluminação espiritual" — a linguagem imita o milênio cristão, mas substitui a volta de Cristo pela evolução tecnológica.',
       'A "nova espiritualidade global" e unificação religiosa proposta conecta diretamente o GF2045 à agenda da religião única anunciada em Astana e outros fóruns globalistas.',
     ],
-    refs: ['dmitry-itskov', 'projeto-avatar-2045', 'transhumanismo', 'imortalidade-cibernetica', 'tecnocracia', 'religiao-unica', 'nova-ordem-mundial'],
+    refs: ['dmitry-itskov', 'projeto-avatar-2045', 'transhumanismo', 'imortalidade-cibernetica', 'tecnocracia', 'religiao-unica', 'nova-ordem-mundial', 'cosmismo-russo', 'noosfera'],
     scriptures: ['Gn 3:5', 'Ap 13:16-17', 'Dn 2:43'],
   },
   {
@@ -3894,12 +3976,15 @@ const DATA = [
       'Enviou carta aberta à lista Forbes de bilionários pedindo que contribuíssem para o Projeto Avatar.',
       'Objetivo declarado: alcançar a imortalidade transferindo a consciência para um "portador não biológico" progressivamente aperfeiçoado.',
       'Descreve sua missão como a "criação de um novo ser humano" capaz de trazer paz mundial e fim das guerras.',
+      'Sua jornada ao transhumanismo ocorreu por meio de uma crise espiritual na meia-idade, influenciada pelos ensinamentos cosmistas de Tsiolkovsky — não por razões puramente científicas.',
+      'Reuniu budistas tibetanos, monges hindus e líderes espirituais orientais junto ao GF2045 para discutir a fusão entre espiritualidade e evolução tecnológica.',
     ],
     interps: [
       'Itskov é o protótipo do empreendedor transhumanista: usa linguagem de paz e espiritualidade para embalar um projeto de reengenharia radical da natureza humana.',
       'A carta aberta para a Forbes é reveladora — ele reconhece que apenas os ultra-ricos podem financiar a próxima evolução, e que essa evolução será acessível primeiro a eles.',
+      'A crise espiritual de Itskov antes de fundar a Iniciativa 2045 revela que o projeto não é puramente tecnológico: é uma busca religiosa revestida de ciência.',
     ],
-    refs: ['global-future-2045', 'projeto-avatar-2045', 'transhumanismo', 'imortalidade-cibernetica'],
+    refs: ['global-future-2045', 'projeto-avatar-2045', 'transhumanismo', 'imortalidade-cibernetica', 'cosmismo-russo'],
     scriptures: ['Gn 3:5'],
   },
   {
