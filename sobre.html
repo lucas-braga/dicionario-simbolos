@@ -253,6 +253,66 @@
   .premise-card h3 { font-size: 0.95rem; color: #fff; margin-bottom: 8px; font-weight: 700; }
   .premise-card p { font-size: 0.82rem; line-height: 1.6; color: var(--text-dim); margin: 0; }
 
+  /* ── ARGUMENT CARDS ── */
+  .arg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .arg-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .arg-item:hover { border-color: rgba(108,99,255,0.4); }
+  .arg-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    background: var(--item-color, var(--accent));
+  }
+  .arg-num {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--item-color, var(--accent));
+    margin-bottom: 8px;
+  }
+  .arg-item h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .arg-item p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    margin: 0;
+    max-width: 100%;
+  }
+  .arg-item p + p { margin-top: 10px; }
+  .arg-item p strong { color: var(--text); }
+  .arg-quote {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(108,99,255,0.06);
+    border-left: 3px solid rgba(108,99,255,0.3);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
   /* ── WHAT YOU FIND ── */
   .cat-list {
     display: flex;
@@ -474,7 +534,57 @@
 
 <div class="divider"></div>
 
-<!-- SEÇÃO 2: O QUE NÃO É -->
+<!-- SEÇÃO 2: POR QUE ISSO IMPORTA -->
+<section>
+  <p class="section-label">Por que você precisa saber disso</p>
+  <h2>Conhecer os símbolos não é curiosidade.<br>É leitura de mundo.</h2>
+  <p>
+    A maior parte das pessoas observa os eventos do noticiário como se fossem fatos isolados — guerras que surgem do nada, crises sem causa aparente, decisões políticas que desafiam qualquer lógica. O que falta não é informação: é o <strong>código que conecta os pontos</strong>. Esse código existe, tem milênios, e ainda está sendo usado.
+  </p>
+
+  <div class="arg-list">
+
+    <div class="arg-item" style="--item-color: #6c63ff">
+      <div class="arg-num">Argumento 01</div>
+      <h3>A geopolítica se torna previsível</h3>
+      <p>Quando você descobre que muitos dos mais importantes líderes mundiais são adeptos de diferentes doutrinas de mistérios secretos — e que, embora diferentes em nome, elas aparentam ter uma mesma origem, pois resultam em frutos iguais — você começa a enxergar o que está por trás das decisões que moldam o mundo.</p>
+      <div class="arg-quote">"Compreendendo tudo isto, independentemente de qualquer destes mitos ser ou não verdade, você começa a perceber que fazer previsões dos destinos dos países através da geopolítica é algo relativamente simples, já que você começa a entender perfeitamente como pensam aqueles que creem conduzir o futuro das nações."</div>
+    </div>
+
+    <div class="arg-item" style="--item-color: #4caf87">
+      <div class="arg-num">Argumento 02</div>
+      <h3>Você passa a reconhecer as assinaturas nos eventos</h3>
+      <p>A tradição astronômica babilônica — que a elite herda através das religiões de mistérios — subordina o calendário político aos astros. Datas marcadas com os números 11, 13, 33, 66 e 99 não são coincidências editoriais: são assinaturas rituais herdadas de 3.500 anos de presságios astronômicos. Eventos de grande impacto raramente acontecem em datas aleatórias.</p>
+      <div class="arg-quote">"Ao conhecer o significado disto para a elite, você consegue também reconhecer suas assinaturas nos eventos e práticas, a depender do dia, e até mesmo perceber que certos eventos não são bem o que parecem."</div>
+    </div>
+
+    <div class="arg-item" style="--item-color: #e8a838">
+      <div class="arg-num">Argumento 03</div>
+      <h3>O alvo da supressão fica claro</h3>
+      <p>Quando você compreende que a religião de mistérios babilônica — a mesma que Jeremias condenou no séc. VII a.C. — está na raiz das ordens esotéricas que guiam a elite contemporânea, fica claro por que o monoteísmo abraâmico (judaico, cristão e islâmico) é o principal alvo de supressão cultural e política no mundo atual. <strong>Não é perseguição ideológica aleatória: é a mesma guerra de milênios, com novas ferramentas.</strong></p>
+      <div class="arg-quote">"O objetivo de todos eles parece desembocar em querer substituir o monoteísmo abraâmico — e as fés que se mostram irredutíveis e insubmissas são percebidas como o principal obstáculo para a unificação política e religiosa do mundo."</div>
+    </div>
+
+    <div class="arg-item" style="--item-color: #dc3c3c">
+      <div class="arg-num">Argumento 04</div>
+      <h3>Você entende o que está sendo feito com seus filhos</h3>
+      <p>A cultura popular — filmes, séries, músicas, personagens infantis — não é produzida em vácuo. Quando se conhece o sistema simbólico da elite, ficam visíveis os arquétipos que estão sendo introduzidos nas gerações mais jovens: a estrela dos desejos de Pinóquio é Sirius; Sirius Black de Harry Potter é um mestre de iniciação; o Homem Arquiteto de Matrix é o mesmo personagem do Show de Truman. A repetição não é coincidência.</p>
+      <div class="arg-quote">"Desde crianças, a cultura popular da humanidade é exposta à intenção da elite de forma subliminar, aparentemente preparando as novas gerações para a aceitação de seus planos."</div>
+    </div>
+
+    <div class="arg-item" style="--item-color: #d4a843">
+      <div class="arg-num">Argumento 05</div>
+      <h3>A Bíblia deixa de ser metáfora e passa a ser crônica</h3>
+      <p>O profeta Jeremias condenou o culto à Rainha do Céu em dois trechos separados (Jr 7:18 e Jr 44:17-25). A deusa que o povo se recusava a abandonar — Ishtar, Isis, Ashtoreth — é a mesma que Alice Bailey chamou de "grande estrela iniciática" emanando de Sirius, e que a Maçonaria representa como a Estrela Flamejante. A Bíblia não estava descrevendo um problema do passado: estava documentando um sistema que duraria milênios.</p>
+      <div class="arg-quote">"A interpretação das mitologias antigas não é uma ciência exata, mas quando você descobre que muitos dos mais importantes líderes mundiais são adeptos destas doutrinas, e que o resultado delas é sempre o mesmo, a Bíblia começa a fazer sentido como chave de leitura do presente."</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SEÇÃO 3: O QUE NÃO É -->
 <section>
   <p class="section-label">Uma ressalva que vem antes de tudo</p>
   <h2>Compreender o que eles creem<br>não significa aderir a isso</h2>
@@ -501,10 +611,10 @@
   </blockquote>
 </div>
 
-<!-- SEÇÃO 3: O QUE VOCÊ ENCONTRA -->
+<!-- SEÇÃO 4: O QUE VOCÊ ENCONTRA -->
 <section>
   <p class="section-label">O dicionário</p>
-  <h2>101 entradas. Uma jornada<br>devidamente costurada.</h2>
+  <h2>309 entradas. Uma jornada<br>devidamente costurada.</h2>
   <p>
     Cada entrada é um nó na rede. Entidades, símbolos, figuras históricas, conceitos bíblicos e filmes, todos conectados por referências cruzadas que revelam o padrão por trás do aparente caos.
   </p>
