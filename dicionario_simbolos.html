@@ -383,6 +383,117 @@
     font-size: 0.9rem;
   }
 
+  /* JORNADAS (trilhas temáticas) */
+  .journeys {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px 0;
+  }
+  .journeys-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .journeys-header h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .journeys-header h2 span { color: var(--accent); }
+  .journeys-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 0.72rem;
+  }
+  .journeys-toggle:hover { color: #fff; border-color: var(--accent); }
+  .journeys-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+  }
+  .journeys-grid.collapsed { display: none; }
+  .journey-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    transition: border-color 0.2s;
+  }
+  .journey-card:hover { border-color: var(--accent); }
+  .journey-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .journey-desc {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .journey-path {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  .journey-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .journey-start {
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .journey-start:hover { opacity: 0.85; }
+  .journey-meta { font-size: 0.7rem; color: var(--text-dim); }
+
+  /* Barra da jornada dentro do modal */
+  .journey-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108,99,255,0.1);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    color: var(--text);
+    flex-wrap: wrap;
+  }
+  .journey-bar-title { font-weight: 600; color: var(--accent); }
+  .journey-bar-progress { color: var(--text-dim); }
+  .journey-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+  }
+  .journey-nav button {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 0.75rem;
+  }
+  .journey-nav button:hover:not(:disabled) { border-color: var(--accent); color: #fff; }
+  .journey-nav button:disabled { opacity: 0.35; cursor: default; }
+
   /* CLEAR SEARCH BUTTON */
   .search-clear {
     position: absolute;
@@ -418,6 +529,48 @@
     margin-bottom: 8px;
   }
   .modal-back:hover { color: #fff; border-color: var(--accent); }
+
+  /* TRILHA DE NAVEGAÇÃO (breadcrumb) */
+  .modal-trail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+  .trail-crumb {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.72rem;
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+  .trail-crumb:hover { background: var(--surface2); text-decoration: underline; }
+  .trail-current { color: var(--text); font-weight: 600; padding: 1px 4px; }
+  .trail-sep { color: var(--border); }
+
+  /* COPIAR LINK */
+  .modal-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+  .modal-share:hover { color: #fff; border-color: var(--accent2); }
+  .modal-share.copied { color: var(--accent2); border-color: var(--accent2); }
 
   /* SCROLL TO TOP */
   .scroll-top {
@@ -489,6 +642,14 @@
   -->
 </div>
 
+<div class="journeys" id="journeys">
+  <div class="journeys-header">
+    <h2>🧭 <span>Jornadas</span> — trilhas de leitura guiada</h2>
+    <button class="journeys-toggle" id="journeysToggle">Ocultar</button>
+  </div>
+  <div class="journeys-grid" id="journeysGrid"></div>
+</div>
+
 <div class="grid" id="grid"></div>
 
 <button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
@@ -553,6 +714,123 @@ function updateFilterCounts() {
     }
   });
 }
+
+// --- JORNADAS (trilhas temáticas curadas) ---
+// Para reverter: remova este bloco, a div #journeys no HTML e o CSS .journey*
+const TRILHAS = [
+  {
+    id: 'gotthard',
+    titulo: 'A saga do Túnel de Gotthard',
+    desc: 'Da lenda da ponte com o demônio ao ritual de 2016: quem é Azazel e o que a cerimônia encenou diante dos líderes da Europa.',
+    ids: ['sangotard', 'azazel', 'sernunos', 'kali', 'apolo-abaddon'],
+  },
+  {
+    id: 'cern',
+    titulo: 'CERN: o portal do abismo',
+    desc: 'Do templo de Apolo em Apolliacum à estátua de Shiva: a camada espiritual do maior laboratório de física do mundo.',
+    ids: ['cern', 'apolo-abaddon', 'shiva', 'experimento-atlas', 'jachin-e-boaz'],
+  },
+  {
+    id: 'linhagem',
+    titulo: 'A linhagem proibida',
+    desc: 'Dos Vigilantes de Gênesis 6 aos gigantes de Canaã: a corrupção genética que atravessou o dilúvio.',
+    ids: ['anjo-caido', 'vigilantes', 'nefilins', 'livro-de-enoque', 'anakim', 'semente-de-caim'],
+  },
+  {
+    id: 'deusa',
+    titulo: 'A deusa de mil nomes',
+    desc: 'Gaia, Ísis, Ishtar, a Rainha do Céu: o mesmo arquétipo feminino adaptado a cada cultura ao longo de milênios.',
+    ids: ['gaia', 'isis', 'ishtar', 'rainha-do-ceu', 'triplice-deusa', 'lilith', 'estrela-oito-pontas'],
+  },
+  {
+    id: 'deus-verde',
+    titulo: 'O Deus Verde',
+    desc: 'Das florestas druídicas ao Bohemian Grove: o senhor dos bosques que nunca deixou de ser adorado.',
+    ids: ['greenman', 'sernunos', 'druidas', 'bohemian-grove', 'moloch'],
+  },
+  {
+    id: 'babel',
+    titulo: 'A nova Torre de Babel',
+    desc: 'Transhumanismo, IA e a promessa de imortalidade: a terceira tentativa de "ser como Deus".',
+    ids: ['transhumanismo', 'quimera-genetica', 'singularidade', 'ia-como-besta', 'segunda-besta'],
+  },
+];
+
+let currentTrail = null;   // trilha ativa
+let currentTrailIdx = 0;   // posição na trilha
+
+function trailProgressKey(tid) { return 'trilha-' + tid; }
+function getTrailProgress(tid) {
+  try { const v = localStorage.getItem(trailProgressKey(tid)); return v === null ? null : parseInt(v, 10); } catch (e) { return null; }
+}
+function setTrailProgress(tid, idx) {
+  try { localStorage.setItem(trailProgressKey(tid), String(idx)); } catch (e) {}
+}
+
+function renderJourneys() {
+  const wrap = document.getElementById('journeysGrid');
+  wrap.innerHTML = TRILHAS.map(t => {
+    const names = t.ids.map(id => {
+      const d = DATA.find(x => x.id === id);
+      return d ? d.name.split(' (')[0] : id;
+    }).join(' › ');
+    const prog = getTrailProgress(t.id);
+    const btnLabel = (prog !== null && prog > 0 && prog < t.ids.length - 1)
+      ? `Continuar · ${prog + 1}/${t.ids.length}`
+      : 'Começar leitura';
+    return `
+      <div class="journey-card">
+        <div class="journey-title">${t.titulo}</div>
+        <div class="journey-desc">${t.desc}</div>
+        <div class="journey-path">${names}</div>
+        <div class="journey-actions">
+          <button class="journey-start" data-trail="${t.id}">${btnLabel}</button>
+          <span class="journey-meta">${t.ids.length} símbolos</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  wrap.querySelectorAll('.journey-start').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const trail = TRILHAS.find(t => t.id === btn.dataset.trail);
+      if (!trail) return;
+      const saved = getTrailProgress(trail.id);
+      const startIdx = (saved !== null && saved > 0 && saved < trail.ids.length - 1) ? saved : 0;
+      startTrail(trail, startIdx);
+    });
+  });
+}
+
+function startTrail(trail, idx = 0) {
+  currentTrail = trail;
+  currentTrailIdx = idx;
+  openModal(trail.ids[idx]);
+}
+
+function trailGo(delta) {
+  if (!currentTrail) return;
+  const next = currentTrailIdx + delta;
+  if (next < 0 || next >= currentTrail.ids.length) return;
+  currentTrailIdx = next;
+  setTrailProgress(currentTrail.id, next);
+  openModal(currentTrail.ids[next]);
+}
+
+// Toggle mostrar/ocultar jornadas (persistido)
+const journeysToggle = document.getElementById('journeysToggle');
+const journeysGrid = document.getElementById('journeysGrid');
+function applyJourneysCollapsed(collapsed) {
+  journeysGrid.classList.toggle('collapsed', collapsed);
+  journeysToggle.textContent = collapsed ? 'Mostrar' : 'Ocultar';
+}
+let journeysCollapsed = false;
+try { journeysCollapsed = localStorage.getItem('jornadas-ocultas') === '1'; } catch (e) {}
+applyJourneysCollapsed(journeysCollapsed);
+journeysToggle.addEventListener('click', () => {
+  journeysCollapsed = !journeysCollapsed;
+  applyJourneysCollapsed(journeysCollapsed);
+  try { localStorage.setItem('jornadas-ocultas', journeysCollapsed ? '1' : '0'); } catch (e) {}
+});
 
 // --- RENDER ---
 const grid = document.getElementById('grid');
@@ -640,7 +918,7 @@ function renderCards() {
   });
 }
 
-function openModal(id, pushHistory = true) {
+function openModal(id, updateHistory = true) {
   const d = DATA.find(x => x.id === id);
   if (!d) return;
   const cat = CATS[d.cat];
@@ -678,21 +956,71 @@ function openModal(id, pushHistory = true) {
 
   const scriptures = (d.scriptures || []).map(s => `<span class="scripture-ref">📖 ${s}</span>`).join('');
 
-  // Histórico de navegação interna
-  if (pushHistory) modalHistory.push(id);
+  // --- Trilha de navegação ---
+  const currentTop = modalHistory[modalHistory.length - 1];
+  if (currentTop !== id) {
+    if (updateHistory) {
+      modalHistory.push(id);
+    } else {
+      // Veio do popstate (botão voltar/avançar do navegador)
+      if (modalHistory.length > 1 && modalHistory[modalHistory.length - 2] === id) {
+        modalHistory.pop(); // voltou um passo
+      } else {
+        modalHistory.push(id); // avançou
+      }
+    }
+  }
 
-  // Deep link: atualiza URL com hash desta entrada
-  history.replaceState(null, '', '#' + id);
+  // Deep link: pushState para o voltar do navegador funcionar
+  if (updateHistory && window.location.hash !== '#' + id) {
+    history.pushState({ sym: id }, '', '#' + id);
+  }
+
+  // Barra da jornada (se o símbolo atual pertence à trilha ativa)
+  let journeyBarHtml = '';
+  if (currentTrail && currentTrail.ids.includes(id)) {
+    currentTrailIdx = currentTrail.ids.indexOf(id);
+    setTrailProgress(currentTrail.id, currentTrailIdx);
+    const isFirst = currentTrailIdx === 0;
+    const isLast = currentTrailIdx === currentTrail.ids.length - 1;
+    journeyBarHtml = `
+      <div class="journey-bar">
+        <span>🧭</span>
+        <span class="journey-bar-title">${currentTrail.titulo}</span>
+        <span class="journey-bar-progress">${currentTrailIdx + 1} de ${currentTrail.ids.length}</span>
+        <div class="journey-nav">
+          <button id="trailPrevBtn" ${isFirst ? 'disabled' : ''}>← Anterior</button>
+          <button id="trailNextBtn" ${isLast ? 'disabled' : ''}>Próximo →</button>
+        </div>
+      </div>`;
+  }
 
   const backBtn = modalHistory.length > 1
     ? `<button class="modal-back" id="modalBackBtn">← Voltar</button>`
     : '';
 
+  // Trilha clicável (aparece a partir de 2 itens)
+  let trailHtml = '';
+  if (modalHistory.length > 1) {
+    trailHtml = '<div class="modal-trail">' + modalHistory.map((tid, i) => {
+      const td = DATA.find(x => x.id === tid);
+      if (!td) return '';
+      const label = td.icon + ' ' + td.name.split(' (')[0];
+      if (i === modalHistory.length - 1) {
+        return `<span class="trail-current">${label}</span>`;
+      }
+      return `<button class="trail-crumb" data-trail-idx="${i}">${label}</button><span class="trail-sep">›</span>`;
+    }).join('') + '</div>';
+  }
+
   document.getElementById('modalBody').innerHTML = `
     <div style="display:flex;align-items:center;margin-bottom:4px">
       ${backBtn}
+      <button class="modal-share" id="modalShareBtn" title="Copiar link desta entrada">🔗 Copiar link</button>
       <button class="modal-close" id="modalCloseBtn">✕ Fechar</button>
     </div>
+    ${journeyBarHtml}
+    ${trailHtml}
     <h2>${d.icon} ${d.name}</h2>
     ${d.aliases ? `<div class="modal-aliases">Nomes alternativos: ${d.aliases.join(' · ')}</div>` : ''}
     <span class="cat-tag" style="background:${cat.bg};color:${cat.text};margin-bottom:16px;display:inline-block">${cat.icon} ${cat.label}</span>
@@ -709,16 +1037,47 @@ function openModal(id, pushHistory = true) {
     ${backRefs ? `<div class="section-block"><h3>Referenciado por</h3><div class="ref-list">${backRefs}</div></div>` : ''}
   `;
 
-  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  document.getElementById('modalCloseBtn').addEventListener('click', () => closeModal());
+
+  // Navegação da jornada
+  const trailPrev = document.getElementById('trailPrevBtn');
+  const trailNext = document.getElementById('trailNextBtn');
+  if (trailPrev) trailPrev.addEventListener('click', () => trailGo(-1));
+  if (trailNext) trailNext.addEventListener('click', () => trailGo(1));
+
+  // Copiar link da entrada
+  document.getElementById('modalShareBtn').addEventListener('click', (e) => {
+    const url = window.location.origin + window.location.pathname + '#' + id;
+    navigator.clipboard.writeText(url).then(() => {
+      const btn = e.currentTarget || document.getElementById('modalShareBtn');
+      btn.textContent = '✓ Copiado!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '🔗 Copiar link';
+        btn.classList.remove('copied');
+      }, 1600);
+    });
+  });
 
   const backBtnEl = document.getElementById('modalBackBtn');
   if (backBtnEl) {
     backBtnEl.addEventListener('click', () => {
       modalHistory.pop(); // remove entrada atual
-      const prevId = modalHistory.pop(); // pega anterior (será re-adicionado por openModal)
-      if (prevId) openModal(prevId);
+      const prevId = modalHistory[modalHistory.length - 1];
+      if (prevId) openModal(prevId, true);
+      else closeModal();
     });
   }
+
+  // Cliques na trilha: volta ao ponto clicado
+  document.querySelectorAll('#modalBody .trail-crumb').forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = parseInt(el.dataset.trailIdx, 10);
+      const targetId = modalHistory[idx];
+      modalHistory = modalHistory.slice(0, idx); // trunca (openModal re-adiciona)
+      openModal(targetId, true);
+    });
+  });
 
   document.querySelectorAll('#modalBody .ref-link').forEach(el => {
     el.addEventListener('click', () => openModal(el.dataset.ref));
@@ -727,11 +1086,28 @@ function openModal(id, pushHistory = true) {
   document.getElementById('modalOverlay').classList.add('open');
 }
 
-function closeModal() {
+function closeModal(fromPopstate = false) {
   document.getElementById('modalOverlay').classList.remove('open');
-  history.replaceState(null, '', window.location.pathname + window.location.search);
-  modalHistory = []; // limpa histórico ao fechar
+  modalHistory = []; // limpa trilha ao fechar
+  if (currentTrail) {
+    currentTrail = null; // sai da jornada (progresso fica salvo)
+    renderJourneys(); // atualiza botões "Continuar · n/N"
+  }
+  if (!fromPopstate && window.location.hash) {
+    // Empilha estado sem hash — o voltar do navegador pode reabrir a última entrada
+    history.pushState(null, '', window.location.pathname + window.location.search);
+  }
 }
+
+// Voltar/avançar do navegador navega entre símbolos
+window.addEventListener('popstate', () => {
+  const id = window.location.hash.slice(1);
+  if (id && DATA.find(x => x.id === id)) {
+    openModal(id, false);
+  } else {
+    closeModal(true);
+  }
+});
 
 document.getElementById('modalOverlay').addEventListener('click', (e) => {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
@@ -798,6 +1174,7 @@ document.addEventListener('keydown', (e) => {
 
 // Inicializa
 updateFilterCounts();
+renderJourneys();
 renderCards();
 
 // Deep link: abre modal se URL tiver hash ao carregar
