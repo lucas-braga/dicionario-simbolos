@@ -1,41 +1,47 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos bíblicos identificados em séries de estudos sobre simbologia e profecia.
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **481 entradas · 120 fontes · 30 jornadas temáticas · geo em 255 entradas.**
 
 ## Estrutura
 
 ```
 dicionario_simbolos.html   — viewer interativo (abre no navegador)
+jornadas.html              — página dedicada de jornadas temáticas
 simbolos.js                — banco de dados com todas as entradas
+sobre.html                 — página sobre o projeto
 deploy.sh                  — script para atualizar e enviar ao Git
 ```
 
 ## Como visualizar
 
-Abra o `dicionario_simbolos.html` no navegador. Os dois arquivos precisam estar na mesma pasta.
+Abra o `dicionario_simbolos.html` no navegador. Todos os arquivos precisam estar na mesma pasta (`simbolos.js`, `jornadas.html`, `sobre.html`).
 
 ```bash
 open ~/Documents/dicionario-simbolos/dicionario_simbolos.html
+# ou direto nas jornadas:
+open ~/Documents/dicionario-simbolos/jornadas.html
 ```
 
 ## Funcionalidades
 
 - **Busca completa** — pesquisa em nomes, aliases, resumos, fatos e interpretações
-- **Filtros por categoria** — Divindades, Símbolos, Conceitos Bíblicos, Figuras Históricas, Manifestações Modernas, Cinema
+- **Filtros por categoria** — Divindades, Símbolos, Conceitos Bíblicos, Figuras Históricas, Manifestações Modernas, Cinema, Ordens, Lugares
 - **Referências cruzadas bidirecionais** — cada entrada mostra o que referencia e quem a referencia
 - **Deep linking** — a URL atualiza com o `#id` da entrada aberta, permitindo compartilhar um link direto para qualquer símbolo
-- **Trilha de navegação** — ao navegar de entrada em entrada pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
-- **Jornadas** — trilhas de leitura guiada com progresso persistido (localStorage); cada jornada tem um conjunto curado de entradas em sequência temática
+- **Trilha de navegação** — ao navegar pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
+- **Jornadas** — 22 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
 
 ## Categorias
 
 | Categoria | Descrição |
 |---|---|
+| 👤 Figuras & Personagens | Pessoas reais, figuras lendárias e personagens históricos |
+| 🔣 Símbolos | Símbolos, marcas e elementos visuais |
+| 🔐 Ordens & Movimentos | Ordens secretas, sociedades, movimentos e ideologias |
+| 💻 Manifestações Modernas | Empresas, tecnologias e fenômenos contemporâneos |
+| 📖 Conceitos Bíblicos | Conceitos, profecias e temas das escrituras |
 | 🏛️ Divindade / Mitologia | Entidades, deuses e figuras mitológicas |
-| 🔣 Símbolo | Símbolos, marcas e elementos visuais |
-| 💻 Manifestação Moderna | Empresas, tecnologias e fenômenos contemporâneos |
-| 📖 Conceito Bíblico / Espiritual | Conceitos, profecias e temas das escrituras |
-| 👤 Figura Histórica | Pessoas e personagens históricos |
+| 🗺️ Lugares & Civilizações | Lugares, sítios arqueológicos e civilizações |
 | 🎬 Cinema / Mídia | Filmes, animações e produções de mídia |
 
 ## Estrutura de uma entrada
@@ -47,45 +53,62 @@ open ~/Documents/dicionario-simbolos/dicionario_simbolos.html
   aliases: ['Apelido 1', 'Apelido 2'],
   cat: 'biblico',           // uma das categorias acima
   icon: '🔥',
-  source: 1,                // qual sessão originou a entrada (uso interno)
+  source: [1, 2],           // fontes de origem (uso interno)
   summary: 'Descrição curta exibida no card.',
   facts: [                  // fatos históricos / documentados (bloco verde)
     'Fato verificável...',
   ],
   interps: [                // interpretações do apresentador (bloco amarelo)
-    '"Citação direta ou paráfrase..."',
+    'Interpretação ou conclusão...',
   ],
   refs: ['outro-id'],       // links para outras entradas
-  scriptures: ['Gn 1:1'],  // referências bíblicas
+  scriptures: ['Gn 1:1'],  // referências bíblicas diretas
+  // Campos geográficos — invisíveis no UI, usados só para busca e mapa futuro
+  pais: ['IT'],             // ISO-3166-1 alpha-2 (ex: 'IT', 'BR', 'DE')
+  local: ['Roma'],          // topônimo específico em PT
+  coords: [41.9028, 12.4964], // [lat, lng] — ponto primário
 }
 ```
 
-## Fontes (uso interno)
+## Jornadas temáticas (27)
 
-| # | Data | Tema |
+| # | ID | Título |
 |---|---|---|
-| 1 | 08/07/2026 | O Greenman, Pai das Abominações |
-| 2 | 15/07/2026 | A Segunda Besta do Apocalipse |
-| 3 | 22/07/2026 | Deus Destruirá o Sistema |
-| 4 | 25/07/2026 | Rango Cap 01 — Livro de Eli e Mad Max no Deserto |
-| 5 | 25/07/2026 | Golden Dawn — A Ordem Hermética da Golden Dawn |
-| 6 | 25/07/2026 | Graal — O Santo Graal e a Lenda Arturiana |
+| 1 | `gotthard` | A saga do Túnel de Gotthard |
+| 2 | `cern` | CERN: o portal do abismo |
+| 3 | `linhagem` | A linhagem proibida |
+| 4 | `deusa` | A deusa de mil nomes |
+| 5 | `deus-verde` | O Deus Verde |
+| 6 | `babel` | A nova Torre de Babel |
+| 7 | `guerra-oculta` | A guerra oculta dos aliados |
+| 8 | `codigo-007` | O código 007 |
+| 9 | `cainitas-lenda` | A lenda dos Cainitas |
+| 10 | `misterio-babilonico` | O Mistério de Babilônia |
+| 11 | `asia-secreta` | A guerra oculta do Oriente |
+| 12 | `malta` | Os mistérios de Malta |
+| 13 | `sacerdotes-serpente` | A raça dos sacerdotes-serpente |
+| 14 | `guerra-fria-oculta` | A Guerra Fria por trás da cortina |
+| 15 | `feticao-tempo` | O feitiço do tempo |
+| 16 | `samhain-mortos` | O Samhain e o culto dos mortos |
+| 17 | `nova-babel` | A Nova Babel: da Teosofia à Era de Aquário |
+| 18 | `retorno-pagan` | O Retorno do Paganismo |
+| 19 | `ocultismo-nazista` | O Ocultismo por Trás da Suástica |
+| 20 | `mk-mente` | A Guerra Invisível Contra a Mente |
+| 21 | `islam-oculto` | O Islã das Sombras |
+| 22 | `eugenismo` | A Ciência dos Eleitos |
+| 23 | `cidade-diabo` | A Cidade do Diabo: Turim |
+| 24 | `eurasia-oculta` | Eurasia Oculta: O Czar, Dugin e o Quarto Império |
+| 25 | `napoleon-oculto` | O Homem Vermelho de Napoleão |
+| 26 | `paises-nao-integrados` | O Mapa do Pentágono e a Grande Guerra Final |
+| 27 | `choque-civilizacoes` | O Choque de Civilizações |
+| 28 | `hollywood-oculto` | Hollywood: A Grande Varinha de Azevinho |
+| 29 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
+| 30 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
 
 ## Como transcrever com Whisper
 
-Abra o terminal e rode o comando abaixo, substituindo o nome do arquivo:
-
 ```bash
 cd ~/Downloads
-whisper "nome-do-arquivo.m4a" --language Portuguese --model small
-```
-
-O `cd ~/Downloads` garante que o `.txt` gerado fique na mesma pasta do áudio. Sem isso, o arquivo vai para a pasta onde o terminal estiver aberto.
-
-Se o arquivo estiver em outro lugar, navegue até lá primeiro:
-
-```bash
-cd ~/Desktop
 whisper "nome-do-arquivo.m4a" --language Portuguese --model small
 ```
 
@@ -100,31 +123,36 @@ revise, adicione com excelência e inteligência considerando os existentes — 
 - não remova nada do que já existe
 - corrija nomes próprios distorcidos pelo Whisper antes de processar
 - enriqueça entradas existentes em vez de duplicar
+- ao enriquecer entradas existentes: adicionar facts[] sempre que o conteúdo trouxer fato novo e específico sobre aquela entrada — não apenas refs; antes de fechar, revisar todas as entradas que receberam só refs e verificar se havia fato específico que deveria ter ido para facts[]
+- summary: nunca alterar por padrão — novos detalhes vão para facts[]; só reescrever o summary se o novo conteúdo mudar fundamentalmente a identidade da entrada (ex: revelar continuidade moderna de uma ordem catalogada como medieval)
 - facts[] = informação factual verificável; interps[] = interpretações e conclusões específicas do apresentador
 - refs bidirecionais obrigatórias — quando A referencia B, B deve referenciar A
+- antes de finalizar qualquer entrada nova: varrer o DATA existente por palavras-chave temáticas relacionadas e adicionar refs bidirecionais para todas as entradas existentes que se conectam diretamente (não apenas as novas entre si)
 - scriptures: apenas quando há referência bíblica direta e clara
+- campos geográficos (invisíveis no UI, usados só para busca e mapa futuro):
+  - figuras históricas reais → pais (ISO-3166 alpha-2) + local (topônimo PT) + coords [lat, lng]
+  - lugares → local + pais + coords
+  - ordens → pais da fundação + local da sede + coords
+  - divindades → somente se houver templo ou local de culto principal específico
+  - símbolos abstratos, cinema, conceitos bíblicos sem lugar físico → omitir os três campos
+  - regra pais/local: usar o local mais específico e historicamente relevante para a entrada (não o país inteiro quando há cidade clara)
 - ao terminar: audit de refs quebradas via Node.js e apresentar simbolos.js
 - ao terminar: avaliar se as novas entradas se encaixam em jornadas existentes (estender ids) ou se formam tema novo suficiente para uma trilha nova (≥ 4 entradas)
 ```
 
-Se a sessão do Claude estiver fria (contexto zerado), adicione esta linha antes:
+Se a sessão do Claude estiver fria (contexto zerado), adicione antes:
 
 ```
-Este projeto usa dois arquivos: simbolos.js (DATA + SOURCES) e dicionario_simbolos.html. Leia o simbolos.js atual antes de começar.
+Este projeto usa os arquivos: simbolos.js (DATA + SOURCES), dicionario_simbolos.html (viewer + TRILHAS), jornadas.html (página de jornadas — TRILHAS duplicado aqui, manter em sincronia), sobre.html e deploy.sh. Leia o simbolos.js e o dicionario_simbolos.html antes de começar.
 ```
 
-## Como adicionar uma nova sessão
-
-1. Transcrever com Whisper (ver seção acima)
-2. Enviar o `.txt` para o Claude com o prompt padrão acima
-3. Claude atualiza o `simbolos.js` com as novas entradas e o novo source
-4. Rodar o deploy:
+## Como fazer deploy
 
 ```bash
-~/Documents/dicionario-simbolos/deploy.sh "Add: Nome da Sessão — X entradas"
+bash ~/Documents/dicionario-simbolos/deploy.sh "Add: Nome da Sessão — X entradas"
 ```
 
-Ou, manualmente:
+Ou manualmente:
 
 ```bash
 cd ~/Documents/dicionario-simbolos
@@ -135,23 +163,34 @@ git push
 
 ## Como criar ou atualizar trilhas (Jornadas)
 
-As jornadas vivem no array `TRILHAS` dentro do `dicionario_simbolos.html`. Nenhuma alteração em `simbolos.js` é necessária.
+As jornadas vivem no array `TRILHAS` em **dois arquivos que precisam ser mantidos em sincronia**: `dicionario_simbolos.html` (usado para iniciar trilhas a partir do dicionário) e `jornadas.html` (página dedicada). Ao adicionar ou editar uma trilha, atualize os dois.
 
-**Adicionar trilha nova** — inserir um objeto no array:
-
+**Adicionar trilha nova:**
 ```javascript
-{ id: 'id-unico', titulo: 'Título da trilha', desc: 'Descrição curta.', ids: ['entrada-1', 'entrada-2', 'entrada-3'] }
+{ id: 'id-unico', titulo: 'Título', desc: 'Descrição curta.', ids: ['entrada-1', 'entrada-2', 'entrada-3'] }
 ```
 
-**Atualizar trilha existente** — editar o array `ids` (adicionar, reordenar ou remover entradas) ou o campo `desc`.
+**Regra:** todos os ids em `ids` precisam existir em `DATA`. Verificar com o audit Node.js antes do deploy:
 
-**Validação** — todos os ids em `ids` precisam existir em `DATA`. Verificar com o mesmo audit Node.js padrão antes do deploy.
-
-**Workflow sugerido após cada batch:**
-1. Processar TXTs → audit de refs (fluxo normal)
-2. Verificar se as novas entradas se encaixam em alguma jornada existente → estender o `ids`
-3. Se houver tema novo suficientemente rico (≥ 4 entradas) → criar jornada nova
-4. Deploy
+```bash
+cd ~/Documents/dicionario-simbolos
+node -e "
+const fs = require('fs');
+let code = fs.readFileSync('simbolos.js', 'utf8');
+code = code.replace(/^const /mg, 'var ');
+eval(code);
+const allIds = new Set(DATA.map(e => e.id));
+const broken = [];
+for (const entry of DATA) {
+  for (const ref of (entry.refs || [])) {
+    if (!allIds.has(ref)) broken.push({ entry: entry.id, brokenRef: ref });
+  }
+}
+if (broken.length === 0) console.log('OK - sem refs quebradas');
+else broken.forEach(b => console.log('QUEBRADA:', b.entry, '->', b.brokenRef));
+console.log('Total entradas:', DATA.length);
+"
+```
 
 ## Hospedagem
 

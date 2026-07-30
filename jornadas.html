@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornadas Temáticas · Dicionário de Símbolos</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d2e;
+      --surface2: #242840;
+      --border: #2e3256;
+      --accent: #6c63ff;
+      --accent2: #4caf87;
+      --warn: #e8a838;
+      --text: #e2e4f0;
+      --text-dim: #8890b0;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      padding: 20px 24px 14px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .header h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .header h1 span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-link {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .nav-link:hover { color: var(--text); border-color: var(--accent); }
+    .nav-link.active {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(108,99,255,0.08);
+    }
+    .header p {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* INTRO */
+    .intro {
+      max-width: 900px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+    .intro h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .intro h2 span { color: var(--accent); }
+    .intro p {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .stats-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .stat strong {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      display: block;
+    }
+
+    /* SEARCH + FILTER */
+    .controls {
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+    .search-wrap input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 8px 10px 8px 34px;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .search-clear.visible { display: block; }
+    .count-badge {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+    .progress-toggle {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .progress-toggle:hover { color: var(--text); border-color: var(--accent); }
+    .progress-toggle.active { color: var(--accent2); border-color: var(--accent2); }
+
+    /* GRID */
+    .grid {
+      max-width: 900px;
+      margin: 20px auto 60px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    /* JOURNEY CARD */
+    .journey-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      transition: border-color 0.2s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .journey-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .journey-card.has-progress { border-color: rgba(76,175,135,0.4); }
+    .journey-card.completed { border-color: rgba(76,175,135,0.8); }
+
+    .journey-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .journey-desc {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .journey-path {
+      font-size: 0.68rem;
+      color: #4a5070;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* PROGRESS BAR */
+    .journey-progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .journey-progress-bar {
+      flex: 1;
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .journey-progress-fill {
+      height: 100%;
+      background: var(--accent2);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+    .journey-progress-text {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+    .journey-progress-text.done { color: var(--accent2); }
+
+    /* ACTIONS */
+    .journey-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .journey-start {
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-size: 0.76rem;
+      font-weight: 600;
+      transition: opacity 0.15s;
+    }
+    .journey-start:hover { opacity: 0.85; }
+    .journey-start.continue { background: var(--accent2); }
+    .journey-start.replay {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+    .journey-start.replay:hover { border-color: var(--accent); color: var(--text); }
+    .journey-meta {
+      font-size: 0.7rem;
+      color: #4a5070;
+      margin-left: auto;
+    }
+
+    /* CALLOUT */
+    .callout {
+      max-width: 900px;
+      margin: 28px auto 0;
+      padding: 0 24px;
+      display: flex;
+      gap: 14px;
+      background: rgba(108,99,255,0.07);
+      border: 1px solid rgba(108,99,255,0.3);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      padding: 16px 20px;
+      align-items: flex-start;
+    }
+    .callout-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .callout-body strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+      letter-spacing: 0.01em;
+    }
+    .callout-body p {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <h1>📖 Dicionário de <span>Símbolos e Crenças</span></h1>
+    <nav class="nav-links">
+      <a class="nav-link" href="dicionario_simbolos.html">📖 Dicionário</a>
+      <a class="nav-link active" href="jornadas.html">🧭 Jornadas</a>
+      <a class="nav-link" href="sobre.html">👁️ Sobre</a>
+    </nav>
+  </div>
+  <p>Trilhas de leitura guiada · sequência temática curada</p>
+</div>
+
+<div class="callout">
+  <div class="callout-icon">🧭</div>
+  <div class="callout-body">
+    <strong>O que são as Jornadas?</strong>
+    <p>Cada jornada é uma trilha de leitura curada: uma sequência ordenada de símbolos, entidades e conceitos que, juntos, contam uma história coesa. Em vez de navegar o dicionário livremente, você segue um fio condutor — do ponto A ao ponto Z — com contexto acumulado a cada entrada. O progresso é salvo automaticamente; você pode pausar e continuar quando quiser.</p>
+  </div>
+</div>
+
+<div class="intro">
+  <h2>🧭 <span>Jornadas</span> Temáticas</h2>
+  <p>Escolha uma trilha abaixo e clique em <em>Começar leitura</em>.</p>
+  <div class="stats-row">
+    <div class="stat"><strong id="stat-total">22</strong>jornadas</div>
+    <div class="stat"><strong id="stat-started">—</strong>iniciadas</div>
+    <div class="stat"><strong id="stat-complete">—</strong>concluídas</div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="search" type="text" placeholder="Buscar jornada…" autocomplete="off">
+    <button class="search-clear" id="searchClear">✕</button>
+  </div>
+  <button class="progress-toggle" id="progressToggle">Mostrar com progresso</button>
+  <span class="count-badge" id="countBadge"></span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script src="simbolos.js"></script>
+<script>
+// ── TRILHAS (mesma lista do dicionário) ───────────────────────────────────────
+const TRILHAS = [
+  {
+    id: 'gotthard',
+    titulo: 'A saga do Túnel de Gotthard',
+    desc: 'Da lenda da ponte com o demônio ao ritual de 2016: quem é Azazel e o que a cerimônia encenou diante dos líderes da Europa.',
+    ids: ['sangotard', 'azazel', 'sernunos', 'kali', 'apolo-abaddon', 'tunel-gotthard', 'olimpiadas', 'culto-ao-sol'],
+  },
+  {
+    id: 'cern',
+    titulo: 'CERN: o portal do abismo',
+    desc: 'Do templo de Apolo em Apolliacum à estátua de Shiva: a camada espiritual do maior laboratório de física do mundo.',
+    ids: ['cern', 'apolo-abaddon', 'shiva', 'experimento-atlas', 'jachin-e-boaz', 'boson-de-higgs', 'projeto-alice-cern', 'sirius-sincrotron', 'teoria-das-cordas', 'templo-centro-tempo'],
+  },
+  {
+    id: 'linhagem',
+    titulo: 'A linhagem proibida',
+    desc: 'Dos Vigilantes de Gênesis 6 aos gigantes de Canaã: a corrupção genética que atravessou o dilúvio.',
+    ids: ['anjo-caido', 'vigilantes', 'nefilins', 'livro-de-enoque', 'anakim', 'semente-de-caim', 'lamech', 'tubal-caim', 'caim', 'cain-abel', 'livro-de-nod'],
+  },
+  {
+    id: 'deusa',
+    titulo: 'A deusa de mil nomes',
+    desc: 'Gaia, Ísis, Ishtar, a Rainha do Céu: o mesmo arquétipo feminino adaptado a cada cultura ao longo de milênios.',
+    ids: ['gaia', 'isis', 'ishtar', 'rainha-do-ceu', 'triplice-deusa', 'lilith', 'estrela-oito-pontas', 'inanna', 'astaroth', 'antimaria', 'virgem-negra', 'pachamama', 'felinos-feminino', 'mictecacihuatl'],
+  },
+  {
+    id: 'deus-verde',
+    titulo: 'O Deus Verde',
+    desc: 'Das florestas druídicas ao Bohemian Grove: o senhor dos bosques que nunca deixou de ser adorado.',
+    ids: ['greenman', 'sernunos', 'druidas', 'merlin', 'bohemian-grove', 'moloch', 'dagda', 'tuatha-de-danann'],
+  },
+  {
+    id: 'babel',
+    titulo: 'A nova Torre de Babel',
+    desc: 'Transhumanismo, IA e a promessa de imortalidade: a terceira tentativa de "ser como Deus".',
+    ids: ['transhumanismo', 'quimera-genetica', 'singularidade', 'ia-como-besta', 'segunda-besta', 'nova-ordem-mundial', 'imortalidade-cibernetica', 'po-neural', 'neuralink', 'robos-humanoides', 'sofia-humanoide', 'ray-kurzweil', 'max-more', 'zoltan-istvan', 'global-future-2045', 'projeto-avatar-2045', 'dmitry-itskov', 'nikolai-fedorov'],
+  },
+  {
+    id: 'guerra-oculta',
+    titulo: 'A guerra oculta dos aliados',
+    desc: 'Churchill era druida, Crowley era seu consultor e Fleming criou a Operação Mistletoe: o lado esotérico da vitória britânica na II Guerra Mundial.',
+    ids: ['winston-churchill', 'druidas', 'aleister-crowley', 'dion-fortune', 'operacao-mistletoe', 'rudolf-hess', 'v-de-vitoria', 'ian-fleming', 'golden-dawn', 'william-westcott', 'macgregor-mathers', 'william-yeats', 'florence-farr', 'israel-regardie', 'stella-matutina'],
+  },
+  {
+    id: 'codigo-007',
+    titulo: 'O código 007',
+    desc: 'De Lâmech e Tubal-Cain a James Bond: como a senha maçônica mais antiga do mundo foi cifrada no agente secreto mais famoso da cultura pop.',
+    ids: ['lamech', 'tubal-caim', 'hiram-abif', 'jachin-e-boaz', 'maconaria', 'james-bond', 'colunas-templo', 'numero-33', 'shriners', 'skull-and-bones', 'estrela-flamejante', 'albert-pike', 'grande-obra', 'ordo-ab-chao'],
+  },
+  {
+    id: 'cainitas-lenda',
+    titulo: 'A lenda dos Cainitas',
+    desc: 'A doutrina secreta da Maçonaria: Caim como ancestral da civilização, Tubal-Cain sobrevivendo ao dilúvio, Hiram Abiff como Filho da Viúva e o Templo de Salomão como obra perfeita dos herdeiros de Caim.',
+    ids: ['cainitas', 'lamech', 'tubal-caim', 'filho-da-viuva', 'hiram-abif', 'rainha-de-saba', 'ninrode', 'caim', 'cain-abel', 'livro-de-nod'],
+  },
+  {
+    id: 'misterio-babilonico',
+    titulo: 'O Mistério de Babilônia',
+    desc: 'Rastreie o sacerdócio secreto desde Ninrode até as sociedades de poder modernas — a corrente oculta que atravessa Egito, Grécia, Roma e América e deixou sua assinatura na nota de dólar.',
+    ids: ['ninrode', 'babilonia', 'misterio-babilonico', 'francis-bacon', 'illuminati', 'bohemian-grove', 'fenix', 'novus-ordo-seclorum', 'alinsky', 'tecnocracia', 'astronomia-babilonica', 'dialética-hegeliana', 'novo-sacerdocio', 'gramsci', 'ordo-ab-chao'],
+  },
+  {
+    id: 'asia-secreta',
+    titulo: 'A guerra oculta do Oriente',
+    desc: 'A rede invisível que conectou as fraternidades secretas do Japão, China e Coreia ao nazismo alemão — e como essa aliança moldou o séc. XX, de Pearl Harbor aos movimentos de libertação asiáticos.',
+    ids: ['karl-haushofer', 'sociedade-oceano-negro', 'dragao-negro', 'subhas-bose', 'tonghak', 'sociedade-hong', 'budismo-berlin', 'perestroika', 'cosmismo-russo', 'uniao-eurasiatica'],
+  },
+  {
+    id: 'malta',
+    titulo: 'Os mistérios de Malta',
+    desc: 'A ilha que guarda o cruzamento entre o pré-dilúvio e o presente: templos de gigantes, catacumbas com milhares de esqueletos, o desaparecimento de crianças no Hipogeu — e a ordem militar católica que zelou por esses segredos por séculos.',
+    ids: ['malta', 'ggantija', 'nefilins', 'hipogeu-malta', 'moloch', 'ordem-de-malta', 'cranio-dolicocefalo', 'shemsu-hor', 'civilizacao-minoica', 'knossos', 'minos', 'minotauro', 'teseu', 'labirinto', 'arthur-evans', 'leonard-woolley'],
+  },
+  {
+    id: 'sacerdotes-serpente',
+    titulo: 'A raça dos sacerdotes-serpente',
+    desc: 'De Jarmo ao Egito, passando por Malta: a raça dolicocéfala que governou o mundo antigo como casta sacerdotal-serpente — e desapareceu simultaneamente em três civilizações por volta de 2.500 a.C., deixando crânios, templos e a memória dos Nefilins.',
+    ids: ['cranio-dolicocefalo', 'shemsu-hor', 'mitanni', 'akhenaton', 'nefilins', 'hipogeu-malta', 'vigilantes', 'atlantida', 'serpente', 'akhenaten', 'dogon', 'nommos', 'reptilianos', 'sargao', 'pilares-de-hercules'],
+  },
+  {
+    id: 'guerra-fria-oculta',
+    titulo: 'A Guerra Fria por trás da cortina',
+    desc: 'A Ordem de Malta fundou a CIA, reciclou a inteligência nazista via Gehlen, infiltrou os governos europeus pela P2 e articulou a nova ordem mundial no Bilderberg — tudo sob a bandeira do anticomunismo e das profecias do Apocalipse.',
+    ids: ['ordem-de-malta', 'cia', 'william-donovan', 'reinhard-gehlen', 'p2', 'bilderberg', 'priorado-de-siao', 'cavaleiros-templarios', 'operacao-paperclip', 'kennedy-discurso'],
+  },
+  {
+    id: 'feticao-tempo',
+    titulo: 'O feitiço do tempo',
+    desc: 'Do festival da marmota em Punxsutawney ao loop do ARQ e ao Zero da Zero Hora: como a mídia Hollywood codifica programação preditiva do "reset do tempo" — e por que Inanna/Ishtar, o oroboros e o XO aparecem em todos eles.',
+    ids: ['dia-da-marmota', 'imbolc', 'loop-temporal', 'arq', 'inanna', 'zero-hora', 'matrix', 'oroboros', 'circulo-magico', 'kenneth-grant', 'viagem-tempo', 'ano-sabatico', 'dia-de-deus'],
+  },
+  {
+    id: 'samhain-mortos',
+    titulo: 'O Samhain e o culto dos mortos',
+    desc: 'Do festival celta de 31 de outubro ao Halloween globalizado por Hollywood: Donn e seu Tech Duinn, as fogueiras de Tlachtga, a Colina de Tara com seus 5.000 anos, a Lia Fáil e o ciclo solar dos quatro festivais. O culto dos mortos precede os celtas e atravessa as eras.',
+    ids: ['samhain', 'donn', 'tech-duinn', 'tlachtga', 'tara', 'lia-fail', 'mog-ruith', 'newgrange', 'fianna', 'bealtaine', 'lughnasadh', 'halloween', 'dia-dos-mortos', 'mictlantecuhtli', 'mictecacihuatl', 'candlemas', 'boneca-brigid', 'cruz-de-brigid'],
+  },
+  {
+    id: 'nova-babel',
+    titulo: 'A Nova Babel: da Teosofia à Era de Aquário',
+    desc: 'De Helena Blavatsky à Lucis Trust de Alice Bailey: como a antiga religião babilônica de mistérios se reinventou como espiritualidade New Age, infiltrou a ONU, e aguarda Maitreya para colocar a pedra angular na pirâmide inacabada de Babel.',
+    ids: ['torre-de-babel', 'teosofia', 'helena-blavatsky', 'lucis-trust', 'new-age', 'prometeu', 'onu', 'maitreya', 'sanat-kumara', 'era-de-aquario', 'piramide-inacabada', 'cristo-cosmico', 'ecumenismo-astana', 'astana', 'piramide-da-paz', 'bayterek', 'religiao-unica', 'alice-bailey', 'dolar', 'henry-wallace', 'olho-verde', 'georgia-guidestones', 'novus-ordo-seclorum'],
+  },
+  {
+    id: 'retorno-pagan',
+    titulo: 'O Retorno do Paganismo',
+    desc: 'De Cosimo de Medici ao Éon de Hórus: como 13 manuscritos herméticos reintroduziram o paganismo no Ocidente cristão, gerando a díade cocriação-teogenia — e como magos brancos e negros, apesar de divergirem nos meios, convergem inevitavelmente para o mesmo fim.',
+    ids: ['cosimo-de-medici', 'marsilio-ficino', 'hermetismo', 'corpus-hermeticum', 'gnose', 'teogenia', 'cocriacao', 'grande-fraternidade-branca', 'eon-de-horus', 'wicca', 'neopaganismo', 'ecofascismo', 'tabua-de-esmeralda', 'prisca-teologia', 'telema', 'magia-negra', 'theurgia', 'abramelin', 'magia-enoquiana', 'pedra-filosofal', 'grande-obra'],
+  },
+  {
+    id: 'ocultismo-nazista',
+    titulo: 'O Ocultismo por Trás da Suástica',
+    desc: 'De Guido von List às operações de Himmler no Tibet: como o nazismo foi concebido como uma ordem iniciática que mesclou ariosofia, magia rúnica e a busca por Hiperbórea — e como Maria Orsic e Aldebaran selaram o pacto final.',
+    ids: ['guido-von-list', 'willigut', 'movimento-volkisch', 'ariosofia', 'sociedade-vril', 'thule', 'ahnenerbe', 'heinrich-himmler', 'maria-orsic', 'aldebaran', 'hiperbórea', 'sebottendorff', 'runas-armanen', 'sonnenrad', 'suastica', 'runa-sieg', 'odinismo', 'asatru', 'heathenry'],
+  },
+  {
+    id: 'mk-mente',
+    titulo: 'A Guerra Invisível Contra a Mente',
+    desc: 'Do MK-Ultra às borboletas monarca de Hollywood: como o controle mental saiu dos laboratórios da CIA, entrou na cultura pop e criou gerações programadas para dissociar — sem nunca saber disso.',
+    ids: ['mk-ultra', 'mk-monarca', 'borboleta-monarca', 'programacao-preditiva', 'engenharia-da-mente', 'alice-pais-maravilhas', 'mago-de-oz', 'matrix'],
+  },
+  {
+    id: 'islam-oculto',
+    titulo: 'O Islã das Sombras',
+    desc: 'Do Dajjal ao Mahdi, dos Hashshashin ao Califado: as doutrinas escatológicas do Islã que poucos ocidentais conhecem — e como elas moldam conflitos, movimentos e profecias que determinam o futuro do Oriente Médio.',
+    ids: ['dajjal', 'mahdi', 'iblis', 'califado-islamico', 'bandeiras-negras-khurasan', 'twelver-shia', 'doze-imames', 'hashashin', 'hashshashin', 'dabiq', 'al-malhama-al-kubra'],
+  },
+  {
+    id: 'eugenismo',
+    titulo: 'A Ciência dos Eleitos',
+    desc: 'De Francis Galton às Pedras da Geórgia: o projeto eugenista nunca foi interrompido — apenas rebatizado. Da esterilização forçada ao Codex Alimentarius, rastreie a linhagem da ideia de que alguns humanos valem menos que outros.',
+    ids: ['eugenia', 'francis-galton', 'gregor-mendel', 'margaret-sanger', 'hg-wells', 'georgia-guidestones', 'codex-alimentarius', 'sociedade-fabiana', 'holodomor', 'grande-fome-irlandesa', 'guerra-dos-boers', 'huguenotes'],
+  },
+  {
+    id: 'cidade-diabo',
+    titulo: 'A Cidade do Diabo: Turim',
+    desc: 'Vértice simultâneo de dois triângulos mágicos globais, capital da fábrica do Tarô e guardião da entrada lendária para o submundo: Turim é a prova arquitetônica mais concreta de que cidades foram fundadas por iniciados em pontos geomânticos calculados.',
+    ids: ['turim', 'piazza-statuto', 'triangulos-magicos', 'castor-e-polux', 'portao-do-diabo-turim', 'chiesa-gran-madre-di-dio', 'tarot-de-marselha'],
+  },
+  {
+    id: 'eurasia-oculta',
+    titulo: 'Eurasia Oculta: O Czar, Dugin e o Quarto Império',
+    desc: 'Da Revolução Conservadora de Évola e Guénon ao "Fundamentos da Geopolítica" de Dugin: como o misticismo pagão europeu, a Terceira Roma ortodoxa e as redes de inteligência russa convergiram numa nova ideologia imperial para o século XXI.',
+    ids: ['eurasianismo', 'alexander-dugin', 'quarta-teoria-politica', 'julius-evola', 'rene-guenon', 'terceira-roma', 'joaquim-de-fiore', 'arthur-moeller-van-den-bruck', 'partido-nacional-bolchevique', 'karl-haushofer', 'guido-von-list', 'uniao-eurasiatica'],
+  },
+  {
+    id: 'napoleon-oculto',
+    titulo: 'O Homem Vermelho de Napoleão',
+    desc: 'Espírito, destino e queda — o guia oculto do maior general da história. Das Tulherias de Catarina de Médici à Ilha de Santa Helena, as profecias do Pequeno Homem Vermelho e como Napoleão as ignorou.',
+    ids: ['napoleon-bonaparte', 'homem-vermelho-destino', 'palacio-tuileries', 'catarina-de-medici', 'espirito-familiar', 'daimon-socratico', 'campanha-russa-1812', 'waterloo', 'palacio-fontainebleau', 'ilha-santa-helena'],
+  },
+  {
+    id: 'paises-nao-integrados',
+    titulo: 'O Mapa do Pentágono e a Grande Guerra Final',
+    desc: 'A doutrina do Vão dos Países Não Integrados — como Thomas Barnett codificou a estratégia globalista de usar a América como aríete militar, e como isso converge com o cavaleiro vermelho do Apocalipse e a guerra de Gog e Magog.',
+    ids: ['thomas-barnett', 'mapa-do-pentagono', 'vao-nao-integrado', 'nucleo-funcional', 'clube-de-roma', 'bill-cooper', 'cavalo-vermelho', 'gog-magog', 'one-belt-one-road'],
+  },
+  {
+    id: 'choque-civilizacoes',
+    titulo: 'O Choque de Civilizações',
+    desc: 'Da Batalha de Viena (1683) a Lepanto (1571) ao ataque de Christchurch (2019): como batalhas históricas entre Cristandade e Islã foram inscritas nas armas do atirador e como uma elite ocultista pode estar orquestrando este choque para seus próprios fins.',
+    ids: ['ataque-christchurch', 'brenton-tarrant', 'sol-negro', 'aceleracionismo', 'batalha-de-viena-1683', 'batalha-de-lepanto', 'jan-sobieski', 'saladino', 'oswald-mosley', 'anders-breivik'],
+  },
+  {
+    id: 'hollywood-oculto',
+    titulo: 'A Varinha Mágica de Hollywood',
+    desc: 'De como Hollywood é a varinha mágica druídica do mundo moderno: a etimologia do azevinho sagrado, a CIA nos bastidores dos estúdios, o submundo ocultista do Film Noir, o caso da Dália Negra e o sacrifício ritual como padrão documentado na indústria do entretenimento.',
+    ids: ['hollywood', 'druidas', 'merlin', 'allan-kardec', 'cia-hollywood', 'dalia-negra', 'film-noir', 'george-hodel', 'olhos-bem-fechados', 'mk-ultra'],
+  },
+  {
+    id: 'surrealismo-elite',
+    titulo: 'O Surrealismo como Ocultismo de Elite',
+    desc: 'Do hospital psiquiátrico-militar de Breton às festas ritualísticas dos Rothschild: como o surrealismo surgiu como veículo de acesso ao mundo espiritual via transes, drogas e ocultismo, e foi adotado pela elite global como linguagem secreta — da festa de 1972 com máscaras de Cernunnos e mesas à la Moloch ao legado de Dalí, Ernst e Hollywood.',
+    ids: ['surrealismo', 'andre-breton', 'salvador-dali', 'max-ernst', 'festa-rothschild-1972', 'film-noir', 'alice-pais-maravilhas', 'hollywood', 'dalia-negra', 'george-hodel'],
+  },
+  {
+    id: 'nove-ocultos',
+    titulo: 'Os Nove: do Imperador Ashoka ao Conselho dos Deuses',
+    desc: 'Do conselho secreto fundado pelo Imperador Ashoka no séc. III a.C. às sessões de canalização financiadas pela CIA em 1952: a lenda dos Nove Desconhecidos, a Enéada de Heliópolis, Shambhala, Sirius e o projeto de uma nova ordem mundial teocrática governada pelo Conselho dos Nove.',
+    ids: ['ashoka', 'nove-desconhecidos', 'conselho-dos-nove', 'eneada-egipcia', 'andrija-puharich', 'saint-yves-dalveydre', 'schwaller-de-lubicz', 'j-j-hurtak', 'shemsu-hor', 'grande-fraternidade-branca', 'shambhala'],
+  },
+];
+
+// ── PROGRESSO ─────────────────────────────────────────────────────────────────
+function getProgress(tid) {
+  try {
+    const v = localStorage.getItem('trilha-' + tid);
+    return v === null ? null : parseInt(v, 10);
+  } catch (e) { return null; }
+}
+
+function launchTrail(trailId, idx) {
+  try {
+    localStorage.setItem('pending-trail-id', trailId);
+    localStorage.setItem('pending-trail-idx', String(idx));
+  } catch (e) {}
+  window.location.href = 'dicionario_simbolos.html';
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+let searchTerm = '';
+let onlyWithProgress = false;
+
+function norm(s) {
+  return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  const term = norm(searchTerm);
+
+  const filtered = TRILHAS.filter(t => {
+    const matchSearch = !term ||
+      norm(t.titulo).includes(term) ||
+      norm(t.desc).includes(term);
+    const prog = getProgress(t.id);
+    const matchProg = !onlyWithProgress || prog !== null;
+    return matchSearch && matchProg;
+  });
+
+  document.getElementById('countBadge').textContent =
+    filtered.length < TRILHAS.length ? `${filtered.length} de ${TRILHAS.length}` : `${TRILHAS.length} jornadas`;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-state">Nenhuma jornada encontrada.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(t => {
+    const prog = getProgress(t.id);
+    const total = t.ids.length;
+    const hasProg = prog !== null && prog > 0;
+    const isDone = prog !== null && prog >= total - 1;
+    const pct = hasProg ? Math.round((prog / (total - 1)) * 100) : 0;
+
+    const names = t.ids.slice(0, 6).map(id => {
+      const d = typeof DATA !== 'undefined' ? DATA.find(x => x.id === id) : null;
+      return d ? d.name.split(' (')[0] : id;
+    }).join(' › ') + (t.ids.length > 6 ? ' …' : '');
+
+    const cardClass = isDone ? 'journey-card completed' : hasProg ? 'journey-card has-progress' : 'journey-card';
+
+    const mainBtn = isDone
+      ? `<button class="journey-start replay" data-id="${t.id}" data-idx="0">Reler do início</button>`
+      : hasProg
+        ? `<button class="journey-start continue" data-id="${t.id}" data-idx="${prog}">Continuar · ${prog + 1}/${total}</button>`
+        : `<button class="journey-start" data-id="${t.id}" data-idx="0">Começar leitura</button>`;
+
+    const progressBar = hasProg ? `
+      <div class="journey-progress-wrap">
+        <div class="journey-progress-bar"><div class="journey-progress-fill" style="width:${pct}%"></div></div>
+        <span class="journey-progress-text ${isDone ? 'done' : ''}">${isDone ? '✓ concluída' : `${prog}/${total - 1}`}</span>
+      </div>` : '';
+
+    return `
+      <div class="${cardClass}">
+        <div class="journey-title">${t.titulo}</div>
+        <div class="journey-desc">${t.desc}</div>
+        <div class="journey-path">${names}</div>
+        ${progressBar}
+        <div class="journey-actions">
+          ${mainBtn}
+          ${hasProg && !isDone ? `<button class="journey-start replay" data-id="${t.id}" data-idx="0" style="font-size:0.7rem;padding:4px 10px">Do início</button>` : ''}
+          <span class="journey-meta">${total} símbolos</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Attach events
+  grid.querySelectorAll('[data-id]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      launchTrail(btn.dataset.id, parseInt(btn.dataset.idx, 10));
+    });
+  });
+}
+
+// ── STATS ─────────────────────────────────────────────────────────────────────
+function updateStats() {
+  let started = 0, complete = 0;
+  TRILHAS.forEach(t => {
+    const p = getProgress(t.id);
+    if (p !== null) { started++; if (p >= t.ids.length - 1) complete++; }
+  });
+  document.getElementById('stat-total').textContent = TRILHAS.length;
+  document.getElementById('stat-started').textContent = started;
+  document.getElementById('stat-complete').textContent = complete;
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+updateStats();
+renderGrid();
+
+// Search
+const searchInput = document.getElementById('search');
+const searchClear = document.getElementById('searchClear');
+searchInput.addEventListener('input', e => {
+  searchTerm = e.target.value;
+  searchClear.classList.toggle('visible', searchTerm.length > 0);
+  renderGrid();
+});
+searchClear.addEventListener('click', () => {
+  searchInput.value = ''; searchTerm = '';
+  searchClear.classList.remove('visible');
+  renderGrid();
+});
+
+// Progress filter toggle
+const progToggle = document.getElementById('progressToggle');
+progToggle.addEventListener('click', () => {
+  onlyWithProgress = !onlyWithProgress;
+  progToggle.classList.toggle('active', onlyWithProgress);
+  progToggle.textContent = onlyWithProgress ? 'Ver todas' : 'Mostrar com progresso';
+  renderGrid();
+});
+</script>
+</body>
+</html>

@@ -470,7 +470,11 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="sobre.html">📖 Por Trás dos <span>Bastidores</span></a>
-  <a class="nav-link" href="dicionario_simbolos.html">Abrir Dicionário →</a>
+  <div style="display:flex;gap:6px">
+    <a class="nav-link" href="dicionario_simbolos.html">📖 Dicionário</a>
+    <a class="nav-link" href="jornadas.html">🧭 Jornadas</a>
+    <a class="nav-link" style="color:var(--accent);border-color:var(--accent);background:rgba(108,99,255,0.08)" href="sobre.html">👁️ Sobre</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -614,9 +618,9 @@
 <!-- SEÇÃO 4: O QUE VOCÊ ENCONTRA -->
 <section>
   <p class="section-label">O dicionário</p>
-  <h2>309 entradas. Uma jornada<br>devidamente costurada.</h2>
+  <h2><span id="stat-entries">…</span> entradas. Uma jornada<br>devidamente costurada.</h2>
   <p>
-    Cada entrada é um nó na rede. Entidades, símbolos, figuras históricas, conceitos bíblicos e filmes, todos conectados por referências cruzadas que revelam o padrão por trás do aparente caos.
+    Cada entrada é um nó na rede — distribuídas em <span id="stat-journeys">…</span> jornadas temáticas e documentadas em <span id="stat-sources">…</span> fontes. Entidades, símbolos, figuras históricas, conceitos bíblicos e filmes, todos conectados por referências cruzadas que revelam o padrão por trás do aparente caos.
   </p>
 
   <div class="cat-list">
@@ -673,8 +677,36 @@
   <p>Nada aqui será por acaso. Tudo devidamente costurado e apresentado em sequência lógica.</p>
   <div class="cta-group">
     <a class="btn-primary" href="dicionario_simbolos.html">📖 Abrir o Dicionário</a>
+    <a class="btn-primary" href="jornadas.html" style="background:transparent;border:1px solid var(--accent);color:var(--accent)">🧭 Ver Jornadas</a>
   </div>
 </div>
 
+<script src="simbolos.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  // Entradas e fontes vêm do simbolos.js já carregado
+  if (typeof DATA !== 'undefined') {
+    document.getElementById('stat-entries').textContent =
+      DATA.filter(Boolean).length.toLocaleString('pt-BR');
+  }
+  if (typeof SOURCES !== 'undefined') {
+    document.getElementById('stat-sources').textContent =
+      Object.keys(SOURCES).length.toLocaleString('pt-BR');
+  }
+
+  // Jornadas: conta os ids no array TRILHAS dentro do viewer
+  try {
+    const res = await fetch('dicionario_simbolos.html');
+    const text = await res.text();
+    const block = text.match(/const TRILHAS\s*=\s*\[([\s\S]*?)\];/);
+    if (block) {
+      const count = (block[1].match(/\bid:\s*'/g) || []).length;
+      document.getElementById('stat-journeys').textContent = count;
+    }
+  } catch (e) {
+    document.getElementById('stat-journeys').textContent = '—';
+  }
+});
+</script>
 </body>
 </html>
