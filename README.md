@@ -114,6 +114,18 @@ whisper "nome-do-arquivo.m4a" --language Portuguese --model small
 
 O Whisper gera vários formatos (`.txt`, `.srt`, `.vtt`). Use o `.txt`.
 
+## Prompt de auditoria de facts ausentes
+
+Usar quando quiser revisitar TXTs já processados e verificar se entradas existentes receberam apenas refs quando deveriam ter recebido facts. Anexar os TXTs originais da sessão a auditar:
+
+```
+Audit de facts ausentes — os TXTs em anexo já foram processados anteriormente. Releia-os e, para cada entrada existente do DATA que foi referenciada naquela sessão (recebeu refs novas), verifica se o conteúdo dos TXTs trazia um fato novo e específico sobre aquela entrada que não foi adicionado a facts[]. Adicione os facts ausentes sem remover nada. Regras:
+- não remova nada do que já existe
+- facts[] = informação factual verificável; não criar interps nem refs adicionais neste audit (apenas corrigir facts ausentes)
+- focar especialmente em entradas que naquela sessão receberam só refs e nenhum fact novo
+- ao terminar: audit de refs quebradas via Node.js e apresentar simbolos.js
+```
+
 ## Prompt padrão para adicionar TXTs
 
 Cole este prompt sempre que enviar novos TXTs ao Claude:
@@ -140,7 +152,7 @@ revise, adicione com excelência e inteligência considerando os existentes — 
 - ao terminar: avaliar se as novas entradas se encaixam em jornadas existentes (estender ids) ou se formam tema novo suficiente para uma trilha nova (≥ 4 entradas)
 ```
 
-Se a sessão do Claude estiver fria (contexto zerado), adicione antes:
+Se a sessão do Claude estiver fria (contexto zerado), adicione o preâmbulo abaixo antes de qualquer um dos prompts acima:
 
 ```
 Este projeto usa os arquivos: simbolos.js (DATA + SOURCES), dicionario_simbolos.html (viewer + TRILHAS), jornadas.html (página de jornadas — TRILHAS duplicado aqui, manter em sincronia), sobre.html e deploy.sh. Leia o simbolos.js e o dicionario_simbolos.html antes de começar.
