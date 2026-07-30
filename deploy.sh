@@ -5,7 +5,7 @@
 REPO="$HOME/Documents/dicionario-simbolos"
 OUTPUTS="/Users/lucasbraga/Library/Application Support/Claude/local-agent-mode-sessions/e6f8a0b9-0ad4-4508-916d-5f13c6355d4d/86cc1ccf-2f66-4b5b-9113-31e68c42569e/local_5f23b667-b22b-4e7a-80f9-e2bf004a6f28/outputs"
 
-MSG="${1:-Add: Os Nove Desconhecidos Caps 01–02 — 8 entradas (conselho-dos-nove, eneada-egipcia, nove-desconhecidos, andrija-puharich, saint-yves-dalveydre, schwaller-de-lubicz, ashoka, j-j-hurtak), fontes 119–120, trilha nove-ocultos — 481 entradas, 120 fontes, 30 jornadas}"
+MSG="${1:-Add: CITAS Caps 03-04 - 9 entradas novas, trilha vampirismo-iniciático criada, linhagem-do-dragao estendida - 532 entradas, 138 fontes, 36 jornadas}"
 
 echo "📦 Copiando arquivos..."
 cp "$OUTPUTS/simbolos.js" "$REPO/simbolos.js"

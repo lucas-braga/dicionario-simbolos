@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **481 entradas · 120 fontes · 30 jornadas temáticas · geo em 255 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **532 entradas · 138 fontes · 36 jornadas temáticas · geo em 279 entradas.**
 
 ## Estrutura
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (27)
+## Jornadas temáticas (33)
 
 | # | ID | Título |
 |---|---|---|
@@ -104,6 +104,9 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 28 | `hollywood-oculto` | Hollywood: A Grande Varinha de Azevinho |
 | 29 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
 | 30 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
+| 31 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
+| 32 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
+| 33 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
 
 ## Como transcrever com Whisper
 
@@ -119,10 +122,10 @@ O Whisper gera vários formatos (`.txt`, `.srt`, `.vtt`). Use o `.txt`.
 Usar quando quiser revisitar TXTs já processados e verificar se entradas existentes receberam apenas refs quando deveriam ter recebido facts. Anexar os TXTs originais da sessão a auditar:
 
 ```
-Audit de facts ausentes — os TXTs em anexo já foram processados anteriormente. Releia-os e, para cada entrada existente do DATA que foi referenciada naquela sessão (recebeu refs novas), verifica se o conteúdo dos TXTs trazia um fato novo e específico sobre aquela entrada que não foi adicionado a facts[]. Adicione os facts ausentes sem remover nada. Regras:
+Audit de facts e interps ausentes — os TXTs em anexo já foram processados anteriormente. Releia-os e, para cada entrada existente do DATA que foi referenciada naquela sessão (recebeu refs novas), verifica se o conteúdo dos TXTs trazia um fato novo e específico sobre aquela entrada que não foi adicionado a facts[], ou uma interpretação nova e específica do apresentador que não foi adicionada a interps[]. Adicione o que estiver ausente sem remover nada. Regras:
 - não remova nada do que já existe
-- facts[] = informação factual verificável; não criar interps nem refs adicionais neste audit (apenas corrigir facts ausentes)
-- focar especialmente em entradas que naquela sessão receberam só refs e nenhum fact novo
+- facts[] = informação factual verificável; interps[] = interpretações e conclusões específicas do apresentador; não criar refs adicionais neste audit
+- focar especialmente em entradas que naquela sessão receberam só refs e nenhum fact ou interp novo
 - ao terminar: audit de refs quebradas via Node.js e apresentar simbolos.js
 ```
 
@@ -135,7 +138,7 @@ revise, adicione com excelência e inteligência considerando os existentes — 
 - não remova nada do que já existe
 - corrija nomes próprios distorcidos pelo Whisper antes de processar
 - enriqueça entradas existentes em vez de duplicar
-- ao enriquecer entradas existentes: adicionar facts[] sempre que o conteúdo trouxer fato novo e específico sobre aquela entrada — não apenas refs; antes de fechar, revisar todas as entradas que receberam só refs e verificar se havia fato específico que deveria ter ido para facts[]
+- ao enriquecer entradas existentes: adicionar facts[] sempre que o conteúdo trouxer fato novo e específico sobre aquela entrada, e adicionar interps[] sempre que o apresentador fizer uma interpretação ou conclusão nova e específica sobre aquela entrada — não apenas refs; antes de fechar, revisar todas as entradas que receberam só refs e verificar se havia fact ou interp específico que deveria ter sido adicionado
 - summary: nunca alterar por padrão — novos detalhes vão para facts[]; só reescrever o summary se o novo conteúdo mudar fundamentalmente a identidade da entrada (ex: revelar continuidade moderna de uma ordem catalogada como medieval)
 - facts[] = informação factual verificável; interps[] = interpretações e conclusões específicas do apresentador
 - refs bidirecionais obrigatórias — quando A referencia B, B deve referenciar A
@@ -148,6 +151,7 @@ revise, adicione com excelência e inteligência considerando os existentes — 
   - divindades → somente se houver templo ou local de culto principal específico
   - símbolos abstratos, cinema, conceitos bíblicos sem lugar físico → omitir os três campos
   - regra pais/local: usar o local mais específico e historicamente relevante para a entrada (não o país inteiro quando há cidade clara)
+- strings JS: usar aspas simples; acentos (á, é, ã, ô, ç…) são válidos e obrigatórios — NÃO remover; apenas apóstrofo (') deve ser evitado (substituir por Unicode ’ ou reformular a frase)
 - ao terminar: audit de refs quebradas via Node.js e apresentar simbolos.js
 - ao terminar: avaliar se as novas entradas se encaixam em jornadas existentes (estender ids) ou se formam tema novo suficiente para uma trilha nova (≥ 4 entradas)
 ```
