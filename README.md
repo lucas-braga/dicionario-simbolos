@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **532 entradas · 138 fontes · 36 jornadas temáticas · geo em 279 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **532 entradas · 138 fontes · 36 jornadas temáticas · geo em 281 entradas.**
 
 ## Estrutura
 
@@ -29,7 +29,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 - **Referências cruzadas bidirecionais** — cada entrada mostra o que referencia e quem a referencia
 - **Deep linking** — a URL atualiza com o `#id` da entrada aberta, permitindo compartilhar um link direto para qualquer símbolo
 - **Trilha de navegação** — ao navegar pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
-- **Jornadas** — 22 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
+- **Jornadas** — 36 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
 
 ## Categorias
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (33)
+## Jornadas temáticas (36)
 
 | # | ID | Título |
 |---|---|---|
@@ -101,12 +101,15 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 25 | `napoleon-oculto` | O Homem Vermelho de Napoleão |
 | 26 | `paises-nao-integrados` | O Mapa do Pentágono e a Grande Guerra Final |
 | 27 | `choque-civilizacoes` | O Choque de Civilizações |
-| 28 | `hollywood-oculto` | Hollywood: A Grande Varinha de Azevinho |
-| 29 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
-| 30 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
-| 31 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
-| 32 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
-| 33 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
+| 28 | `hollywood-oculto` | A Varinha Mágica de Hollywood |
+| 29 | `tolkien-oculto` | Tolkien, The Inklings e a Golden Dawn |
+| 30 | `linhagem-do-dragao` | Linhagem do Dragão: dos Ubaid à Ordem de Vlad |
+| 31 | `vampirismo-iniciático` | Vampirismo Iniciático: Sangue, Cabeça e Glândula Pineal |
+| 32 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
+| 33 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
+| 34 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
+| 35 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
+| 36 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
 
 ## Como transcrever com Whisper
 
