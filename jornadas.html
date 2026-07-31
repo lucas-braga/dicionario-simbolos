@@ -622,8 +622,7 @@ function getProgress(tid) {
   try {
     const v = localStorage.getItem('trilha-' + tid);
     return v === null ? null : parseInt(v, 10);
-  } 
-        { id: 'nobreza-negra-trail', titulo: 'A Nobreza Negra: de Veneza ao Comitê dos 300', desc: 'Da linhagem veneziana dos Guelfos medievais às famílias que controlam os bancos centrais e o Comitê dos 300: a Nobreza Negra por trás de séculos de guerras, revoluções e colapsos financeiros planejados.', ids: ['edomitas', 'guelfos', 'nobreza-negra', 'tratado-de-verona', 'guilherme-de-orange', 'banco-da-inglaterra', 'companhia-das-indias-orientais', 'lugano', 'giovanni-agnelli', 'aurelio-peccei', 'clube-de-roma', 'comite-dos-300', 'aldo-moro', 'brigadas-vermelhas', 'harriman', 'henry-kissinger'] },catch (e) { return null; }
+  } catch (e) { return null; }
 }
 
 function launchTrail(trailId, idx) {
