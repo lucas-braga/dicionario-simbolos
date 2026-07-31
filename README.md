@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **532 entradas · 138 fontes · 36 jornadas temáticas · geo em 281 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **609 entradas · 158 fontes · 42 jornadas temáticas · geo em 343 entradas.**
 
 ## Estrutura
 
@@ -29,7 +29,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 - **Referências cruzadas bidirecionais** — cada entrada mostra o que referencia e quem a referencia
 - **Deep linking** — a URL atualiza com o `#id` da entrada aberta, permitindo compartilhar um link direto para qualquer símbolo
 - **Trilha de navegação** — ao navegar pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
-- **Jornadas** — 36 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
+- **Jornadas** — 41 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
 
 ## Categorias
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (36)
+## Jornadas temáticas (41)
 
 | # | ID | Título |
 |---|---|---|
@@ -110,6 +110,12 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 34 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
 | 35 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
 | 36 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
+| 37 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
+| 38 | `transhumanismo-silicio` | Transhumanismo no Vale do Silício: da Gnose ao Deus de Silício |
+| 39 | `triangulo-poder-global` | O Triângulo do Poder Global: CFR, Bilderberg e Comissão Trilateral |
+| 40 | `cartel-bancario` | O Cartel Bancário: dos Rothschilds à Reserva Federal |
+| 41 | `imperialismo-britanico` | Do Imperialismo ao Governo Mundial: Rhodes, Ruskin e a Mesa Redonda |
+| 42 | `nobreza-negra-trail` | A Nobreza Negra: de Veneza ao Comitê dos 300 |
 
 ## Como transcrever com Whisper
 
