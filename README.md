@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **609 entradas · 158 fontes · 42 jornadas temáticas · geo em 343 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **631 entradas · 163 fontes · 45 jornadas temáticas · geo em 346 entradas.**
 
 ## Estrutura
 
@@ -29,7 +29,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 - **Referências cruzadas bidirecionais** — cada entrada mostra o que referencia e quem a referencia
 - **Deep linking** — a URL atualiza com o `#id` da entrada aberta, permitindo compartilhar um link direto para qualquer símbolo
 - **Trilha de navegação** — ao navegar pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
-- **Jornadas** — 41 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
+- **Jornadas** — 45 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
 
 ## Categorias
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (41)
+## Jornadas temáticas (45)
 
 | # | ID | Título |
 |---|---|---|
@@ -116,6 +116,9 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 40 | `cartel-bancario` | O Cartel Bancário: dos Rothschilds à Reserva Federal |
 | 41 | `imperialismo-britanico` | Do Imperialismo ao Governo Mundial: Rhodes, Ruskin e a Mesa Redonda |
 | 42 | `nobreza-negra-trail` | A Nobreza Negra: de Veneza ao Comitê dos 300 |
+| 43 | `diluvio-trail` | O Dilúvio Universal: Memória ou Evento Real? |
+| 44 | `jung-eneagrama-trail` | Jung, Eneagrama e a Psicologia Oculta |
+| 45 | `dante-hermetico-trail` | Dante e o Hermetismo Medieval |
 
 ## Como transcrever com Whisper
 

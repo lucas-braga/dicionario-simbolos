@@ -5,7 +5,7 @@
 REPO="$HOME/Documents/dicionario-simbolos"
 OUTPUTS="/Users/lucasbraga/Library/Application Support/Claude/local-agent-mode-sessions/e6f8a0b9-0ad4-4508-916d-5f13c6355d4d/86cc1ccf-2f66-4b5b-9113-31e68c42569e/local_5f23b667-b22b-4e7a-80f9-e2bf004a6f28/outputs"
 
-MSG="${1:-Add: Nobreza Negra - 14 entradas novas (nobreza-negra, guelfos, tratado-de-verona, edomitas, guilherme-de-orange, banco-da-inglaterra, companhia-das-indias-orientais, tavistock, giovanni-agnelli, aurelio-peccei, lugano, aldo-moro, brigadas-vermelhas, ordem-da-jarreteira), jornada nobreza-negra-trail 16 ids, 42 jornadas - 609 entradas, 158 fontes}"
+MSG="${1:-Add: Dante Alighieri e Hermetismo Medieval - 4 entradas novas (dante-alighieri, divina-comedia, fedeli-damore, fede-santa), jornada dante-hermetico-trail 12 ids, 45 jornadas - 631 entradas, 163 fontes}"
 
 echo "📦 Copiando arquivos..."
 cp "$OUTPUTS/simbolos.js" "$REPO/simbolos.js"
