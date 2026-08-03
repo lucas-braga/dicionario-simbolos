@@ -1458,9 +1458,17 @@ document.getElementById('modalOverlay').addEventListener('click', (e) => {
 
 document.querySelectorAll('.filter-btn:not(.src-btn)').forEach(btn => {
   btn.addEventListener('click', () => {
+    const isActive = btn.classList.contains('active');
+    const isAll = btn.dataset.cat === 'all';
     document.querySelectorAll('.filter-btn:not(.src-btn)').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.cat;
+    if (isActive && !isAll) {
+      // toggle off: volta ao Todos
+      document.querySelector('.filter-btn[data-cat="all"]').classList.add('active');
+      activeFilter = 'all';
+    } else {
+      btn.classList.add('active');
+      activeFilter = btn.dataset.cat;
+    }
     renderCards();
   });
 });
