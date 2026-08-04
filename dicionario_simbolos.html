@@ -531,6 +531,34 @@
   .search-clear.visible { display: block; }
   .search-clear:hover { color: var(--text); background: var(--surface2); }
 
+
+  /* MATCH SNIPPET */
+  .match-snippet {
+    font-size: 0.77rem;
+    color: var(--text);
+    background: var(--surface2);
+    border-left: 2px solid var(--accent);
+    padding: 4px 8px;
+    border-radius: 0 4px 4px 0;
+    margin: 4px 0 6px;
+    line-height: 1.45;
+  }
+  .match-label {
+    font-size: 0.67rem;
+    font-weight: 600;
+    margin-right: 4px;
+    opacity: 0.65;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .match-snippet mark {
+    background: #f5c400;
+    color: #111;
+    border-radius: 2px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+
   /* MODAL BACK BUTTON */
   .modal-back {
     display: inline-flex;
@@ -769,7 +797,7 @@
 </div>
 
 <div class="journeys-nav-wrap">
-  <a class="journeys-nav-link" href="jornadas.html">🧭 <span>Jornadas temáticas</span> <span class="journeys-nav-count" id="journeysNavCount">39 trilhas →</span></a>
+  <a class="journeys-nav-link" href="jornadas.html">🧭 <span>Jornadas temáticas</span> <span class="journeys-nav-count" id="journeysNavCount"><span id="journeysNavN">56</span> trilhas →</span></a>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -781,8 +809,9 @@
   <div class="welcome-modal">
     <div class="welcome-icon">📖</div>
     <h2>Dicionário de<br><span>Símbolos e Crenças</span></h2>
+    <p style="font-size:0.78rem;opacity:0.6;margin:0 0 12px;letter-spacing:0.03em"><span id="popupEntradas">762</span> entradas · <span id="popupJornadasN">56</span> jornadas</p>
     <p>Um sistema de referência cruzada de símbolos, entidades, figuras e conceitos identificados em estudos sobre simbologia bíblica e profética.</p>
-    <p>Cada entrada se conecta às demais por referências bidirecionais. Navegue pelo dicionário, filtre por categoria, ou siga uma das <strong>39 jornadas temáticas</strong> — trilhas de leitura curadas que conduzem de um ponto a outro com contexto acumulado.</p>
+    <p>Cada entrada se conecta às demais por referências bidirecionais. Navegue pelo dicionário, filtre por categoria, ou siga uma das <strong id="popupJornadas">56 jornadas temáticas</strong> — trilhas de leitura curadas que conduzem de um ponto a outro com contexto acumulado.</p>
     <button class="welcome-btn" id="welcomeBtn" onclick="var o=document.getElementById('welcomeOverlay');if(o)o.style.display='none';try{localStorage.setItem('dic-boas-vindas','1')}catch(e){}">Entrar →</button>
   </div>
 </div>
@@ -853,6 +882,7 @@ function updateFilterCounts() {
 // --- JORNADAS (trilhas temáticas curadas) ---
 // Para reverter: remova este bloco, a div #journeys no HTML e o CSS .journey*
 const TRILHAS = [
+  { id: 'hermetismo-88-trail', titulo: 'O Segredo do 88: Hermetismo, Baphomet e a Magia Profunda', desc: 'Da Tábua de Esmeralda ao número 88 — os símbolos herméticos que a elite usa para codificar o "como acima, como abaixo" em filmes, pianos e tabuleiros de xadrez.', ids: ['tabua-de-esmeralda', 'hermes-trismegistus', 'corpus-hermeticum', 'hermetismo', 'baphomet', 'ouroboros', 'numero-88', 'tabuleiro-xadrez', 'gadu', 'pedra-filosofal', 'nicolas-flamel'] },
   {
     id: 'gotthard',
     titulo: 'A saga do Túnel de Gotthard',
@@ -863,7 +893,7 @@ const TRILHAS = [
     id: 'cern',
     titulo: 'CERN: o portal do abismo',
     desc: 'Do templo de Apolo em Apolliacum à estátua de Shiva: a camada espiritual do maior laboratório de física do mundo.',
-    ids: ['cern', 'apolo-abaddon', 'shiva', 'experimento-atlas', 'jachin-e-boaz', 'boson-de-higgs', 'projeto-alice-cern', 'sirius-sincrotron', 'teoria-das-cordas', 'templo-centro-tempo', 'demiurgo', 'arcontes', 'pleroma', 'rephaim', 'tartaro', 'ligo', 'materia-escura', 'djinn', 'chave-de-davi'],
+    ids: ['cern', 'apolo-abaddon', 'shiva', 'experimento-atlas', 'jachin-e-boaz', 'boson-de-higgs', 'projeto-alice-cern', 'sirius-sincrotron', 'teoria-das-cordas', 'templo-centro-tempo', 'demiurgo', 'arcontes', 'pleroma', 'rephaim', 'tartaro', 'ligo', 'materia-escura', 'djinn', 'chave-de-davi', 'stephen-hawking', 'dwave-computador', 'torre-de-babel'],
   },
   {
     id: 'linhagem',
@@ -899,7 +929,7 @@ const TRILHAS = [
     id: 'codigo-007',
     titulo: 'O código 007',
     desc: 'De Lâmech e Tubal-Cain a James Bond: como a senha maçônica mais antiga do mundo foi cifrada no agente secreto mais famoso da cultura pop.',
-    ids: ['lamech', 'tubal-caim', 'hiram-abif', 'jachin-e-boaz', 'maconaria', 'james-bond', 'colunas-templo', 'numero-33', 'shriners', 'skull-and-bones', 'estrela-flamejante', 'albert-pike', 'grande-obra', 'ordo-ab-chao'],
+    ids: ['lamech', 'tubal-caim', 'hiram-abif', 'jachin-e-boaz', 'maconaria', 'john-dee', 'edward-kelley', 'magia-enoquiana', 'espelho-negro', 'james-bond', 'ian-fleming', 'colunas-templo', 'numero-33', 'shriners', 'skull-and-bones', 'estrela-flamejante', 'albert-pike', 'grande-obra', 'ordo-ab-chao'],
   },
   {
     id: 'cainitas-lenda',
@@ -941,7 +971,7 @@ const TRILHAS = [
     id: 'feticao-tempo',
     titulo: 'O feitiço do tempo',
     desc: 'Do festival da marmota em Punxsutawney ao loop do ARQ e ao Zero da Zero Hora: como a mídia Hollywood codifica programação preditiva do "reset do tempo" — e por que Inanna/Ishtar, o oroboros e o XO aparecem em todos eles.',
-    ids: ['dia-da-marmota', 'imbolc', 'loop-temporal', 'arq', 'inanna', 'zero-hora', 'matrix', 'oroboros', 'circulo-magico', 'kenneth-grant', 'viagem-tempo', 'ano-sabatico', 'dia-de-deus'],
+    ids: ['dia-da-marmota', 'imbolc', 'loop-temporal', 'arq', 'inanna', 'zero-hora', 'matrix', 'ouroboros', 'circulo-magico', 'kenneth-grant', 'viagem-tempo', 'ano-sabatico', 'dia-de-deus'],
   },
   {
     id: 'samhain-mortos',
@@ -959,7 +989,7 @@ const TRILHAS = [
     id: 'retorno-pagan',
     titulo: 'O Retorno do Paganismo',
     desc: 'De Cosimo de Medici ao Éon de Hórus: como 13 manuscritos herméticos reintroduziram o paganismo no Ocidente cristão, gerando a díade cocriação-teogenia — e como magos brancos e negros, apesar de divergirem nos meios, convergem inevitavelmente para o mesmo fim.',
-    ids: ['cosimo-de-medici', 'marsilio-ficino', 'hermetismo', 'corpus-hermeticum', 'gnose', 'teogenia', 'cocriacao', 'grande-fraternidade-branca', 'eon-de-horus', 'wicca', 'neopaganismo', 'ecofascismo', 'tabua-de-esmeralda', 'prisca-teologia', 'telema', 'magia-negra', 'theurgia', 'abramelin', 'magia-enoquiana', 'pedra-filosofal', 'grande-obra', 'arcontes', 'pleroma', 'core-persephone', 'lemuria', 'virgem-negra', 'basilides', 'valentinus', 'cibele', 'el-canaanita', 'irmandade-saturno'],
+    ids: ['cosimo-de-medici', 'marsilio-ficino', 'hermetismo', 'corpus-hermeticum', 'gnose', 'teogenia', 'cocriacao', 'grande-fraternidade-branca', 'eon-de-horus', 'wicca', 'neopaganismo', 'ecofascismo', 'tabua-de-esmeralda', 'prisca-teologia', 'telema', 'magia-negra', 'theurgia', 'abramelin', 'magia-enoquiana', 'pedra-filosofal', 'grande-obra', 'arcontes', 'pleroma', 'core-persephone', 'lemuria', 'virgem-negra', 'basilides', 'valentinus', 'cibele', 'el-canaanita', 'irmandade-saturno', 'baphomet', 'ouroboros', 'gadu'],
   },
   {
     id: 'ocultismo-nazista',
@@ -1043,7 +1073,7 @@ const TRILHAS = [
     id: 'sementes-da-matrix',
     titulo: 'Sementes da Matrix: Engenharia Social e o Ocultismo Pop',
     desc: 'Como a elite planta símbolos ocultistas na mente infantil via mídia de massa e os colhe décadas depois: de Dungeons & Dragons (1983) à propaganda Renault (2020), da lenda dos Anunnaki/Tiamat ao trans-humanismo como próxima colheita, do unicórnio-Anel de Tolkien às ilhas flutuantes de Avatar/Yggdrasil — uma cadeia contínua de engenharia social de longo prazo.',
-    ids: ['engenharia-social', 'caverna-do-dragao', 'apolo', 'anunnaki', 'tiamat', 'nibiru', 'yggdrasil', 'matrix', 'transhumanismo', 'alice-pais-maravilhas', 'nefilins', 'tolkien', 'portais-dimensionais', 'terminator', 'outsider', 'sigmund-freud', 'psicanalise', 'seculo-do-ego', 'mesmerismo'],
+    ids: ['engenharia-social', 'caverna-do-dragao', 'apolo', 'anunnaki', 'tiamat', 'nibiru', 'yggdrasil', 'matrix', 'transhumanismo', 'alice-pais-maravilhas', 'nefilins', 'tolkien', 'portais-dimensionais', 'terminator', 'outsider', 'sigmund-freud', 'psicanalise', 'seculo-do-ego', 'mesmerismo', 'numero-88', 'baphomet', 'tabuleiro-xadrez', 'gadu', 'george-orwell', 'big-brother', 'quarto-101', 'numero-911', 'mega-ritual', 'michael-hoffman'],
   },
   {
     id: 'surrealismo-elite',
@@ -1085,7 +1115,7 @@ const TRILHAS = [
     id: 'transhumanismo-silicio',
     titulo: 'A Mente da Máquina: Transhumanismo no Vale do Silício',
     desc: 'Do cosmismo russo de Nikolai Fyodorov às fortunas de Sergey Brin, Peter Thiel e Elon Musk: como o Vale do Silício se tornou o templo do technognosticismo — a versão materialista e invertida do gnosticismo antigo. De Julian Huxley cunhando o termo em 1957 ao upload de consciência de Kurzweil, passando pelas cabeças em jarras de Futurama e o diagnóstico de Rushkoff: um plano de evacuação da humanidade.',
-    ids: ['vale-do-silicio', 'transhumanismo', 'ray-kurzweil', 'julian-huxley', 'nikolai-fedorov', 'cosmismo-russo', 'technognosticismo', 'elon-musk', 'sergey-brin', 'peter-thiel', 'ia-como-besta', 'singularidade', 'douglas-rushkoff', 'futurama', 'matt-groening', 'global-future-2045', 'imortalidade-cibernetica', 'demiurgo'],
+    ids: ['vale-do-silicio', 'transhumanismo', 'ray-kurzweil', 'julian-huxley', 'nikolai-fedorov', 'cosmismo-russo', 'technognosticismo', 'elon-musk', 'sergey-brin', 'peter-thiel', 'ia-como-besta', 'singularidade', 'douglas-rushkoff', 'futurama', 'matt-groening', 'global-future-2045', 'imortalidade-cibernetica', 'demiurgo', 'smart-dust', '322'],
   },
   { id: 'cartel-bancario', titulo: 'O Cartel Bancário: dos Rothschilds à Reserva Federal', desc: 'Como o capital privado europeu capturou o sistema financeiro americano: da parceria Peabody-Morgan com os Rothschilds em Londres à reunião secreta na ilha Jekyll que criou o Federal Reserve em 1913 — o roteiro documentado da privatização do dinheiro.', ids: ['george-peabody', 'rothschild', 'jp-morgan', 'harriman', 'john-d-rockefeller', 'paul-warburg', 'federal-reserve', 'standard-oil', 'chase-manhattan', 'rockefeller-foundation', 'mayer-rothschild', 'thurn-und-taxis', 'nathan-rothschild', 'jacob-schiff', 'kuhn-loeb', 'reserva-fracionaria', 'de-beers', 'cecil-rhodes', 'banco-da-inglaterra', 'guilherme-de-orange', 'nobreza-negra'] },
   { id: 'imperialismo-britanico', titulo: 'Do Imperialismo ao Governo Mundial: Rhodes, Ruskin e a Mesa Redonda', desc: 'De Platao aos filosofos-reis modernos: como o imperialismo britanico do seculo XIX se transformou na rede global de poder do seculo XX.', ids: ['john-ruskin', 'helena-blavatsky', 'golden-dawn', 'maconaria', 'de-beers', 'cecil-rhodes', 'lord-alfred-milner', 'mesa-redonda-britanica', 'carroll-quigley', 'chatham-house', 'cfr', 'instituto-estudos-avancados', 'comite-dos-300', 'nova-ordem-mundial', 'guilherme-de-orange', 'banco-da-inglaterra', 'companhia-das-indias-orientais', 'nobreza-negra', 'guelfos', 'tratado-de-verona'] },
@@ -1094,18 +1124,37 @@ const TRILHAS = [
     id: 'diluvio-trail',
     titulo: 'O Dilúvio Universal: Memória ou Evento Real?',
     desc: 'O dilúvio em 600+ culturas — de Noé a Gilgamesh, de Ziusudra a Deucalião — e os Nefilins como causa do julgamento divino.',
-    ids: ['diluvio-universal', 'nefilins', 'vigilantes', 'noe', 'ziusudra', 'utnapistin', 'gilgamesh', 'manu-hindu', 'deucaliao', 'prometeu', 'atlantida', 'anunnaki', 'dingir', 'livro-de-enoque', 'cain-abel', 'rephaim', 'gogue', 'emin', 'zamzummim']
+    ids: ['diluvio-universal', 'nefilins', 'vigilantes', 'noe', 'ziusudra', 'utnapistin', 'gilgamesh', 'manu-hindu', 'deucaliao', 'prometeu', 'atlantida', 'anunnaki', 'dingir', 'livro-de-enoque', 'cain-abel', 'rephaim', 'gogue', 'emin', 'zamzummim', 'flavio-josefo', 'querubim']
   },
   { id: 'jung-eneagrama-trail', titulo: 'Jung, Eneagrama e a Psicologia Oculta', desc: 'Do sistema cósmico de Gurdjieff ao espírito-guia de Jung: como o ocultismo esotérico tornou-se ferramenta psico-espiritual infiltrada nas igrejas e no mercado corporativo.', ids: ['gurdjieff', 'ouspenski', 'oscar-ichazo', 'metatron', 'eneagrama', 'claudio-naranjo', 'esalen-institute', 'new-age', 'carl-jung', 'philemon', 'inconsciente-coletivo', 'mbti', 'sufismo', 'gnose', 'geometria-sagrada', 'ubermensch'] },
-  { id: 'dante-hermetico-trail', titulo: 'Dante e o Hermetismo Medieval', desc: 'A Divina Comédia como mapa iniciático: as três fases alquímicas, o simbolismo cabalístico dos círculos do Inferno e a rede de ordens secretas — Fede Santa, Fedeli d’Amore, Templários e Rosacruz — que Dante habitava e codificou em versos.', ids: ['dante-alighieri', 'divina-comedia', 'fedeli-damore', 'fede-santa', 'rene-guenon', 'cavaleiros-templarios', 'rosacruz', 'hermetismo', 'grande-obra', 'arvore-da-vida', 'pedra-filosofal', 'gnose', 'galileu-galilei', 'academia-florentina', 'vortice'] },
+  { id: 'dante-hermetico-trail', titulo: 'Dante e o Hermetismo Medieval', desc: 'A Divina Comédia como mapa iniciático: as três fases alquímicas, o simbolismo cabalístico dos círculos do Inferno e a rede de ordens secretas — Fede Santa, Fedeli d’Amore, Templários e Rosacruz — que Dante habitava e codificou em versos.', ids: ['dante-alighieri', 'divina-comedia', 'fedeli-damore', 'fede-santa', 'rene-guenon', 'cavaleiros-templarios', 'rosacruz', 'hermetismo', 'grande-obra', 'arvore-da-vida', 'pedra-filosofal', 'gnose', 'galileu-galilei', 'academia-florentina', 'vortice', 'nicolas-flamel', 'baphomet', 'ouroboros'] },
   { id: 'rephaim-gigantes-trail', titulo: 'Os Refaim: Gigantes, Abismo e o Retorno de Gog', desc: 'A raça lendária dos Refaim — da aristocracia dos condenados ao arquétipo profético de Gog, as ruínas megalíticas de Baalbek e o plano da elite para reabrir o abismo e reeditar a genética humana.', ids: ['rephaim', 'nefilins', 'vigilantes', 'tartaro', 'gogue', 'baalbek', 'emin', 'zamzummim', 'anakim', 'gog-magog', 'diluvio-universal', 'cern', 'thanatos', 'djinn', 'materia-escura', 'chave-de-davi', 'ligo', 'charles-dickens', 'mesmerismo', 'edgar-allan-poe', 'valdemar', 'espiritismo', 'phineas-quimby', 'mary-baker-eddy'] },
-  { id: 'fisica-abismo-trail', titulo: 'Física Quântica e o Abismo: da Matéria Escura aos Refaim', desc: 'Como a física moderna — Bóson de Higgs, teoria das cordas, matéria escura, buracos negros e LIGO — é interpretada como mapa científico da dimensão-prisão onde os Refaim e djinn estão confinados.', ids: ['cern', 'boson-de-higgs', 'teoria-das-cordas', 'ligo', 'materia-escura', 'tartaro', 'rephaim', 'djinn', 'chave-de-davi', 'quimera-genetica', 'galileu-galilei'] },
-  { id: 'literatura-oculta-trail', titulo: 'Literatura Ocultista: de Dickens ao Controle de Mentes', desc: 'Como romancistas vitorianos — Dickens, du Maurier, Poe, Mary Shelley — documentaram e codificaram o ocultismo de sua época: mesmerismo, magia sexual, alquimia espiritual e drogas como portais para a dimensão dos Refaim.', ids: ['charles-dickens', 'edwin-drood', 'mesmerismo', 'svengali', 'paschal-beverly-randolph', 'mary-shelley', 'pedra-filosofal', 'rosacruz', 'aleister-crowley', 'djinn', 'alice-pais-maravilhas', 'rephaim', 'edgar-allan-poe', 'valdemar', 'johann-gassner', 'phineas-quimby'] },
+  { id: 'fisica-abismo-trail', titulo: 'Física Quântica e o Abismo: da Matéria Escura aos Refaim', desc: 'Como a física moderna — Bóson de Higgs, teoria das cordas, matéria escura, buracos negros e LIGO — é interpretada como mapa científico da dimensão-prisão onde os Refaim e djinn estão confinados.', ids: ['cern', 'boson-de-higgs', 'teoria-das-cordas', 'ligo', 'materia-escura', 'tartaro', 'rephaim', 'djinn', 'chave-de-davi', 'quimera-genetica', 'galileu-galilei', 'stephen-hawking', 'dwave-computador'] },
+  { id: 'literatura-oculta-trail', titulo: 'Literatura Ocultista: de Dickens ao Controle de Mentes', desc: 'Como romancistas vitorianos — Dickens, du Maurier, Poe, Mary Shelley — documentaram e codificaram o ocultismo de sua época: mesmerismo, magia sexual, alquimia espiritual e drogas como portais para a dimensão dos Refaim.', ids: ['charles-dickens', 'edwin-drood', 'mesmerismo', 'svengali', 'paschal-beverly-randolph', 'mary-shelley', 'pedra-filosofal', 'rosacruz', 'aleister-crowley', 'djinn', 'alice-pais-maravilhas', 'rephaim', 'edgar-allan-poe', 'valdemar', 'johann-gassner', 'phineas-quimby', 'george-orwell', 'aldous-huxley'] },
   { id: 'mesmerismo-espiritismo-trail', titulo: 'Mesmerismo e Espiritismo: da Hipnose ao Portal dos Mortos', desc: 'De Franz Anton Mesmer a Helena Blavatsky: como o magnetismo animal, o transe hipnótico e o Espiritismo formaram o projeto ocultista de acesso à dimensão dos Refaim — e como seus herdeiros (Novo Pensamento, Ciência Cristã, Teosofia) prepararam o terreno cultural para a normalização desse contato.', ids: ['mesmerismo', 'johann-gassner', 'edgar-allan-poe', 'phineas-quimby', 'mary-baker-eddy', 'new-thought', 'espiritismo', 'helena-blavatsky', 'paschal-beverly-randolph', 'teosofia', 'rephaim', 'glandula-pineal', 'sigmund-freud', 'jean-martin-charcot', 'psicanalise', 'seculo-do-ego'] }
 ,
   { id: 'merovingios-trail', titulo: 'Os Merovíngios: Do Quinotauro ao Priorado de Sião', desc: 'A linhagem merovíngia rastreada desde o mito do Quinotauro até a infiltração da Igreja e a fundação do Priorado de Sião — passando por Ormésius, a Sociedade de Hormuz, Orval e a Primeira Cruzada.', ids: ['merovingios', 'quinotauro', 'meroveu', 'neptuno', 'era-de-ouro', 'virgem-negra', 'maria-madalena', 'atanasio-alexandria', 'arianismo', 'ormesius', 'terapeutas', 'sociedade-hormuz', 'dagoberto-ii', 'ursus', 'orval', 'godofredo-bouillon', 'bernardo-claraval', 'ordem-cisterciense', 'priorado-de-siao', 'urbano-ii', 'charles-nodier', 'filadelfos', 'septimania', 'guilhem-gellone', 'sigisbert-iv', 'cataros', 'linguedoc', 'rex-deus', 'templo-salomao', 'hugues-payens', 'rennes-le-chateau', 'pierre-plantard', 'cicambrianos', 'arduinna', 'catedral-chartres', 'hitler', 'cain', 'ham-cam', 'enki', 'kingu', 'cthulhu', 'lovecraft', 'tracy-twyman', 'necronomicon', 'makara', 'livro-da-lei', 'telchines', 'holy-blood-holy-grail', 'rosslyn', 'virgo-paritura', 'fatima'] },
   { id: 'catedral-misterios-trail', titulo: 'A Catedral dos Mistérios: Chartres, o Graal e a Virgem Oculta', desc: 'Dos druidas a Chartres: como a deusa mãe foi infiltrada no Cristianismo e o Graal revelado como linhagem anticristã.', ids: ['catedral-chartres', 'virgo-paritura', 'virgem-negra', 'druidas', 'rosslyn', 'holy-blood-holy-grail', 'graal', 'alice-bailey', 'maria-madalena', 'priorado-de-siao'] },
-  { id: 'saturno-trail', titulo: 'Saturno: O Verdadeiro Senhor dos Anéis', desc: 'Do deus canaaneu El ao cubo negro da Kaaba — o culto saturnino que atravessa Babilônia, Roma, a Maçonaria e a era de Aquário.', ids: ['saturno', 'el-canaanita', 'cibele', 'onfalo', 'ferro-meteorico', 'cubo-negro', 'kepler', 'irmandade-saturno', 'era-de-ouro', 'era-de-aquario', 'pan', 'saturnalia', 'sol-invictus', 'pedra-filosofal', 'sol-negro', 'set-egipcio', 'osiris', 'horus', 'borg-star-trek', 'tesseract-marvel'] },
+  { id: 'saturno-trail', titulo: 'Saturno: O Verdadeiro Senhor dos Anéis', desc: 'Do deus canaaneu El ao cubo negro da Kaaba — o culto saturnino que atravessa Babilônia, Roma, a Maçonaria e a era de Aquário.', ids: ['saturno', 'el-canaanita', 'cibele', 'onfalo', 'ferro-meteorico', 'cubo-negro', 'kepler', 'irmandade-saturno', 'era-de-ouro', 'era-de-aquario', 'pan', 'saturnalia', 'sol-invictus', 'pedra-filosofal', 'sol-negro', 'set-egipcio', 'osiris', 'horus', 'borg-star-trek', 'tesseract-marvel', 'ixxi', 'numero-911'] },
+    {
+    id: 'numerologia-sagrada-trail',
+    titulo: 'Numerologia Sagrada: 911, IXXI e o Projeto Transumano',
+    desc: 'A linguagem numerica oculta da elite: do sistema 1-0-11-101-911 ao simbolo IXXI que codifica Saturno e o DNA transumano, dos mega-rituais televisivos ao Smart Dust como prototipo da materia negra programavel — uma cadeia numerica que conecta o 9/11 ao projeto de imortalidade sem Deus.',
+    ids: ['numerologia', 'numero-911', 'ixxi', 'mega-ritual', 'michael-hoffman', '322', 'transhumanismo', 'smart-dust', 'cubo-negro', 'saturno'],
+  },
+  {
+    id: 'dee-enoquiana-trail',
+    titulo: 'A Linhagem Enoquiana: de John Dee ao JPL da NASA',
+    desc: 'Do espião de Elizabeth I ao foguete lunar: como a Magia Enoquiana de Dee e Kelley moldou as ordens ocultas modernas e chegou ao JPL via Jack Parsons.',
+    ids: ['john-dee', 'edward-kelley', 'espelho-negro', 'magia-enoquiana', 'william-shakespeare', 'golden-dawn', 'aleister-crowley', 'oto', 'jack-parsons', 'temple-of-set', 'michael-aquino', 'philip-k-dick', 'srinivasa-ramanujan', 'hermetismo', 'ian-fleming', 'james-bond'],
+  },
+  {
+    id: 'inferno-abismo-trail',
+    titulo: 'O Inferno e o Abismo: do Tártaro ao CERN',
+    desc: 'Da queda dos anjos ao maior colisor de partículas: o fio que conecta o Tártaro bíblico ao CERN — passando pelos Vigilantes, pelo Dilúvio, pela Torre de Babel e pelo computador quântico D-Wave — e por que Apoliom está esculpido nas portas do laboratório.',
+    ids: ['tartaro', 'anjo-caido', 'querubim', 'vigilantes', 'flavio-josefo', 'nefilins', 'diluvio-universal', 'noe', 'torre-de-babel', 'cern', 'stephen-hawking', 'dwave-computador', 'apolo-abaddon', 'shiva'],
+  },
+
 ];
 
 let currentTrail = null;   // trilha ativa
@@ -1205,33 +1254,73 @@ const ISO_PT = {
   TI:'Tibete',   // código não oficial, usado internamente
 };
 
+// ── Busca com ranking de relevância ────────────────────────────────────────
+function makeSnippet(text, term) {
+  const nText = norm(text);
+  const nTerm = norm(term);
+  const idx = nText.indexOf(nTerm);
+  if (idx === -1) return null;
+  const start = Math.max(0, idx - 35);
+  const end = Math.min(text.length, idx + nTerm.length + 60);
+  let snip = (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+  // Highlight: escape regex special chars first
+  const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  snip = snip.replace(new RegExp('(' + esc + ')', 'gi'), '<mark>$1</mark>');
+  return snip;
+}
+
+function scoreEntry(d, rawTerm) {
+  const t = norm(rawTerm);
+  if (!t) return { score: 0, field: null, snippet: null };
+  const n = norm(d.name);
+  if (n === t)           return { score: 100, field: 'name',   snippet: null };
+  if (n.startsWith(t))   return { score: 80,  field: 'name',   snippet: null };
+  if (n.includes(t))     return { score: 60,  field: 'name',   snippet: null };
+  if ((d.aliases || []).some(a => norm(a).includes(t)))
+                         return { score: 50,  field: 'alias',  snippet: null };
+  if (norm(d.summary).includes(t))
+                         return { score: 30,  field: 'resumo', snippet: null };
+  if ((d.local || []).some(l => norm(l).includes(t)))
+                         return { score: 20,  field: 'local',  snippet: null };
+  if ((d.pais || []).some(p => norm(ISO_PT[p] || p).includes(t)))
+                         return { score: 20,  field: 'país',   snippet: null };
+  // Facts e interps: só em modo 'full' e com ≥ 3 caracteres
+  if (t.length >= 4) {
+    for (const f of (d.facts || [])) {
+      if (norm(f).includes(t)) return { score: 15, field: 'fato',  snippet: makeSnippet(f, rawTerm) };
+    }
+    for (const iv of (d.interps || [])) {
+      if (norm(iv).includes(t)) return { score: 10, field: 'interp', snippet: makeSnippet(iv, rawTerm) };
+    }
+  }
+  return { score: 0, field: null, snippet: null };
+}
+
 function renderCards() {
-  const filtered = DATA.filter(d => {
-    const matchCat = activeFilter === 'all' || d.cat === activeFilter;
-    const term = norm(searchTerm);
-    // Busca expandida: nome, aliases, resumo, fatos e interpretações (sem acento obrigatório)
-    const matchSearch = !term ||
-      norm(d.name).includes(term) ||
-      (d.aliases || []).some(a => norm(a).includes(term)) ||
-      norm(d.summary).includes(term) ||
-      (d.facts || []).some(f => norm(f).includes(term)) ||
-      (d.interps || []).some(i => norm(i).includes(term)) ||
-      (d.local || []).some(l => norm(l).includes(term)) ||
-      (d.pais || []).some(p => norm(ISO_PT[p] || p).includes(term));
-    return matchCat && matchSearch;
-  });
+  const rawTerm = searchTerm;
+  const hasTerm = rawTerm.trim().length > 0;
+
+  const scored = DATA.map(d => {
+    if (activeFilter !== 'all' && d.cat !== activeFilter) return null;
+    if (!hasTerm) return { d, score: 0, field: null, snippet: null };
+    const result = scoreEntry(d, rawTerm);
+    return result.score > 0 ? { d, ...result } : null;
+  }).filter(Boolean);
+
+  // Ordenar por score decrescente quando há busca ativa
+  if (hasTerm) scored.sort((a, b) => b.score - a.score);
 
   grid.innerHTML = '';
 
-  if (filtered.length === 0) {
+  if (scored.length === 0) {
     grid.innerHTML = '<div class="empty-state">Nenhum símbolo encontrado para essa busca.</div>';
     countEl.textContent = '0 resultados';
     return;
   }
 
-  countEl.textContent = `${filtered.length} símbolo${filtered.length !== 1 ? 's' : ''}`;
+  countEl.textContent = `${scored.length} símbolo${scored.length !== 1 ? 's' : ''}`;
 
-  filtered.forEach(d => {
+  scored.forEach(({ d, field, snippet }) => {
     const cat = CATS[d.cat];
     const card = document.createElement('div');
     card.className = 'card';
@@ -1243,6 +1332,10 @@ function renderCards() {
       return refData ? `<span class="ref-chip" data-ref="${ref}">${refData.icon} ${refData.name.split(' ')[0]}</span>` : '';
     }).join('');
 
+    const snippetHtml = snippet
+      ? `<div class="match-snippet"><span class="match-label">${field === 'fato' ? '📚 Fato' : '💬 Interp.'}</span>${snippet}</div>`
+      : '';
+
     card.innerHTML = `
       <div class="card-header">
         <div class="card-icon">${d.icon}</div>
@@ -1253,6 +1346,7 @@ function renderCards() {
         </div>
       </div>
       <p class="card-summary">${d.summary}</p>
+      ${snippetHtml}
       ${refChips ? `<div class="refs-preview">${refChips}</div>` : ''}
     `;
 
@@ -1506,6 +1600,7 @@ searchClear.addEventListener('click', () => {
   searchTerm = '';
   searchClear.classList.remove('visible');
   searchInput.focus();
+
   renderCards();
 });
 
@@ -1551,6 +1646,22 @@ renderCards();
     if (btn) btn.onclick = dismiss;
     overlay.onclick = function(e) { if (e.target === overlay) dismiss(); };
   } catch(e) {}
+})();
+
+// Contadores automáticos — lidos de DATA e TRILHAS ao carregar
+(function updateCounters() {
+  const nEntradas = DATA.length;
+  const nJornadas = TRILHAS.length;
+  // Popup
+  const pe = document.getElementById('popupEntradas');
+  const pj = document.getElementById('popupJornadas');
+  const pjn = document.getElementById('popupJornadasN');
+  if (pe) pe.textContent = nEntradas;
+  if (pj) pj.textContent = nJornadas + ' jornadas temáticas';
+  if (pjn) pjn.textContent = nJornadas;
+  // Botão jornadas
+  const nj = document.getElementById('journeysNavN');
+  if (nj) nj.textContent = nJornadas;
 })();
 
 // Deep link: abre modal se URL tiver hash ao carregar

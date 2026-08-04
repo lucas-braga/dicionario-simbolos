@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **737 entradas · 186 fontes · 52 jornadas temáticas · geo em 414 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **762 entradas · 193 fontes · 56 jornadas temáticas · geo em 430 entradas.**
 
 ## Estrutura
 
@@ -126,6 +126,10 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 50 | `merovingios-trail` | Os Merovíngios: Do Quinotauro ao Priorado de Sião |
 | 51 | `catedral-misterios-trail` | A Catedral dos Mistérios: Chartres, o Graal e a Virgem Oculta |
 | 52 | `saturno-trail` | Saturno: O Verdadeiro Senhor dos Anéis |
+| 53 | `dee-enoquiana-trail` | A Tradição Enoquiana: de John Dee à Ficção Científica |
+| 54 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
+| 55 | `numerologia-sagrada-trail` | Numerologia Sagrada: 911, IXXI e o Projeto Transumano |
+| 56 | `inferno-abismo-trail` | O Inferno e o Abismo: do Tártaro ao CERN |
 
 ## Como transcrever com Whisper
 
