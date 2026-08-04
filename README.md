@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **631 entradas · 163 fontes · 45 jornadas temáticas · geo em 346 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **737 entradas · 186 fontes · 52 jornadas temáticas · geo em 414 entradas.**
 
 ## Estrutura
 
@@ -119,6 +119,13 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 43 | `diluvio-trail` | O Dilúvio Universal: Memória ou Evento Real? |
 | 44 | `jung-eneagrama-trail` | Jung, Eneagrama e a Psicologia Oculta |
 | 45 | `dante-hermetico-trail` | Dante e o Hermetismo Medieval |
+| 46 | `rephaim-gigantes-trail` | Os Refaim: Gigantes, Abismo e o Retorno de Gog |
+| 47 | `fisica-abismo-trail` | Física Quântica e o Abismo: da Matéria Escura aos Refaim |
+| 48 | `literatura-oculta-trail` | Literatura Ocultista: de Dickens ao Controle de Mentes |
+| 49 | `mesmerismo-espiritismo-trail` | Mesmerismo e Espiritismo: da Hipnose ao Portal dos Mortos |
+| 50 | `merovingios-trail` | Os Merovíngios: Do Quinotauro ao Priorado de Sião |
+| 51 | `catedral-misterios-trail` | A Catedral dos Mistérios: Chartres, o Graal e a Virgem Oculta |
+| 52 | `saturno-trail` | Saturno: O Verdadeiro Senhor dos Anéis |
 
 ## Como transcrever com Whisper
 
