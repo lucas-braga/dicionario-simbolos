@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **762 entradas · 193 fontes · 56 jornadas temáticas · geo em 430 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **780 entradas · 199 fontes · 58 jornadas temáticas · geo em 430 entradas.**
 
 ## Estrutura
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (45)
+## Jornadas temáticas (58)
 
 | # | ID | Título |
 |---|---|---|
@@ -130,6 +130,8 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 54 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
 | 55 | `numerologia-sagrada-trail` | Numerologia Sagrada: 911, IXXI e o Projeto Transumano |
 | 56 | `inferno-abismo-trail` | O Inferno e o Abismo: do Tártaro ao CERN |
+| 57 | `graal-pedra-negra-trail` | O Graal como Pedra Negra: de Wolfram a Otto Rahn |
+| 58 | `sol-saturno-portal-trail` | O Sol de Saturno: Mito, Portal e CERN |
 
 ## Como transcrever com Whisper
 

@@ -8,7 +8,7 @@ OUTPUTS="/Users/lucasbraga/Library/Application Support/Claude/local-agent-mode-s
 if [ -n "$1" ]; then
   MSG="$1"
 else
-  MSG="Add: INFERNO Caps 01-02 - stephen-hawking, flavio-josefo, querubim, dwave-computador + inferno-abismo-trail - 762 entradas, 193 fontes, 56 jornadas"
+  MSG="Add: INFERNO Caps 07-08 - olho-que-tudo-ve, lemegeton, antony-patch, david-talbott, immanuel-velikovsky, dispositivo-de-osiris, montanha-cosmica, anjos-e-demonios + trilha sol-saturno-portal - 780 entradas, 199 fontes, 58 jornadas"
 fi
 
 echo "📦 Copiando arquivos..."

@@ -198,6 +198,12 @@ const SOURCES = {
   191: 'SEGREDOS CIFRADOS - 911, 101, 322, 44, 46 e 66',
   192: 'INFERNO - Da queda ao Diluvio - Cap 01',
   193: 'INFERNO - Retorno ao CERN - Cap 02',
+  194: 'INFERNO - D-Wave - Cap 03',
+  195: 'INFERNO - Sheeva e Kali - Cap 04',
+  196: 'INFERNO - Despertai - Cap 05',
+  197: 'INFERNO - Correntes de Birkeland - Cap 06',
+  198: 'INFERNO - O Olho de Saturno - Cap 07',
+  199: 'INFERNO - O Dispositivo de Osíris - Cap 08',
 };
 
 const DATA = [
@@ -243,6 +249,9 @@ const DATA = [
     'Set cortou o corpo de Osíris em 13 partes e as espalhou; Ísis recuperou todas exceto o falo',
     'Ressuscitado por Ísis, Osíris tornou-se Senhor do Submundo — identidade que define sua função pós-morte',
     'Set não era sempre considerado maligno na teologia egípcia antiga — conflitos entre casas reais levaram à depreciação de determinados deuses'
+  ,
+    'No sistema astroteológico descrito por David Talbott: Osiris é identificado com Saturno. Cernunnos (Sernunos) — o deus céltico cujo nome abreviaria CERN — é mitologicamente assemelhado a Osiris/Saturno.',
+    'A barca/navio de Osiris — veículo solar da mitologia egípcia — é identificado por William Henry como o dispositivo de Osíris: um buraco de minhoca saturnino que permitiria viajar instantaneamente pelo espaço-tempo.'
   ],
     interps: [
       'Identificado pelo apresentador como o "verdadeiro Greenman" — a origem histórica mais documentada do arquétipo.',
@@ -250,8 +259,10 @@ const DATA = [
       'As esculturas de Osiris-jardim são comparadas a "bichinhos de estimação" ou "o mais assustador da história", dependendo da teologia do observador.',
       'O pilar Djed de Osiris = Torre de Babel = eixo entre a terra e o céu: se o pilar de Osiris e a Torre de Babel descrevem o mesmo dispositivo (um eixo cósmico que liga o plano terrestre ao celestial), então a elite que venera Osiris e a elite que tenta completar o projeto de Babel têm o mesmo objetivo — e o CERN ATLAS (8 raios, octograma de Ishtar) é a versão tecnológica moderna do mesmo pilar.',
       'O "navio da eternidade" de Osiris — representado como um portal para navegar entre mundos "como uma estrela" — é a linguagem mitológica para aquilo que a física moderna chama de buraco de minhoca: uma distorção do espaço-tempo que permite atravessar de um ponto a outro do cosmos. A elite que venera Osiris busca, com o CERN, construir o mesmo navio.',
-    ],
-    refs: ['greenman', 'tamus', 'isis', 'horus', 'sernunos', 'grut', 'ninrode', 'cern', 'experimento-atlas', 'estrela-oito-pontas', 'eneada-egipcia', 'navajos', 'religiao-primordial', 'terra-oca', 'saturnalia', 'sol-invictus', 'set-egipcio'],
+    ,
+    'A equação CERN = Cernunnos = Osiris = Saturno é lida como cadeia intencional de associações: o laboratório escolheu nome (Cernunnos), local (Apolliacum = cidade de Apoliom) e escultura (Shiva) que juntos formam um mapa simbólico de Saturno como deus do submundo.'
+  ],
+    refs: ['greenman', 'tamus', 'isis', 'horus', 'sernunos', 'grut', 'ninrode', 'cern', 'experimento-atlas', 'estrela-oito-pontas', 'eneada-egipcia', 'navajos', 'religiao-primordial', 'terra-oca', 'saturnalia', 'sol-invictus', 'set-egipcio', 'david-talbott', 'dispositivo-de-osiris', 'montanha-cosmica'],
     scriptures: ['Ez 8:14'],
     pais: ["EG"],
     local: ["Abidos"],
@@ -285,6 +296,7 @@ const DATA = [
     aliases: ['Cernunnos', 'Deus Cornudo das Florestas', 'Herne o Caçador', 'Herne the Hunter', 'deus cornífero'],
     cat: 'divindade',
     icon: '🦌',
+    source: [198, 199],
     summary: 'Divindade celta dos bosques profundos, representado com chifres de cervo, sentado de pernas cruzadas, rodeado de animais e segurando uma serpente com chifres. Encontrado no Caldeirão de Gundestrup. Na tradição britânica é conhecido como "Herne o Caçador" — que sobreviveu apenas ao sujeitar-se a usar um crânio enfeitiçado de cervo sobre a cabeça, ganhando a imortalidade mas perdendo sua identidade de caçador. É o deus que morre e sempre renasce, o rei do carvalho e do azevinho, o senhor das matas. Está ligado simbolicamente tanto ao CERN (ambos na Suíça) quanto à cerimônia do Túnel de Gotthard.',
     facts: [
       'Figura encontrada no Caldeirão de Gundestrup (artefato celta, aprox. 100 a.C.), com inscrição "Cernunnos".',
@@ -297,7 +309,10 @@ const DATA = [
       'Cernunnos é o deus que morre e sempre renasce — seus ciclos de morte e vida representariam a própria existência humana segundo a crença do renascimento cíclico, ao estilo da fênix.',
       'O CERN (laboratório de física de partículas) está localizado a poucos quilômetros do Túnel de São Gotardo, ambos na Suíça. O nome "CERN" é lido como referência direta a Cernunnos.',
     
-      'No Cap 03 da série SATURNO, Azazel e Cernunnos são mencionados explicitamente como pontos de ligação entre Saturno e Satanás — parte da lista de conexões entre o planeta e o adversário bíblico, ao lado de Pan e do deus Pan entronizado em Capricórnio.',],
+      'No Cap 03 da série SATURNO, Azazel e Cernunnos são mencionados explicitamente como pontos de ligação entre Saturno e Satanás — parte da lista de conexões entre o planeta e o adversário bíblico, ao lado de Pan e do deus Pan entronizado em Capricórnio.',,
+    'O nome CERN é interpretado como abreviação de Cernunnos — deus céltico do submundo com chifres de veado, mitologicamente assemelhado a Azazel, Osiris, Enki, Nimrod e Ninurta — todos correlatos de Saturno no sistema astroteológico antigo.',
+    'David Talbott e Anthony Patch situam Cernunnos (CERN) como o polo contemporâneo de ativação do portal de Saturno — a mesma montanha cósmica da Torre de Babel replicada em tecnologia moderna.'
+  ],
     interps: [
       'Identificado como um dos "Baals" — um senhor local da natureza selvagem, da mesma família espiritual que Osiris e Tamus.',
       'A serpente que carrega é vista como "cartão de visitas" — símbolo do mesmo espírito da serpente do Éden.',
@@ -306,8 +321,10 @@ const DATA = [
       'Cernunnos é a entidade que detém "o poder de abrir" — o abridor do portal do abismo. Na cerimônia de Gotthard, o Bode (Azazel) usa Cernunnos como a força que abre a passagem dimensional.',
       'Os druidas realizavam seus ritos em bosques sagrados onde a copa das árvores criava luz verde — visto como o "templo preferido" desse espírito.',
     
-      'Os Merovíngios são interpretados, em uma das versões esotéricas, como descendentes da tribo de Dan que se casou com os cananeus — herdeiros do culto de Cernunnos/Baal/Pan no Monte Hermão.',],
-    refs: ['greenman', 'baal', 'cern', 'druidas', 'bohemian-grove', 'azazel', 'sangotard', 'tunel-gotthard', 'hipogeu-malta', 'festa-rothschild-1972', 'surrealismo', 'merovingios', 'tribo-de-dan', 'monte-hermao', 'arcadia', 'saturno', 'pan', 'sol-negro'],
+      'Os Merovíngios são interpretados, em uma das versões esotéricas, como descendentes da tribo de Dan que se casou com os cananeus — herdeiros do culto de Cernunnos/Baal/Pan no Monte Hermão.',,
+    'A localização do CERN em Saint-Genis-Pouilly (Apolliacum Romano = cidade de Apoliom/Abaddon) + nome Cernunnos + escultura de Shiva é lida como tripla confirmação de que o laboratório foi deliberadamente posicionado como templo do deus do abismo/Saturno.'
+  ],
+    refs: ['greenman', 'baal', 'cern', 'druidas', 'bohemian-grove', 'azazel', 'sangotard', 'tunel-gotthard', 'hipogeu-malta', 'festa-rothschild-1972', 'surrealismo', 'merovingios', 'tribo-de-dan', 'monte-hermao', 'arcadia', 'saturno', 'pan', 'sol-negro', 'dispositivo-de-osiris', 'montanha-cosmica', 'atlas-titan', 'ninrode', 'osiris', 'david-talbott'],
     scriptures: [],
   },
   {
@@ -391,6 +408,7 @@ const DATA = [
     aliases: ['Cronos', 'Saturn', 'Tempo'],
     cat: 'divindade',
     icon: '⏳',
+    source: [182, 183, 184, 185, 186, 196, 197, 198, 199],
     summary: 'Deus greco-romano do tempo e da colheita. Na mitologia, devora seus próprios filhos para impedir que o destituam. Associado a Satanás e à força que puxa o homem de volta ao pó.',
     facts: [
       'Saturno (romano) = Cronos (grego): deus da colheita e do tempo.',
@@ -429,6 +447,21 @@ const DATA = [
     'Ops/Reia enganou Saturno enrolando uma pedra em panos ao invés de entregar o recém-nascido Zeus, e fugiu com o filho para a ilha de Creta'
   ,
     'O símbolo IXXI codifica o hexágono de Saturno através das duas letras X centrais, conectando a data 9/11 a geometria saturnina e ao Cubo Negro'
+  ,
+    'O hexágono do polo norte de Saturno foi confirmado pela missão Voyager (1981) e revisitado pela Cassini-Huygens (2006). Seu tamanho corresponde a quatro vezes o tamanho da Terra.',
+    'Quando fotografado pela câmera grande angular da Cassini em 2012, o hexágono aparecia na cor azul; em 2016, havia mudado para dourado.',
+    'O movimento de nuvens no polo norte de Saturno é contra-rotativo: um anel interno gira numa direção enquanto o externo gira na oposta — estrutura idêntica ao LHC do CERN, com dois fluxos de prótons contra-girantes que geram energia sincrotrônica.',
+    'Anthony Peratt, físico de plasma, propôs que o campo de força interno de Saturno é composto por correntes de Birkeland em arranjo cúbico — explicando geometricamente o hexágono polar.',
+    'O polo sul de Saturno apresenta uma espiral — geometricamente idêntica à espiral norueguesa de 2009 e à hélice dupla do DNA humano. Polo norte e polo sul são conectados por correntes de Birkeland formando uma hélice torcida.',
+    'Na teoria ocultista descrita: sete divindades titânicas estariam aprisionadas dentro de Saturno neste campo cúbico de energia formado por correntes de Birkeland.',
+    'O objetivo do CERN e do D-Wave na crença ocultista apresentada: gerar uma corrente de Birkeland para o polo norte de Saturno e quebrar o campo-prisão cúbico — liberando as entidades aprisionadas de volta à Terra.'
+  ,
+    'O polo sul de Saturno apresenta uma tempestade do tipo furacão com um olho bem definido, rodeado por nuvens imponentes — preso ao polo e imóvel, diferente de furacões terrestres. Observado pela sonda Cassini da NASA.',
+    'Saturno é o sexto planeta a partir do Sol. O dia Saturday (Sábado) é o dia de Saturno — sexto dia após o domingo. O talismã de Saturno é um hexágono ligado à estrela de Remphan (citada em Amós 5:26).',
+    'David Talbott propôs que Saturno foi um sol primitivo (Sol de Saturno ou Saturn Sun) que dominava os céus da Terra em eras remotas — teoria popularizada por Immanuel Velikovsky em Worlds in Collision (1950).',
+    'No sistema astroteológico antigo: Rá (deus do Sol egípcio) é identificado com Saturno — não com o Sol atual — segundo ostrakon grego citado pelo classicista Franz Boll.',
+    'O crescente de Saturno — o navio do grande pai — foi identificado por David Talbott com representações de buracos de minhoca e com o dispositivo de Osíris de William Henry: um veículo de transporte pelo espaço-tempo interdimensional.',
+    'Em filmes e séries, Saturno é frequentemente associado a buracos de minhoca e portais: Space 1999 (episódio Black Sun, 1975), Wolfenstein (dimensão do Sol Negro), Zathura (2005), Interstellar (2014), Planeta dos Macacos 2001 e 2001: Uma Odisseia no Espaço (portal estelar originalmente em Saturno).'
   ],
     interps: [
       'Identificado com Satanás: assim como Cronos devorava os filhos, o adversário quer "puxar os homens de volta para a terra, para o pó".',
@@ -442,8 +475,15 @@ const DATA = [
       'O Sábado como "dia de Saturno" nas três religiões abraâmicas (judaísmo: Shabbat; Islão: Sexta = dia de Sexta-feira de Allah = El; Cristianismo: Saturday = Sábado renomeado) é interpretado como sobrevivência do culto saturnino dentro das religiões monoteístas — o "dia sagrado" guarda a memória do reinado de Saturno.',
     'O apresentador vê Saturno como "prisão mental" da humanidade — o cubo negro seria seu receptáculo; o ouroboros, o ciclo eterno sem saída que a elite (seus cultuadores) impõe ao mundo',
     'Saturno = Satanás: não apenas por associação nominal, mas como princípio de limitação, morte, decadência e servidão ao tempo — o grande Testador e Castigador das paixões humanas'
+  ,
+    'A identificação Shiva = Saturno — deduzida da equação Kali (esposa de Shiva) = Gaia (esposa de Saturno) — conecta os dois maiores símbolos destrutivos das tradições hindu e greco-romana. Se Shiva é a estátua do CERN, então o CERN é também um templo saturnino — o que une a iconografia hindu oficial do laboratório com o simbolismo de Saturno presente em toda a agenda globalista.'
+  ,
+    'O polo norte de Saturno como sincrotron: o hexágono contra-rotativo reproduz geometricamente o LHC. O CERN seria, na leitura do apresentador, uma imitação física da estrutura polar de Saturno — um instrumento construído para replicar seu polo norte e abrir comunicação por corrente de Birkeland.',
+    'A teoria de que o polo norte (sincrotron/cubo) e o polo sul (espiral/DNA) de Saturno são os dois extremos de uma mesma estrutura de plasma conecta o simbolismo do cubo negro ao da espiral — duas faces do mesmo sistema de aprisionamento e liberação.'
+  ,
+    'A associação de Saturno com buracos de minhoca em múltiplos filmes de ficção científica — e com a barca de Rá do Egito antigo — é lida como preservação codificada do conhecimento ocultista de que Saturno funciona como um Stargate ou dispositivo de Osíris.'
   ],
-    refs: ['greenman', 'sangotard', 'anticristo', 'tartaria', 'donn', 'mog-ruith', 'halloween', 'cubo-negro', 'el-canaanita', 'irmandade-saturno', 'cibele', 'onfalo', 'ferro-meteorico', 'era-de-ouro', 'era-de-aquario', 'pan', 'saturnalia', 'sol-invictus', 'quetzalcoatl', 'osiris', 'gaia', 'isis', 'atlas-titan', 'atlantida', 'quinotauro', 'borg-star-trek', 'tesseract-marvel', 'azazel', 'ouroboros', 'ixxi', 'numero-911', 'mega-ritual', 'smart-dust'],
+    refs: ['greenman', 'sangotard', 'anticristo', 'tartaria', 'donn', 'mog-ruith', 'halloween', 'cubo-negro', 'el-canaanita', 'irmandade-saturno', 'cibele', 'onfalo', 'ferro-meteorico', 'era-de-ouro', 'era-de-aquario', 'pan', 'saturnalia', 'sol-invictus', 'quetzalcoatl', 'osiris', 'gaia', 'isis', 'atlas-titan', 'atlantida', 'quinotauro', 'borg-star-trek', 'tesseract-marvel', 'azazel', 'ouroboros', 'ixxi', 'numero-911', 'mega-ritual', 'smart-dust', 'shiva', 'kali', 'correntes-birkeland', 'espiral-norueguesa', 'projeto-awake', 'dwave-computador', 'olho-que-tudo-ve', 'david-talbott', 'immanuel-velikovsky', 'dispositivo-de-osiris', 'montanha-cosmica'],
     scriptures: ['Gn 3:19'],
     pais: ["IT"],
     local: ["Roma"],
@@ -488,7 +528,7 @@ const DATA = [
     aliases: ['Nimrod', 'Rei de Babel', 'Primeiro Rei da Terra', 'o Grande Caçador'],
     cat: 'figura',
     icon: '👑',
-    source: 53,
+    source: [53, 199],
     summary: 'Rei bíblico, fundador de Babel. Identificado como o "rei rebelde original" e pai putativo de Tamus na tradição cristã. Na visão da elite esotérica, Nimrod foi o construtor da Torre de Babel — um eixo cósmico entre a terra e o céu das estrelas — identificado com o Pilar de Osiris (Djed/Taver) dos egípcios: o vínculo entre o céu e a terra. A liderança europeia em Bruxelas é identificada pelo apresentador como tendo o propósito de completar a torre milenamente abandonada.',
     facts: [
       'Mencionado em Gênesis 10:8-10 como "poderoso caçador diante do Senhor" e fundador de Babel.',
@@ -502,7 +542,9 @@ const DATA = [
       'Estudiosos comparam Ninrode com Sargão de Agad: ambos foram grandes guerreiros e caçadores que emergiram como líderes poderosos na Mesopotâmia. Livros apócrifos chegam a identificar os dois como o mesmo personagem — "Caim, rei de Uruk", traversando as eras.',
       'Após a queda da civilização de Ninrode e a dispersão de seus cientistas com a confusão das línguas, o conhecimento proibido foi transmitido ao antigo Egito → Grécia → Roma → Europa moderna → América — sempre custodiado por sacerdócios secretos compartimentalizados.',
     
-      'O Sol Invictus romano (Dies Natalis Solis Invicti, celebrado em 25 de dezembro) é interpretado como possível recontagem do mito de Nimrod e Semíramis — o deus morto e ressurreto que renasce como o Sol Invicto no solstício de inverno.',],
+      'O Sol Invictus romano (Dies Natalis Solis Invicti, celebrado em 25 de dezembro) é interpretado como possível recontagem do mito de Nimrod e Semíramis — o deus morto e ressurreto que renasce como o Sol Invicto no solstício de inverno.',,
+    'No sistema astroteológico descrito: Ninurta/Nimrod (Ninrode) está associado a Saturno. Cernunnos, Osiris, Enki e Ninurta são correlatos mitológicos de Saturno e, na interpretação ocultista, são todos o mesmo deus que o CERN invoca.'
+  ],
     interps: [
       'Uma longa tradição de escritores cristãos (Hislop, "Os Dois Babilônios") o identifica como o pai deificado de Tamus.',
       'Babel/Babilônia é vista como o protótipo do sistema anticristão global.',
@@ -510,7 +552,7 @@ const DATA = [
       'Que os dirigentes europeus em Bruxelas e Estrasburgo pareçam querer "terminar a Torre de Babel" — usando os mesmos símbolos da construção interrompida — é a declaração pública de um projeto que a Bíblia descreve com precisão há 4.000 anos.',
     
       'Se Sol Invictus = Nimrod ressurreto, então a data de 25 de dezembro do Natal cristão foi sincretizada não apenas com o Sol Invictus romano mas com o ciclo Nimrod/Semíramis — e por extensão com o culto de Saturno cuja Saturnalia encerrava precisamente na véspera desta data.',],
-    refs: ['tamus', 'babilonia', 'cern', 'osiris', 'estrela-oito-pontas', 'cainitas', 'tubal-caim', 'misterio-babilonico', 'moloch', 'malta', 'torre-de-babel', 'sol-invictus', 'saturnalia', 'saturno'],
+    refs: ['tamus', 'babilonia', 'cern', 'osiris', 'estrela-oito-pontas', 'cainitas', 'tubal-caim', 'misterio-babilonico', 'moloch', 'malta', 'torre-de-babel', 'sol-invictus', 'saturnalia', 'saturno', 'dispositivo-de-osiris', 'montanha-cosmica', 'david-talbott'],
     scriptures: ['Gn 10:8-10', 'Gn 11:1-9', 'Ap 17-18'],
     pais: ["IQ"],
     local: ["Nínive","Babel"],
@@ -688,6 +730,9 @@ const DATA = [
       'A doutrina secreta dos Nefilins/Anunnaki é transmitida também através de Lovecraft, Necronomicon, D&D e jogos de computador, além das ordens tradicionais.',
     'As vidas dos primeiros semideuses (Nefilins) foram encerradas na enchente de Noé, que coincide aproximadamente com o dia 2 de novembro do calendário moderno.',
     'Civilizações egípcias, gregas, romanas, persas e babilônicas — e antes delas — prestavam homenagem e adoravam esses semideuses, que governavam no topo da cadeia de poder.'
+  ,
+    'Em uma era de edição genética, coloca-se a hipótese de que o DNA humano poderia ser editado para recriar corpos gigantescos ao estilo Nefilim — e que esses corpos poderiam ser infundidos com os espíritos aprisionados desde o dilúvio universal.',
+    'Esculturas de gigantes emergindo do solo têm surgido pelo mundo — The Awakening em Washington D.C./Maryland, gigante em Budapeste, gigante na Sicília — lidas como simbolismo do retorno dos Nefilins.'
   ],
     interps: [
       'Identificados com os "espíritos do fogo" invocados em oferendas em encruzilhadas.',
@@ -702,7 +747,7 @@ const DATA = [
       'O apresentador conecta os Nefilins banidos ao centro da Terra (tradição esotérica) aos pais dos Merovíngios, traçando uma linhagem ininterrupta de entidades caídas que persistiu após o dilúvio via Quinotauro.',
     'O apresentador interpreta que os dias de Noé se repetirão porque alguém os fará se repetir — e que esse alguém inclui os cultuadores modernos dos seres aprisionados no Tártaro.'
   ],
-    refs: ['iblis', 'baal', 'gaia', 'livro-de-enoque', 'bruxa-de-endor', 'vigilantes', 'anakim', 'darth-vader', 'quimera-genetica', 'gregor-mendel', 'transhumanismo', 'urim-tumim', 'azazel', 'dia-dos-mortos', 'malta', 'ggantija', 'hipogeu-malta', 'cranio-dolicocefalo', 'shemsu-hor', 'mitanni', 'akhenaton', 'ubaid', 'tiamat', 'samael', 'tocarios', 'druidas', 'caverna-do-dragao', 'anunnaki', 'engenharia-social', 'yggdrasil', 'diluvio-universal', 'noe', 'dingir', 'ziusudra', 'gilgamesh', 'rephaim', 'gogue', 'emin', 'zamzummim', 'tartaro', 'baalbek', 'helena-blavatsky', 'espiritismo', 'glandula-pineal', 'merovingios', 'quinotauro', 'tribo-de-dan', 'monte-hermao', 'sodoma-gomorra', 'linhagem-do-dragao', 'kenneth-grant', 'pendragon', 'era-de-ouro', 'cthulhu', 'tracy-twyman', 'lovecraft', 'necronomicon', 'telchines', 'cain', 'enki', 'kingu', 'makara', 'livro-da-lei', 'querubim', 'flavio-josefo', 'cern', 'stephen-hawking', 'dwave-computador'],
+    refs: ['iblis', 'baal', 'gaia', 'livro-de-enoque', 'bruxa-de-endor', 'vigilantes', 'anakim', 'darth-vader', 'quimera-genetica', 'gregor-mendel', 'transhumanismo', 'urim-tumim', 'azazel', 'dia-dos-mortos', 'malta', 'ggantija', 'hipogeu-malta', 'cranio-dolicocefalo', 'shemsu-hor', 'mitanni', 'akhenaton', 'ubaid', 'tiamat', 'samael', 'tocarios', 'druidas', 'caverna-do-dragao', 'anunnaki', 'engenharia-social', 'yggdrasil', 'diluvio-universal', 'noe', 'dingir', 'ziusudra', 'gilgamesh', 'rephaim', 'gogue', 'emin', 'zamzummim', 'tartaro', 'baalbek', 'helena-blavatsky', 'espiritismo', 'glandula-pineal', 'merovingios', 'quinotauro', 'tribo-de-dan', 'monte-hermao', 'sodoma-gomorra', 'linhagem-do-dragao', 'kenneth-grant', 'pendragon', 'era-de-ouro', 'cthulhu', 'tracy-twyman', 'lovecraft', 'necronomicon', 'telchines', 'cain', 'enki', 'kingu', 'makara', 'livro-da-lei', 'querubim', 'flavio-josefo', 'cern', 'stephen-hawking', 'dwave-computador', 'projeto-awake', 'correntes-birkeland'],
     scriptures: ['Gn 6:1-9', '2Pe 2:4', 'Jd 6', 'Ap 20:1-3', 'Nm 13:33', 'Josué 11:21-22', '2Sm 21:20', 'Dt 2:10-20'],
   },
   {
@@ -824,7 +869,7 @@ const DATA = [
     aliases: ['CERN', 'LHC', 'Large Hadron Collider', 'Grande Colisor de Hádrons', 'Conselho Europeu para a Pesquisa Nuclear', 'Conseil Européen pour la Recherche Nucléaire'],
     cat: 'moderno',
     icon: '⚛️',
-    source: 24,
+    source: [24, 194, 195, 196, 198],
     summary: 'Maior acelerador de partículas do mundo, localizado na fronteira franco-suíça perto de Genebra. Objetivo oficial: descobrir a física fundamental do universo. Objetivo declarado por seu próprio diretor de pesquisa: abrir uma porta para outra dimensão pela qual "algo poderá vir ou poderemos enviar algo". Possui uma estátua de Shiva Nataraja — o Deus Hindu da Destruição — na entrada do campus. Em 2016, um vídeo mostrou um aparente ritual de sacrifício humano encenado diante da mesma estátua, por pessoas com acesso interno às instalações.',
     facts: [
       'CERN = Conseil Européen pour la Recherche Nucléaire. Localizado na fronteira franco-suíça, próximo a Genebra. O LHC (Large Hadron Collider) é o maior e mais energético acelerador de partículas do planeta.',
@@ -852,6 +897,21 @@ const DATA = [
     'O bioquímico alemão Otto Rössler, da Universidade de Tübingen, entrou com ação no Tribunal Europeu de Direitos Humanos em 2008 alegando que o CERN poderia criar um buraco negro que consumiria o planeta.',
     'Stephen Hawking advertiu que o bóson de Higgs poderia se tornar instável e desencadear o colapso do espaço e do tempo sem aviso prévio.',
     'Cientistas do próprio CERN admitiram abertamente que o LHC serve para abrir uma porta dimensional.'
+  ,
+    'O prédio principal do complexo do CERN lembra simultaneamente uma nave espacial e uma baleia — o que remete, na leitura esotérica, à história bíblica de Jonas na barriga da baleia: algo que absorve e aprisiona no interior.',
+    'O CERN recebe cientistas de mais de 100 países e 680 instituições. A Índia é estado observador do CERN, junto com EUA, Rússia e Japão.',
+    'A estrutura do CERN com seus oito tubos externos replica o número oito da Estrela de Ishtar e dos oito braços de Shiva em algumas representações — simbolismo que o apresentador considera deliberado e não acidental.'
+  ,
+    'Em 24 de janeiro de 2016, uma formação bizarra de nuvens apareceu diretamente sobre o LHC no mesmo dia em que os cientistas iniciaram o experimento AWAKE (Despertai) — descrito oficialmente como projeto para mudar a forma como os átomos são partidos.',
+    'O projeto AWAKE (Advanced Wakefield Experiment) acelerou com êxito elétrons pela primeira vez em 26 de maio de 2018, usando um Wakefield gerado por prótons passando por plasma. Resultado publicado na revista Nature.',
+    'O movimento contra-rotativo de dois anéis de nuvens no polo norte de Saturno é geometricamente idêntico ao LHC — dois fluxos de prótons em direções opostas que se colidem gerando energia sincrotrônica. Um colisor de hádrons seria uma imitação física do polo norte de Saturno.'
+  ,
+    'No complexo do CERN existem antigos pergaminhos em hebraico e sânscrito exibidos entre placas de vidro, cujos textos falam de trazer de volta os antigos deuses e espíritos antigos.',
+    'A escultura Wandering the Immeasurable (Vagando pelo Incomensurável) instalada no CERN é um gigante de aço inox em formato de serpente, reunindo nomes de cientistas e fórmulas matemáticas — interpretada como representação da serpente do conhecimento proibido que solicita em troca a abertura da caixa de Pandora.',
+    'O nome CERN remete a Cernunnos (Sernunos) — deus céltico do submundo mitologicamente associado a Azazel, Osiris, Enki, Nimrod e Ninurta — todos correlacionados a Saturno no sistema astroteológico antigo.',
+    'Sergio Bertolucci, diretor de pesquisa do CERN (2009-2015), declarou que o Grande Colisor de Hádrons poderia abrir uma porta para outra dimensão, e que por essa porta poderia vir alguma coisa, ou algo poderia ser enviado através dela.',
+    'O detector ATLAS do LHC — descrito como a roda de oito raios — corresponde geometricamente ao símbolo de Bab-Ilu (cruz de oito raios = portal de Deus em acádio), à estrela de Shamash e ao símbolo de Ishtar identificados por David Talbott com Saturno.',
+    'Pesquisadores Anthony Patch e William Henry afirmam que o CERN está tentando recriar a Torre de Babel — reproduzindo fisicamente a montanha cósmica de Saturno com tecnologia moderna.'
   ],
     interps: [
       'O nome "CERN" é lido como homenagem a Cernunnos — o deus cornudo das florestas da Gália, divindade que os celtas identificavam com o domínio sobre mundos subterrâneos e dimensões ocultas.',
@@ -867,8 +927,12 @@ const DATA = [
       'O apresentador interpreta o CERN e outros colisores como instrumentos da tentativa da elite de abrir o "abismo" — a dimensão-prisão (Tártaro) onde os Refaim e os anjos rebeldes estão confinados.',
     'Se a Torre de Babel tentava subir ao céu, o CERN vai na direção oposta — está abaixo do solo, como se esta nova torre rumasse para o abismo em vez de para as alturas.',
     'O CERN está ligado ao computador quântico adiabático D-Wave (The Wave), descrito como dispositivo de comunicação interdimensional — os dois seriam instrumentos complementares do mesmo projeto.'
+  ,
+    'O nome AWAKE (Despertai) é lido como sinalização ocultista: o projeto científico e o simbolismo do despertar das entidades aprisionadas no abismo são, na interpretação do apresentador, a mesma intenção expressa em linguagens diferentes.'
+  ,
+    'A reunião no CERN de: pergaminhos sobre ressurreição de deuses antigos + escultura da serpente do conhecimento proibido + nome Cernunnos (deus do submundo) + detector ATLAS com símbolo de Bab-Ilu — é lida como evidência de que o laboratório foi conscientemente modelado como replicação física da Torre de Babel/montanha cósmica de Saturno.'
   ],
-    refs: ['sernunos', 'sangotard', 'shiva', 'orbe-alado', 'boson-de-higgs', 'teoria-das-cordas', 'apolo-abaddon', 'demiurgo', 'ishtar', 'estrela-oito-pontas', 'ninrode', 'hollywood', 'portais-dimensionais', 'terminator', 'galileu-galilei', 'vortice', 'divina-comedia', 'rephaim', 'tartaro', 'gogue', 'ligo', 'materia-escura', 'djinn', 'chave-de-davi', 'stephen-hawking', 'dwave-computador', 'torre-de-babel', 'vigilantes', 'flavio-josefo'],
+    refs: ['sernunos', 'sangotard', 'shiva', 'orbe-alado', 'boson-de-higgs', 'teoria-das-cordas', 'apolo-abaddon', 'demiurgo', 'ishtar', 'estrela-oito-pontas', 'ninrode', 'hollywood', 'portais-dimensionais', 'terminator', 'galileu-galilei', 'vortice', 'divina-comedia', 'rephaim', 'tartaro', 'gogue', 'ligo', 'materia-escura', 'djinn', 'chave-de-davi', 'stephen-hawking', 'dwave-computador', 'torre-de-babel', 'vigilantes', 'flavio-josefo', 'brahma', 'vishnu', 'ganesh', 'geordie-rose', 'projeto-awake', 'correntes-birkeland', 'espiral-norueguesa', 'olho-que-tudo-ve', 'lemegeton', 'antony-patch', 'david-talbott', 'montanha-cosmica', 'dispositivo-de-osiris', 'anjos-e-demonios', 'prometeu'],
     scriptures: ['Ap 9:1-3', 'Ap 9:11', 'Gn 11:6'],
     pais: ["CH"],
     local: ["Genebra"],
@@ -1212,7 +1276,7 @@ const DATA = [
     aliases: ['Nataraja', 'Shiva Destruidor', 'Senhor da Dança', 'Shiva', 'Mahadeva'],
     cat: 'divindade',
     icon: '💃',
-    source: 28,
+    source: [28, 194, 195],
     summary: 'Divindade hindu da destruição e da transformação. Parte da Trimurti — a trindade hindu composta de Brahma (o Criador), Vishnu (o Preservador) e Shiva (o Destruidor/Transformador). Shiva é apenas um dos avatares do mestre Krishna; Kali (o aspecto feminino e destruidor) é outro avatar do mesmo Krishna — todos são um só com aspectos diferentes, como a água nos estados sólido, líquido e gasoso. Uma estátua de Nataraja ("Senhor da Dança") em bronze foi presenteada ao CERN pela Índia em 2004 e está instalada de forma proeminente na entrada do campus. Funcionários do CERN já foram filmados dançando ao redor da estátua. Em 2016, outro vídeo registrou indivíduos de túnicas pretas encenando um aparente sacrifício humano diante da mesma estátua.',
     facts: [
       'Shiva integra a Trimurti hindu: Brahma (Criador), Vishnu (Preservador) e Shiva (Destruidor/Transformador) — o ciclo cósmico completo de existência.',
@@ -1227,6 +1291,12 @@ const DATA = [
       'Shiva Sthanu (o pilar do mundo) foi identificado pelos Dravidas/Tamils com a estrela polar Canopus — a estrela do Polo Sul dos tempos atlânticos, usada nas lendárias navegações celestiais. Os Tamils, cujo nome significa "povo da estrela polar", identificavam seu deus supremo com Canopus; os egípcios a identificavam com Osíris e o pilar Djed.',
       'No mito hindu, Shiva e Parvati são vistos sentados numa ilha flutuante no meio de um lago; às vezes Shiva navega no lago sobre a serpente Shashnag — configuração que replica a de Yggdrasil: serpente na base, lago ao redor, plataforma elevada. A ilha flutuante de Shiva é o mesmo arquétipo das ilhas flutuantes de D&D, de Asgard e da Jerusalém descendo do céu.',
     'Uma estátua de Shiva em posição de Nataraja (dança cósmica da destruição e criação) foi instalada permanentemente na entrada do CERN em Genebra como presente do governo indiano.'
+  ,
+    'A palavra Shiva significa literalmente aquilo que não é — o zero entre os pilares, o princípio da ausência e do vazio, em contraste com Brahma e Vishnu que representam a presença e a plenitude.',
+    'Em algumas representações, Shiva possui quatro pares de braços — oito braços no total — que dançando marcam o ritmo e produzem a realidade com seus gestos. O mesmo número das oito pontas da Estrela de Ishtar e dos oito tubos externos do aparelho do CERN.',
+    'Na dança Nataraja, Shiva segura dois objetos principais: um pequeno tambor (damaru) que representa o passar do tempo, e uma chama que representa a eternidade. Os outros braços criam a impressão de movimento dançante.',
+    'A inauguração oficial da estátua de Nataraja no CERN contou com a presença do Dr. Robert Aymar (diretor-geral do CERN), do embaixador K. M. Chandrasekhar (embaixador da Índia na OMC em Genebra) e do Dr. Anil Kakodkar (presidente da Comissão de Energia Atômica da Índia).',
+    'A estátua de Shiva no CERN celebra a associação da Índia com o laboratório, iniciada nos anos 1960. A Índia é um dos estados observadores do CERN, junto com EUA, Rússia e Japão.'
   ],
     interps: [
       'Nenhuma instituição científica coloca a estátua de um deus destruidor na sua entrada por acidente estético. A presença de Shiva Nataraja no CERN é uma declaração de intenção: o laboratório que recria o Big Bang se identifica com o princípio cósmico da destruição como caminho para a transformação.',
@@ -1234,8 +1304,11 @@ const DATA = [
       'O vídeo de sacrifício humano diante de Shiva, realizado por pessoas com acesso interno ao campus, coloca a questão diretamente: o que exatamente é praticado no CERN além de física de partículas?',
       'A cadeia Krishna → Shiva/Destruidor → Kali/Feminino Destruidor é lida como a revelação de que o sistema de divindades hindu opera com um único ser primordial que se manifesta em formas diferentes conforme a necessidade — o mesmo padrão que o transhumanismo moderno repete com a IA como "nova divindade".',
     
-      'Shiva como Sthanu (pilar do mundo) = Canopus (estrela polar sul dos tempos atlânticos) = Djed egípcio (pilar de Osíris): o mesmo símbolo do pilar cósmico reaparece como Shiva no Himalaia, como Djed no Egito, como Atlas na Grécia e como Meru na cosmologia universal. São registros diferentes de uma única astronomia atlântica centrada em Canopus.',],
-    refs: ['cern', 'orbe-alado', 'sangotard', 'demiurgo', 'apolo-abaddon', 'kali', 'religiao-primordial', 'gemeos-navajo', 'atlas-titan', 'pilares-de-hercules', 'atlantida', 'sirius-estrela', 'yggdrasil', 'caverna-do-dragao', 'arvore-da-vida', 'engenharia-social', 'tartaro', 'dwave-computador', 'stephen-hawking', 'torre-de-babel'],
+      'Shiva como Sthanu (pilar do mundo) = Canopus (estrela polar sul dos tempos atlânticos) = Djed egípcio (pilar de Osíris): o mesmo símbolo do pilar cósmico reaparece como Shiva no Himalaia, como Djed no Egito, como Atlas na Grécia e como Meru na cosmologia universal. São registros diferentes de uma única astronomia atlântica centrada em Canopus.',,
+    'Na simbologia binária, o número 101 codifica o triunvirato hindu: Brahma=1 e Vishnu=1 (aquilo que está ligado), Shiva=0 (aquilo que não é, o vazio). O zero é o próprio buraco negro, o abismo, o Stargate para outra dimensão. A escolha do CERN de invocar Shiva é a escolha do zero — o nada entre os dois polos, o portal que colapsa a fronteira dimensional.',
+    'Se Kali (esposa de Shiva) é identificada com Gaia, e Saturno perdeu sua esposa Gaia em uma disputa cósmica, então Shiva = Saturno. O Destruidor hinduísta e o deus romano do tempo e da morte convergem na mesma entidade — o que coloca a estátua do CERN como símbolo de Saturno tanto quanto de Shiva.'
+  ],
+    refs: ['cern', 'orbe-alado', 'sangotard', 'demiurgo', 'apolo-abaddon', 'kali', 'religiao-primordial', 'gemeos-navajo', 'atlas-titan', 'pilares-de-hercules', 'atlantida', 'sirius-estrela', 'yggdrasil', 'caverna-do-dragao', 'arvore-da-vida', 'engenharia-social', 'tartaro', 'dwave-computador', 'stephen-hawking', 'torre-de-babel', 'brahma', 'vishnu', 'ganesh', 'geordie-rose'],
     scriptures: ['Is 46:1-2'],
     pais: ["IN"],
     local: ["Varanasi"],
@@ -1290,7 +1363,7 @@ const DATA = [
       'Babel/Ninrode é o protótipo histórico: o primeiro projeto de unificação global rebelde.',
       'Ora, se a religião de mistérios babilônica permanece até hoje e é praticada pela elite, entendemos que a observação astronômica é fundamental para o plano deles — daí a utilização de datas ligadas a 11, 13, 33, 66 e 99 para marcar eventos importantes. A numerologia do calendário está para eles sempre subordinada aos astros.',
     ],
-    refs: ['antimaria', 'anticristo', 'ninrode', 'nvidia', 'mamon', 'astronomia-babilonica', 'numerologia', 'rainha-do-ceu', 'ishtar', 'misterio-babilonico', 'torre-de-babel', 'diluvio-universal', 'gilgamesh', 'utnapistin', 'ziusudra'],
+    refs: ['antimaria', 'anticristo', 'ninrode', 'nvidia', 'mamon', 'astronomia-babilonica', 'numerologia', 'rainha-do-ceu', 'ishtar', 'misterio-babilonico', 'torre-de-babel', 'diluvio-universal', 'gilgamesh', 'utnapistin', 'ziusudra', 'david-talbott', 'montanha-cosmica'],
     scriptures: ['Ap 17', 'Ap 18', 'Gn 11:1-9', 'Jr 7:18', 'Jr 44:17-25'],
   },
   {
@@ -2528,7 +2601,7 @@ const DATA = [
     aliases: ['A Grande Besta', 'Edward Alexander Crowley', '666', 'Beast 666', 'To Mega Therion'],
     cat: 'figura',
     icon: '🐍',
-    source: 5,
+    source: [5, 198],
     summary: 'Ocultista britânico (1875-1947). Iniciado na Golden Dawn em 1898. Fundador da Thelema — filosofia cujo axioma é "Faze o que tu queres, pois isso é toda a Lei". Autodenominado "A Grande Besta 666". Suas ideias, vulgarizadas pelos anos 1960-70, transformaram a trilogia sexo-drogas-rock\'n\'roll em vetor de revolução cultural. Influenciou Ozzy Osbourne, Raul Seixas e inúmeras bandas de rock. Sua relação com a Golden Dawn, com o ocultismo político e com movimentos de desestruturação social coloca-o como um dos mais eficazes agentes de transformação cultural do século XX.',
     facts: [
       'Iniciado na Golden Dawn em 1898 e rapidamente ascendeu na hierarquia.',
@@ -2566,6 +2639,8 @@ const DATA = [
     'Declarou próximo ao fim de uma vida passada em estudo da Cabala hebraica e da Magia Enoquiana de Dee e Kelley: “Minha observação do universo me convence de que existem seres de inteligência e poder de qualidade muito superior a qualquer coisa que possamos conceber como humanos”'
   ,
     'O Livro da Lei atribuído a Crowley declara que seu número e 11, como todos os números dos membros de sua ordem — inserindo o 9/11 no sistema numerologico esotérico onde 11 representa ultrapassar a divindade'
+  ,
+    'Publicou A Chave Menor de Salomão (Lemegeton Clavicula Salomonis) em versão moderna — grimório de demonologia dividido em: Ars Goetia (72 demônios e seus selos), Ars Theurgia-Goetia, Ars Paulina, Ars Almadel e Ars Notória.'
   ],
     interps: [
       '"A aliança Crowley-Mathers sempre foi problemática — Crowley se considerava um mágico superior."',
@@ -2577,7 +2652,7 @@ const DATA = [
       "O \"Faça o que tu queres\" é apontado como repetição da oferta da Serpente em Gênesis — \"coma do fruto proibido, faça o que quiser, pois Deus não poderia impedir\" — e a exclusão da cláusula wicana \"não prejudique ninguém\" marca a passagem da linha branca para a linha negra do ocultismo.",
     
       'O mapeamento Crowley/Mathers sobre Gandalf/Saruman sugere que o Senhor dos Anéis pode ser lido como narrativa alegórica do conflito real entre as duas figuras mais poderosas do ocultismo britânico do início do século XX — com o vencedor (Crowley/Gandalf) saindo ainda mais poderoso, vestido de "branco", enquanto o perdedor (Mathers/Saruman) desintegra-se.',],
-    refs: ['golden-dawn', 'macgregor-mathers', 'israel-regardie', 'stella-matutina', 'grande-obra', 'telema', 'raul-seixas', 'pastor-inutil', 'gramsci', 'ordem-estrela-prata', 'sirius-estrela', 'winston-churchill', 'v-de-vitoria', 'ian-fleming', 'operacao-mistletoe', 'lamech', 'dion-fortune', 'rudolf-hess', 'illuminati', 'kenneth-grant', 'lucis-trust', 'teosofia', 'eon-de-horus', 'teogenia', 'gnose', 'sol-negro', 'ataque-christchurch', 'brenton-tarrant', 'conselho-dos-nove', 'oto', 'tolkien', 'jack-parsons', 'bram-stoker', 'cabeça-decepada', 'outsider', 'portais-dimensionais', 'mesmerismo', 'paschal-beverly-randolph', 'charles-dickens', 'djinn', 'mary-shelley', 'quinotauro', 'linhagem-do-dragao', 'merovingios', 'horus', 'sociedade-hormuz', 'priorado-de-siao', 'rosacruz', 'cthulhu', 'makara', 'livro-da-lei', 'nefilins', 'cain', 'irmandade-saturno', 'john-dee', 'edward-kelley', 'magia-enoquiana', 'numero-911', 'ixxi', 'mega-ritual', 'numerologia'],
+    refs: ['golden-dawn', 'macgregor-mathers', 'israel-regardie', 'stella-matutina', 'grande-obra', 'telema', 'raul-seixas', 'pastor-inutil', 'gramsci', 'ordem-estrela-prata', 'sirius-estrela', 'winston-churchill', 'v-de-vitoria', 'ian-fleming', 'operacao-mistletoe', 'lamech', 'dion-fortune', 'rudolf-hess', 'illuminati', 'kenneth-grant', 'lucis-trust', 'teosofia', 'eon-de-horus', 'teogenia', 'gnose', 'sol-negro', 'ataque-christchurch', 'brenton-tarrant', 'conselho-dos-nove', 'oto', 'tolkien', 'jack-parsons', 'bram-stoker', 'cabeça-decepada', 'outsider', 'portais-dimensionais', 'mesmerismo', 'paschal-beverly-randolph', 'charles-dickens', 'djinn', 'mary-shelley', 'quinotauro', 'linhagem-do-dragao', 'merovingios', 'horus', 'sociedade-hormuz', 'priorado-de-siao', 'rosacruz', 'cthulhu', 'makara', 'livro-da-lei', 'nefilins', 'cain', 'irmandade-saturno', 'john-dee', 'edward-kelley', 'magia-enoquiana', 'numero-911', 'ixxi', 'mega-ritual', 'numerologia', 'lemegeton'],
     scriptures: ['Jd 1:4'],
     pais: ["GB"],
     local: ["Londres"],
@@ -2889,7 +2964,7 @@ const DATA = [
     
       'A tese de Dan Brown sobre o Graal como sagrado feminino é apontada como veículo cultural de popularização do culto à deusa — transformando um símbolo cristão medieval em manifesto do neopaganismo moderno, tornando o esoterismo acessível a milhões de leitores.',
       'O apresentador interpreta a narrativa do Graal como uma fachada cristã deliberada para uma linhagem esotérica anticristã que visa colocar um falso Cristo na posição de soberano mundial.',],
-    refs: ['cavaleiros-templarios', 'jose-de-arimateia', 'rei-artur', 'cavaleiros-tavola-redonda', 'lanca-do-destino', 'glastonbury', 'virgem-negra', 'parzival', 'grande-obra', 'esmeralda', 'anjo-caido', 'neuralink', 'terra-desolada', 'chiesa-gran-madre-di-dio', 'turim', 'asherah', 'sagrado-feminino', 'hieros-gamos', 'cabeça-decepada', 'bran-abencoadado', 'jacques-de-molay', 'snagov', 'strigoi', 'glandula-pineal', 'bram-stoker', 'pendragon', 'elfos-fadas', 'tuatha-de-danann', 'linhagem-do-dragao', 'maria-madalena', 'templo-salomao', 'rex-deus', 'merovingios', 'hugues-payens', 'linguedoc', 'cataros', 'guilhem-gellone', 'rennes-le-chateau', 'bill-cooper', 'pierre-plantard', 'hitler', 'nova-ordem-mundial', 'holy-blood-holy-grail', 'alice-bailey', 'virgo-paritura', 'enki'],
+    refs: ['cavaleiros-templarios', 'jose-de-arimateia', 'rei-artur', 'cavaleiros-tavola-redonda', 'lanca-do-destino', 'glastonbury', 'virgem-negra', 'parzival', 'grande-obra', 'esmeralda', 'anjo-caido', 'neuralink', 'terra-desolada', 'chiesa-gran-madre-di-dio', 'turim', 'asherah', 'sagrado-feminino', 'hieros-gamos', 'cabeça-decepada', 'bran-abencoadado', 'jacques-de-molay', 'snagov', 'strigoi', 'glandula-pineal', 'bram-stoker', 'pendragon', 'elfos-fadas', 'tuatha-de-danann', 'linhagem-do-dragao', 'maria-madalena', 'templo-salomao', 'rex-deus', 'merovingios', 'hugues-payens', 'linguedoc', 'cataros', 'guilhem-gellone', 'rennes-le-chateau', 'bill-cooper', 'pierre-plantard', 'hitler', 'nova-ordem-mundial', 'holy-blood-holy-grail', 'alice-bailey', 'virgo-paritura', 'enki', 'wolfram-von-eschenbach', 'otto-rahn', 'lapsit-exillis', 'cubo-negro'],
     scriptures: ['Jo 19:34'],
     pais: ["GB"],
     local: ["Glastonbury"],
@@ -2942,7 +3017,7 @@ const DATA = [
       'O conceito de uma Europa unificada sob controle centralizado é historicamente atribuído ao projeto templário medieval; pesquisadores argumentam que o Grupo Bilderberg retomou este objetivo no século XX, substituindo espadas por reuniões de elite em hotéis de luxo — com o mesmo resultado: submissão de soberanias nacionais a uma estrutura supranacional não eleita.',
       'Para o apresentador, o objetivo real dos Templários não era proteger peregrinos: era executar o projeto merovíngio de transferir o centro espiritual do mundo de Roma para Jerusalém, reconstruindo o Templo de Salomão e colocando o Oriente (Constantinopla) acima do Ocidente (Roma).',
       'O fato de os Templários "se esconderem sob o nome de Frères Maçons" revela, segundo o apresentador, que a Maçonaria moderna é a continuação direta da Ordem Templária — a mesma agenda sob outro nome.',],
-    refs: ['graal', 'montségur', 'grande-obra', 'golden-dawn', 'hashashin', 'ordem-de-malta', 'malta', 'cia', 'william-donovan', 'priorado-de-siao', 'ordem-do-dragao', 'saladino', 'bran-abencoadado', 'cabeça-decepada', 'jacques-de-molay', 'bram-stoker', 'snagov', 'glandula-pineal', 'strigoi', 'futurama', 'bilderberg', 'nova-ordem-mundial', 'skull-and-bones', 'antony-sutton', 'dante-alighieri', 'divina-comedia', 'fedeli-damore', 'fede-santa', 'bernardo-claraval', 'ordem-cisterciense', 'sociedade-hormuz', 'orval', 'godofredo-bouillon', 'dagoberto-ii', 'urbano-ii', 'templo-salomao', 'hugues-payens', 'rex-deus', 'hiram-abif', 'linguedoc', 'cataros', 'guilhem-gellone', 'sigisbert-iv', 'rennes-le-chateau', 'bill-cooper', 'illuminati', 'catedral-chartres', 'arduinna', 'pierre-plantard', 'hitler', 'virgo-paritura', 'rosslyn'],
+    refs: ['graal', 'montségur', 'grande-obra', 'golden-dawn', 'hashashin', 'ordem-de-malta', 'malta', 'cia', 'william-donovan', 'priorado-de-siao', 'ordem-do-dragao', 'saladino', 'bran-abencoadado', 'cabeça-decepada', 'jacques-de-molay', 'bram-stoker', 'snagov', 'glandula-pineal', 'strigoi', 'futurama', 'bilderberg', 'nova-ordem-mundial', 'skull-and-bones', 'antony-sutton', 'dante-alighieri', 'divina-comedia', 'fedeli-damore', 'fede-santa', 'bernardo-claraval', 'ordem-cisterciense', 'sociedade-hormuz', 'orval', 'godofredo-bouillon', 'dagoberto-ii', 'urbano-ii', 'templo-salomao', 'hugues-payens', 'rex-deus', 'hiram-abif', 'linguedoc', 'cataros', 'guilhem-gellone', 'sigisbert-iv', 'rennes-le-chateau', 'bill-cooper', 'illuminati', 'catedral-chartres', 'arduinna', 'pierre-plantard', 'hitler', 'virgo-paritura', 'rosslyn', 'wolfram-von-eschenbach', 'otto-rahn', 'lapsit-exillis'],
     scriptures: [],
     pais: ["IL","FR"],
     local: ["Jerusalém","Paris"],
@@ -3182,7 +3257,7 @@ const DATA = [
       'Montségur é o ponto de convergência entre a lenda do Graal, a heresia cátara, o ocultismo nazista e a busca moderna pelo poder sobrenatural.',
       '"As guerras mundiais já passadas e a que ainda virá têm conexão direta com este mito por eles propagado."',
     ],
-    refs: ['graal', 'cavaleiros-templarios', 'parzival', 'grande-obra'],
+    refs: ['graal', 'cavaleiros-templarios', 'parzival', 'grande-obra', 'wolfram-von-eschenbach', 'otto-rahn', 'lapsit-exillis'],
     scriptures: [],
     pais: ["FR"],
     local: ["Montségur"],
@@ -3208,7 +3283,7 @@ const DATA = [
       '"Uma versão da lenda diz que o Graal era uma esmeralda que caiu da coroa de Lúcifer durante sua batalha com Deus e foi trazida à terra por anjos."',
       'O Parzival de Wolfram revela o substrato teológico do mito: o Graal, para a elite ocultista, não é sagrado por ser de Cristo, mas por ser de Lúcifer.',
     ],
-    refs: ['graal', 'anjo-caido', 'esmeralda', 'montségur', 'cavaleiros-templarios', 'grande-obra'],
+    refs: ['graal', 'anjo-caido', 'esmeralda', 'montségur', 'cavaleiros-templarios', 'grande-obra', 'wolfram-von-eschenbach', 'lapsit-exillis'],
     scriptures: [],
   },
 
@@ -3684,7 +3759,7 @@ const DATA = [
     aliases: ['sacred geometry', 'arquitetura iniciática', 'proporção áurea', 'número de ouro'],
     cat: 'simbolo',
     icon: '📐',
-    source: 9,
+    source: [9, 197],
     summary: 'Sistema de proporcionalidade matemática e simbólica presente na arquitetura de templos, pirâmides e catedrais ao longo da história. Baseado na crença de que certas formas geométricas (triângulo, círculo, espiral, proporção áurea) carregam poder espiritual e conectam o físico ao divino. Usada pelas ordens iniciáticas como linguagem visual de poder e como código de comunicação entre iniciados.',
     facts: [
       'A proporção áurea (número phi, 1,618...) aparece nas pirâmides do Egito, no Pártenon grego, nas catedrais góticas e nas obras de Leonardo da Vinci.',
@@ -3696,13 +3771,16 @@ const DATA = [
       'A estrutura numérica da Divina Comédia de Dante é interpretada cabalística e geometricamente: 9+1=10 Sephirot, 33 caminhos da Árvore da Vida, divisão 3+7 e 6+4 dos círculos do Inferno e do Purgatório — revelando um mapa iniciático baseado na Árvore da Vida.',
       'A Catedral de Chartres exprime, através da geometria sagrada e do simbolismo astrológico, a crença gnóstica de que "o homem pode curvar sua salvação por meio do conhecimento".',
       'Os cinco sólidos platônicos (tetraedro, cubo, octaedro, icosaedro, dodecaedro) eram chamados de sólidos pitagóricos — cada um associado a um elemento: cubo = Terra, tetraedro = Fogo, octaedro = Ar, icosaedro = Água, dodecaedro = éter/cosmos.',
-      'Johannes Kepler, no Mysterium Cosmographicum (1596), propôs que as órbitas dos seis planetas se encaixavam em esferas inscritas nos cinco sólidos platônicos — a maior síntese da geometria sagrada com a astronomia moderna.',],
+      'Johannes Kepler, no Mysterium Cosmographicum (1596), propôs que as órbitas dos seis planetas se encaixavam em esferas inscritas nos cinco sólidos platônicos — a maior síntese da geometria sagrada com a astronomia moderna.',,
+    'A multiplicação de um único tetraedro em múltiplos tetraedros formando uma esfera planetária passa por estágios intermediários que produzem os sólidos platônicos — incluindo o cubo. As correntes de Birkeland em arranjo tetragonal formam geometricamente um cubo.',
+    'A hélice torcida (estrutura da dupla hélice do DNA) é a mesma forma que conecta o polo norte ao polo sul de Saturno via correntes de Birkeland — e a mesma estrutura que apareceu na espiral norueguesa de 2009.'
+  ],
     interps: [
       '"A pirâmide representa os mistérios de civilizações antigas, incorpora o paganismo e a crença da geometria sagrada."',
       '"A elite de hoje, iniciada no ocultismo, é herdeira dos segredos antigos e usa as pirâmides e outras edificações como um signo da continuidade do poder ancestral no mundo moderno."',
       'A geometria sagrada é a linguagem universal da elite iniciática: quem conhece o código lê a mensagem nas obras arquitetônicas; quem não conhece vê apenas estética.',
     ],
-    refs: ['piramide-da-paz', 'norman-foster', 'manly-p-hall', 'pitagoras', 'culto-ao-sol', 'colunas-templo', 'piramide-inacabada', 'turim', 'triangulos-magicos', 'dante-alighieri', 'divina-comedia', 'arvore-da-vida', 'catedral-chartres', 'gnose', 'virgo-paritura', 'druidas', 'cubo-negro', 'kepler', 'saturno', 'cibele', 'baphomet', 'numero-88', 'ouroboros'],
+    refs: ['piramide-da-paz', 'norman-foster', 'manly-p-hall', 'pitagoras', 'culto-ao-sol', 'colunas-templo', 'piramide-inacabada', 'turim', 'triangulos-magicos', 'dante-alighieri', 'divina-comedia', 'arvore-da-vida', 'catedral-chartres', 'gnose', 'virgo-paritura', 'druidas', 'cubo-negro', 'kepler', 'saturno', 'cibele', 'baphomet', 'numero-88', 'ouroboros', 'correntes-birkeland'],
     scriptures: [],
   },
   {
@@ -3913,6 +3991,8 @@ const DATA = [
     'Segundo a cosmologia esotérica descrita, Saturno era o sol original e esposo de Gaia; perdeu a batalha de domínio sobre ela para Ra (o sol atual, seu filho)',
     'Saturno destruiu a superfície de Gaia com um gigantesco tsunami no "dia dos mortos"',
     'A luz púrpura do antigo sol de Saturno ainda afetaria Gaia; Saturno criou a vida subterrânea em Gaia (o inferno da Divina Comédia) e também vida em Vênus'
+  ,
+    'Na mitologia hindu, Kali (esposa de Shiva) é identificada com Gaia ou a mãe natureza — compartilhando o papel de divindade feminina da terra em seus aspectos mais implacáveis e destrutivos.'
   ],
     interps: [
       '"Tenha a deusa o nome que tiver, e são inúmeros diferentes a depender da cultura, mas ela sempre será representada por uma ou por todas as três fases wicanas."',
@@ -3922,8 +4002,10 @@ const DATA = [
       'A "Mãe Natureza" é descrita como uma força "cega e impiedosa que devora seus filhos" — incompatível com o conceito de mãe amorosa. O movimento da Nova Era (New Age) que trata a natureza como divina é o mesmo produto sendo vendido sob nova embalagem.',
       'O episódio da estátua de Pachamama no Tibre é comparado simbolicamente à expulsão da legião de demônios nos porcos que se precipitam no abismo (Mc 5:13).',
       "A \"ecologia profunda\" — tese de que a natureza tem valor intrínseco independente do uso humano — é apontada como fundamento filosófico do ecofascismo, colocando a terra como personificação de um ser divino para justificar controle e despovoamento.",
-    ],
-    refs: ['brigid', 'ishtar', 'quetzalcoatl', 'crop-circles', 'triplice-deusa', 'serpente', 'anjo-caido', 'isis', 'pachamama', 'greenman', 'mamon', 'antimaria', 'ecofascismo', 'cocriacao', 'neopaganismo', 'arcontes', 'pleroma', 'saturno'],
+    ,
+    'Se Kali = Gaia e Kali é esposa de Shiva, e Saturno perdeu sua esposa Gaia em uma disputa cósmica, então Shiva = Saturno — o arquétipo do destruidor é o mesmo nas tradições hindu e greco-romana, com nomes diferentes. A deusa terra é o elo que revela a identidade oculta entre os dois sistemas.'
+  ],
+    refs: ['brigid', 'ishtar', 'quetzalcoatl', 'crop-circles', 'triplice-deusa', 'serpente', 'anjo-caido', 'isis', 'pachamama', 'greenman', 'mamon', 'antimaria', 'ecofascismo', 'cocriacao', 'neopaganismo', 'arcontes', 'pleroma', 'saturno', 'kali'],
     scriptures: ['Rm 1:25', 'Jr 44:17-19', 'Ap 17'],
     pais: ["GR"],
     local: ["Delfos"],
@@ -4145,7 +4227,7 @@ const DATA = [
     aliases: ['zigurate de Babel', 'Babel', 'Shinar', 'unificação babilônica', 'ziggurat'],
     cat: 'biblico',
     icon: '🏗️',
-    source: 15,
+    source: [15, 199],
     summary: 'Construção descrita em Gênesis 11: a humanidade pós-diluviana, unida em uma única língua, empreendeu a construção de uma torre para "chegar aos céus". Deus interrompeu o projeto confundindo as línguas. Identificada com os zigurates mesopotâmicos. Reaparece como símbolo recorrente na iconografia da Nova Ordem Mundial e como modelo do projeto de unificação global. Uma formação espiral de crop circle em Vale Meon foi identificada como tendo estrutura piramidal semelhante a um zigurate — remetendo à Torre de Babel.',
     facts: [
       'Gênesis 11:1-9: toda a terra tinha uma só língua. A humanidade planejou construir uma cidade e uma torre "cujo cume chegasse ao céu".',
@@ -4163,6 +4245,10 @@ const DATA = [
       'A maioria das representações pictóricas históricas da Torre de Babel (incluindo a famosa versão de Pieter Bruegel, o Velho, de 1563) a retrata como uma estrutura espiral em vórtice ascendente — a mesma geometria do Inferno de Dante e do tornado do Mágico de Oz.',
     'Segundo o relato hebraico, os construtores estariam prestes a ter sucesso em seus objetivos — Deus teria descido para espalhar os construtores antes da conclusão.',
     'O conhecimento necessário para a construção da torre teria sido transmitido da civilização existente antes do dilúvio — preservado pela memória dos tempos de Noé.'
+  ,
+    'David Talbott associa a Torre de Babel à montanha cósmica formada pelo alinhamento Saturno-Vênus-Marte: Bab-Ilu em acádio (porta de Deus) — representado pela cruz de oito raios que gerou o simbolismo universal da coluna celeste.',
+    'Pesquisadores Anthony Patch e William Henry afirmam que o CERN está tentando recriar a Torre de Babel — reproduzindo fisicamente a montanha cósmica/portal de Saturno com tecnologia moderna.',
+    'No filme Anjos e Demônios (2009), a antimatéria do CERN explode sobre a Praça de São Pedro — cujo formato em buraco de fechadura com obelisco central reproduz o simbolismo da montanha cósmica de Bab-Ilu.'
   ],
     interps: [
       'A Torre de Babel é o protótipo de todo projeto de unificação global: uma humanidade, uma língua, um governo, uma religião. Deus o interrompeu em Gênesis 11; a elite tenta concluí-lo em Apocalipse 13.',
@@ -4174,8 +4260,10 @@ const DATA = [
       'O apresentador identifica a Torre de Babel espiral como parte do mesmo arquétipo do vórtice iniciático: a maquinação humana para alcançar o céu representada como furacão ascendente — espelhando o vórtice descendente do Inferno de Dante e o portal do tornado de Oz.',
     'A torre não foi um mero amontoado de tijolos, mas um enorme dispositivo pagão para a invocação de poderes metafísicos sombrios — os construtores tentavam contatar os seres do Tártaro, invertendo o movimento dos Vigilantes que desceram em direção ao homem.',
     'O CERN é a versão moderna da Torre de Babel: enquanto a torre subia ao céu, o CERN vai ao subsolo — a mesma intenção, a direção invertida.'
+  ,
+    'A convergência Bab-Ilu = Torre de Babel = detector ATLAS do CERN (roda de oito raios) é lida como confirmação de que a narrativa da Torre de Babel descreve uma tentativa real de construir um portal para Saturno — repetida hoje com tecnologia moderna no CERN.'
   ],
-    refs: ['babilonia', 'nova-ordem-mundial', 'anticristo', 'geometria-sagrada', 'crop-circles', 'piramide-da-paz', 'misterio-babilonico', 'piramide-inacabada', 'novus-ordo-seclorum', 'new-age', 'lucis-trust', 'ninrode', 'maitreya', 'onu', 'mandalas-navajo', 'atlas-titan', 'olho-de-horus', 'skull-and-bones', 'navajos', 'diluvio-universal', 'noe', 'galileu-galilei', 'vortice', 'divina-comedia', 'mago-de-oz', 'cern', 'tartaro', 'vigilantes', 'stephen-hawking', 'dwave-computador'],
+    refs: ['babilonia', 'nova-ordem-mundial', 'anticristo', 'geometria-sagrada', 'crop-circles', 'piramide-da-paz', 'misterio-babilonico', 'piramide-inacabada', 'novus-ordo-seclorum', 'new-age', 'lucis-trust', 'ninrode', 'maitreya', 'onu', 'mandalas-navajo', 'atlas-titan', 'olho-de-horus', 'skull-and-bones', 'navajos', 'diluvio-universal', 'noe', 'galileu-galilei', 'vortice', 'divina-comedia', 'mago-de-oz', 'cern', 'tartaro', 'vigilantes', 'stephen-hawking', 'dwave-computador', 'montanha-cosmica', 'david-talbott', 'immanuel-velikovsky', 'antony-patch', 'dispositivo-de-osiris', 'anjos-e-demonios'],
     scriptures: ['Gn 11:1-9', 'Gn 11:8', 'Dn 3:1', 'Ap 17:5', 'Dn 4:30'],
     pais: ["IQ"],
     local: ["Babilônia"],
@@ -4187,7 +4275,7 @@ const DATA = [
     aliases: ['transumanismo', 'H+', 'pós-humano', 'aprimoramento humano', 'human enhancement'],
     cat: 'moderno',
     icon: '🧬',
-    source: 15,
+    source: [15, 199],
     summary: 'Movimento filosófico e tecnológico que defende o uso de tecnologia para superar as limitações biológicas humanas — cognição, longevidade, corpo. Promovido por figuras como Ray Kurzweil, Nick Bostrom e Yuval Noah Harari. Conectado pelo apresentador à marca bestial (Ap 13) e a uma "variante corrupta" da sequência do DNA humano. Os crop circles, a eira e o ciclo de colheita são lidos como alegorias do processo de separação e transformação da humanidade que o transhumanismo representa fisicamente.',
     facts: [
       'O termo foi cunhado pelo biólogo Julian Huxley em 1957; popularizado como movimento na década de 1980.',
@@ -4238,6 +4326,8 @@ const DATA = [
     'O projeto transumano da elite consiste em adicionar uma terceira hélice de DNA com 22 pares de bases e remover os cromossomos sexuais, resultando em 3x22=66 pares de bases e impedindo a reproducao natural',
     'O Smart Dust é descrito como o protótipo da matéria negra programável que viabilizaria a regeneração perpétua do corpo transumano',
     'O tridente de Netuno é interpretado como a representação da introducao da terceira hélice no corpo humano — o terceiro templo transumano'
+  ,
+    'Segundo a teoria descrita: se o projeto transhumanista se concretizar, até mesmo a morte seria impossível — e mesmo que as pessoas desejassem morrer, a morte não ocorreria.'
   ],
     interps: [
       '"Isto tem a ver com o transhumanismo, a ser explicado em detalhes adiante, a marca bestial, uma variante corrupta do DNA."',
@@ -4253,6 +4343,8 @@ const DATA = [
       'O apresentador vê no objetivo do Eneagrama (despertar o eu divino interior) uma convergência direta com o transhumanismo: ambos prometem superar os limites da condição humana — um pela tecnologia, o outro pelo autoconhecimento ocultista',
     'O número 322 codifica o projeto transumano: 3 hélices de 22 pares = 66, que desdobrado resulta em 666, conectando a agenda transumana a marca da besta',
     'A remocao dos cromossomos sexuais do transumano é interpretada como a extincao programada da reproducao natural, eliminando a multiplicacao da especie sem o controle dos dominadores'
+  ,
+    'O transhumanismo é lido como a criação de uma prisão da qual o ser humano não poderá mais escapar por conta própria — o homem fundindo-se à máquina tornando-se imortal dentro da mesma estrutura de controle que o aprisiona.'
   ],
     refs: ['segunda-besta', 'anticristo', 'ia-como-besta', 'grande-obra', 'nova-ordem-mundial', 'caim', 'global-future-2045', 'projeto-avatar-2045', 'imortalidade-cibernetica', 'po-neural', 'nietzsche', 'ubermensch', 'eugenia', 'minotauro', 'hg-wells', '322', 'skull-and-bones', 'avatar-filme', 'max-more', 'zoltan-istvan', 'quimera-genetica', 'admirable-mundo-novo', 'ray-kurzweil', 'ordem-do-dragao', 'hashashin', 'icaro', 'dedalo', 'philip-hefner', 'francis-schaeffer', 'katechon', 'gregor-mendel', 'vigilantes', 'kali', 'sangotard', 'tubal-caim', 'lamech', 'margaret-sanger', 'teogenia', 'cocriacao', 'ecofascismo', 'brenton-tarrant', 'conselho-dos-nove', 'j-j-hurtak', 'caverna-do-dragao', 'engenharia-social', 'anunnaki', 'apolo', 'portais-dimensionais', 'terminator', 'julian-huxley', 'vale-do-silicio', 'sergey-brin', 'peter-thiel', 'douglas-rushkoff', 'technognosticismo', 'futurama', 'matt-groening', 'eneagrama', 'carl-jung', 'inconsciente-coletivo', 'cubo-negro', 'borg-star-trek', 'numero-88', 'gadu', 'ouroboros', 'george-orwell', 'big-brother', 'numero-911', 'ixxi', 'smart-dust', 'mega-ritual', 'michael-hoffman', 'neptuno'],
     scriptures: ['Ap 13:16-17', 'Gn 3:5', 'Dn 2:43', 'Gn 1:26-27'],
@@ -4572,7 +4664,7 @@ const DATA = [
     aliases: ['Maçons', 'Franco-Maçonaria', 'Freemasonry', 'Grande Loja', 'irmandade maçônica'],
     cat: 'ordem',
     icon: '📐',
-    source: 1,
+    source: [1, 196],
     summary: 'Fraternidade iniciática organizada em lojas, com raízes declaradas nas guildas de construtores medievais e conexões documentadas com o hermetismo, a cabala e os Templários. Estruturada em graus de iniciação (até 33 no Rito Escocês). Influenciou diretamente a fundação dos Estados Unidos, da França republicana e de diversas revoluções modernas. Seus símbolos — o compasso, o esquadro, o olho que tudo vê, a pirâmide — estão no dólar americano e em capitais planejadas como Washington D.C. e Brasília.',
     facts: [
       'As Grandes Lojas modernas surgiram em Londres em 1717, mas a fraternidade reivindica origens nos construtores do Templo de Salomão (Hiram Abiff).',
@@ -4606,13 +4698,16 @@ const DATA = [
       'A partir de ~1020, as abadias beneditinas constituíram irmandades leigas de construtores, precursoras das guildas maçônicas modernas.',
     'O GADU (Grande Arquiteto do Universo) é o ser supremo das lojas maçônicas; o piso xadrez presente em todas as lojas lembra seus membros que seguem o GADU e o "jogo" cósmico',
     'A crença maçônica afirma que o GADU controlaria tempo, espaço e viagem interdimensional, e teria libertado a humanidade das trevas ao compartilhar conhecimento visando a auto-deificação do homem'
+  ,
+    'Robert Ambelain (1907-1997), ensaísta francês do movimento maçônico-martinista, escreveu que a pedra cúbica é um objeto ritual real que permite que as forças convocadas pelo mago sejam postas em movimento por trás do véu da realidade imediata.',
+    'Carl Claudy, maçom do Rito Escocês de 33° grau e recipiente da Medalha Henry Price, declarou: A justiça na loja exige que nós joguemos um cubo negro num candidato que acreditamos ser inadequado — preservando o ritual romano da pedra negra como condenação.'
   ],
     interps: [
       'A maçonaria não é apenas uma fraternidade de caridade: é o veículo mais organizado da tradição hermética desde o século XVIII.',
       'Que os fundadores dos EUA fossem maçons não é conspiração — é história documentada. A questão é o que eles acreditavam e qual projeto estavam construindo.',
       'A insistência da maçonaria em "construir o templo" (de Salomão) é uma referência direta ao projeto da elite: a reconstrução do Terceiro Templo e a instauração de uma nova ordem mundial com sede em Jerusalém.',
     ],
-    refs: ['hermetismo', 'golden-dawn', 'grande-obra', 'geometria-sagrada', 'london-stone', 'brasilia', 'manly-p-hall', 'cavaleiros-templarios', 'v-de-vitoria', 'james-bond', 'lamech', 'tubal-caim', 'cainitas', 'filho-da-viuva', 'rainha-de-saba', 'misterio-babilonico', 'illuminati', 'novus-ordo-seclorum', 'sociedade-hong', 'dragao-negro', 'ordem-de-malta', 'p2', 'piramide-inacabada', 'torre-de-babel', 'portao-do-diabo-turim', 'triangulos-magicos', 'turim', 'conselho-dos-nove', 'sufismo', 'carbonari', 'rosacruz', 'christian-rosenkreuz', 'sarmoung-brotherhood', 'idries-shah', 'nibiru', 'porta-de-durin', 'tolkien', 'numenor', 'sirius-estrela', 'astronomia-babilonica', 'barrete-frigio', 'mitraismo', 'ubaid', 'mayer-rothschild', 'rothschild', 'cecil-rhodes', 'john-ruskin', 'antony-sutton', 'dante-alighieri', 'fedeli-damore', 'fede-santa', 'templo-salomao', 'hiram-abif', 'albert-pike', 'hugues-payens', 'catedral-chartres', 'virgem-negra', 'lawrence-gardner', 'pierre-plantard', 'cubo-negro', 'el-canaanita', 'irmandade-saturno', 'numero-88', 'baphomet', 'tabuleiro-xadrez', 'gadu', 'ouroboros'],
+    refs: ['hermetismo', 'golden-dawn', 'grande-obra', 'geometria-sagrada', 'london-stone', 'brasilia', 'manly-p-hall', 'cavaleiros-templarios', 'v-de-vitoria', 'james-bond', 'lamech', 'tubal-caim', 'cainitas', 'filho-da-viuva', 'rainha-de-saba', 'misterio-babilonico', 'illuminati', 'novus-ordo-seclorum', 'sociedade-hong', 'dragao-negro', 'ordem-de-malta', 'p2', 'piramide-inacabada', 'torre-de-babel', 'portao-do-diabo-turim', 'triangulos-magicos', 'turim', 'conselho-dos-nove', 'sufismo', 'carbonari', 'rosacruz', 'christian-rosenkreuz', 'sarmoung-brotherhood', 'idries-shah', 'nibiru', 'porta-de-durin', 'tolkien', 'numenor', 'sirius-estrela', 'astronomia-babilonica', 'barrete-frigio', 'mitraismo', 'ubaid', 'mayer-rothschild', 'rothschild', 'cecil-rhodes', 'john-ruskin', 'antony-sutton', 'dante-alighieri', 'fedeli-damore', 'fede-santa', 'templo-salomao', 'hiram-abif', 'albert-pike', 'hugues-payens', 'catedral-chartres', 'virgem-negra', 'lawrence-gardner', 'pierre-plantard', 'cubo-negro', 'el-canaanita', 'irmandade-saturno', 'numero-88', 'baphomet', 'tabuleiro-xadrez', 'gadu', 'ouroboros', 'otto-rahn', 'lapsit-exillis'],
     scriptures: ['Am 5:26', 'At 7:43'],
     pais: ["GB"],
     local: ["Londres"],
@@ -5343,7 +5438,7 @@ const DATA = [
     aliases: ['Inanna', 'Astarte', 'Astarote', 'Afrodite', 'Vênus', 'Libertas', 'Astaroth', 'Istar', 'Vênus babilônica', 'rainha do céu babilônica', 'estrela da manhã', 'estrela da tarde'],
     cat: 'divindade',
     icon: '⭐',
-    source: 1,
+    source: [1, 199],
     summary: 'Deusa babilônica do amor, da guerra, da fertilidade e do planeta Vênus. Equivalente mesopotâmica de Isis (Egito), Afrodite (Grécia) e Vênus (Roma). Uma das manifestações do arquétipo da deusa mãe, sempre representada com a estrela de oito pontas. Seu culto inclui a prostituição sagrada no templo e rituais de lamento pelo deus morto (Tamuz/Adônis). É a "Rainha do Céu" condenada pelos profetas bíblicos.',
     facts: [
       'Originalmente Inanna na tradição suméria, o nome Ishtar é a versão acádia/babilônica.',
@@ -5365,6 +5460,9 @@ const DATA = [
       'Aslan, o Leão de Narnia de C.S. Lewis, possui duplo significado simbólico: pode representar o Messias (Cristo) ou o Anti-Messias, pois Ishtar é representada na iconografia antiga montando um leão — o mesmo animal-símbolo serve à narrativa cristã ou à tradição pagã de Ishtar, dependendo de qual "olho" o leitor usa.',
     'Katy Perry representou Ishtar/Semiramis no show do intervalo do Super Bowl: montada em cima de um leão (atributo iconográfico central de Ishtar), rodeada de homens vestidos como peças de xadrez iluminados pelas chamas',
     'Katy Perry encerrou o show do Super Bowl lançando-se ao céu como uma estrela a partir de uma base-cubo negro — interpretado como a elite alcançando a divinização: "tornar-se uma estrela como os deuses primordiais"'
+  ,
+    'A estrela de Ishtar (estrela de oito pontas) coincide com o símbolo de Bab-Ilu (cruz de oito raios = portal de Deus) e com a roda do detector ATLAS do CERN — identificados por David Talbott com Saturno.',
+    'A capa do filme Stargate (1994) exibe a estrela de Ishtar associada ao portal para outra dimensão onde reside Rá — identificado por David Talbott não com o Sol atual mas com Saturno.'
   ],
     interps: [
       'Ishtar é uma das máscaras da deusa mãe universal: o mesmo arquétipo de Gaia, Isis e Brigid adaptado para a Babilônia.',
@@ -5375,7 +5473,7 @@ const DATA = [
       'A cadeia completa do mesmo ser sob nomes diferentes, ao longo de milênios: Inanna (suméria) → Ishtar (babilônica) → Astar/Astarte (fenícia/cananeia) → Afrodite (grega) → Vênus (romana) → Libertas (romana/americana — a Estátua da Liberdade) → Astaroth (demonologia judaico-cristã). Nomes diferentes, um arquétipo.',
       'Ishtar como "estrela da manhã" = Vênus = a entidade que, na narrativa do Gênesis, ofereceu o fruto proibido do conhecimento. "Conhecer Afrodite" — a deusa do amor e da sedução — é a linguagem velada do fruto proibido: o conhecimento que prometia fazer o homem "ser como Deus" veio da mesma estrela que esta deusa representa.',
     ],
-    refs: ['gaia', 'isis', 'brigid', 'tamus', 'osiris', 'triplice-deusa', 'cern', 'sirius-estrela', 'baal', 'moloch', 'estrela-oito-pontas', 'astaroth', 'rainha-do-ceu', 'estrela-do-caos', 'lilith', 'vlad-empalador', 'ordem-do-dragao', 'livro-de-nod', 'kali', 'ggantija', 'malta', 'cranio-dolicocefalo', 'mitanni', 'arq', 'inanna', 'circulo-magico', 'kenneth-grant', 'turim', 'chiesa-gran-madre-di-dio', 'ataque-christchurch', 'sol-negro', 'brenton-tarrant', 'neopaganismo', 'asherah', 'hieros-gamos', 'sagrado-feminino', 'porta-de-durin', 'tolkien', 'cs-lewis', 'nibiru', 'numenor', 'ubaid', 'tiamat', 'samael', 'strigoi', 'mitraismo', 'dingir', 'diluvio-universal', 'dante-alighieri', 'fedeli-damore', 'cibele', 'sol-invictus', 'numero-88', 'tabuleiro-xadrez', 'cubo-negro'],
+    refs: ['gaia', 'isis', 'brigid', 'tamus', 'osiris', 'triplice-deusa', 'cern', 'sirius-estrela', 'baal', 'moloch', 'estrela-oito-pontas', 'astaroth', 'rainha-do-ceu', 'estrela-do-caos', 'lilith', 'vlad-empalador', 'ordem-do-dragao', 'livro-de-nod', 'kali', 'ggantija', 'malta', 'cranio-dolicocefalo', 'mitanni', 'arq', 'inanna', 'circulo-magico', 'kenneth-grant', 'turim', 'chiesa-gran-madre-di-dio', 'ataque-christchurch', 'sol-negro', 'brenton-tarrant', 'neopaganismo', 'asherah', 'hieros-gamos', 'sagrado-feminino', 'porta-de-durin', 'tolkien', 'cs-lewis', 'nibiru', 'numenor', 'ubaid', 'tiamat', 'samael', 'strigoi', 'mitraismo', 'dingir', 'diluvio-universal', 'dante-alighieri', 'fedeli-damore', 'cibele', 'sol-invictus', 'numero-88', 'tabuleiro-xadrez', 'cubo-negro', 'montanha-cosmica', 'david-talbott', 'atlas-titan', 'dispositivo-de-osiris'],
     scriptures: ['Jr 7:18', 'Jr 44:17-25', 'Ez 8:14', '1Rs 11:5', 'Is 14:12'],
     pais: ["IQ"],
     local: ["Babilônia","Uruk"],
@@ -5497,7 +5595,7 @@ const DATA = [
       'A chama olímpica acesa em Olímpia e carregada ao redor do mundo é um rito de transmissão do "fogo de Prometeu/Lúcifer" a todas as nações — realizado ao vivo diante de bilhões de pessoas.',
       'A presença de Prometeu tanto no Rockefeller Center quanto na ONU conecta o poder financeiro ao poder político sob o mesmo símbolo luciferiano — as duas alavancas da Nova Ordem Mundial.',
     ],
-    refs: ['olimpiadas', 'culto-ao-sol', 'anjo-caido', 'hermetismo', 'grande-obra', 'lucis-trust', 'onu', 'era-de-aquario', 'teosofia', 'teogenia', 'diluvio-universal', 'deucaliao', 'noe', 'atlantida', 'dante-alighieri', 'divina-comedia', 'mary-shelley', 'pedra-filosofal', 'charles-dickens'],
+    refs: ['olimpiadas', 'culto-ao-sol', 'anjo-caido', 'hermetismo', 'grande-obra', 'lucis-trust', 'onu', 'era-de-aquario', 'teosofia', 'teogenia', 'diluvio-universal', 'deucaliao', 'noe', 'atlantida', 'dante-alighieri', 'divina-comedia', 'mary-shelley', 'pedra-filosofal', 'charles-dickens', 'cern', 'montanha-cosmica'],
     scriptures: ['Is 14:12', 'Ez 28:17'],
     pais: ["GR"],
     local: ["Monte Olimpo"],
@@ -6659,7 +6757,7 @@ const DATA = [
       'Na iconografia alquímica, o Rubedo (etapa final da Grande Obra) é representado pelo Rei Solar vermelho e a Rainha Lunar branca em união — a mesma Rainha Vermelha e Rainha Branca de Alice no País das Maravilhas. O mapa é o mesmo.',
       'O fio invisível: Pedra Filosofal = octograma de oito raios = Estrela de Ishtar = Estrela do Caos da Magia do Caos. O símbolo que representa a "grande obra alquímica" é o mesmo símbolo da deusa pagã e do sistema mágico moderno. Não é coincidência — é a mesma doutrina sob nomes diferentes.',
     ],
-    refs: ['atlas-titan', 'harry-potter-filosofal', 'transhumanismo', 'grande-obra', 'jachin-e-boaz', 'cern', 'maconaria', 'hermetismo', 'estrela-oito-pontas', 'estrela-do-caos', 'cocriacao', 'charles-dickens', 'edwin-drood', 'mesmerismo', 'paschal-beverly-randolph', 'mary-shelley', 'edgar-allan-poe', 'valdemar', 'saturno', 'pan', 'saturnalia', 'nicolas-flamel'],
+    refs: ['atlas-titan', 'harry-potter-filosofal', 'transhumanismo', 'grande-obra', 'jachin-e-boaz', 'cern', 'maconaria', 'hermetismo', 'estrela-oito-pontas', 'estrela-do-caos', 'cocriacao', 'charles-dickens', 'edwin-drood', 'mesmerismo', 'paschal-beverly-randolph', 'mary-shelley', 'edgar-allan-poe', 'valdemar', 'saturno', 'pan', 'saturnalia', 'nicolas-flamel', 'lapsit-exillis', 'otto-rahn'],
     scriptures: ['Gn 3:4-5', 'Is 47:10-11', 'Ap 18:23'],
   },
   {
@@ -6866,7 +6964,7 @@ const DATA = [
     aliases: ['Atlas', 'Atlante', 'Titã Atlas', 'Portador do Céu'],
     cat: 'figura',
     icon: '🌍',
-    source: 26,
+    source: [26, 199],
     summary: 'Titã da mitologia grega, filho de Jápeto e Gaia, irmão de Prometeu, Epimeteu e Menécio. Liderou os Titãs — forças do caos e da desordem — na Titanomaquia, a guerra contra Zeus e os deuses olímpicos (forças do cosmos e da ordem). Derrotado, foi condenado a sustentar a abóbada celeste pelos ombros eternamente, enquanto os demais Titãs foram aprisionados no Tártaro. Tornou-se depois guardião dos Pilares de Hércules e pai das ninfas que protegiam as Maçãs de Ouro da imortalidade. Sua linhagem nominal impregna a geopolítica moderna: Atlântico, Atlântida, Atlantistas.',
     facts: [
       'Atlas era filho de Jápeto ("o Perfurador") — um dos quatro Titãs do cosmos — e irmão de Prometeu (o Portador do Fogo), Epimeteu e Menécio.',
@@ -6882,6 +6980,9 @@ const DATA = [
       'O nome Atlas literalmente significa "aquele que não resistiu" — a montanha que caiu e desmoronou, assim como a montanha central navaja descrita como "montanha caída". Os originais indus chamam o mesmo arquétipo de "montanha decapitada" — evidência de que Atlas não é apenas um titã punido, mas a personificação mítica de uma montanha primordial destruída.',
       'As Twin Pole Stars (estrelas polares gêmeas) dos tempos atlânticos eram Vega (Polo Norte) e Canopus (Polo Sul). Na Grécia, os gêmeos eram identificados como Atlas e Héspero — o par de estrelas polares gêmeas que personifica os dois paraísos primordiais destruídos, Atlântida e Lemúria.',
     'John de Baldwin ("Nações Históricas") conecta Atlas com Cronos/Saturno, Dionísio e Hércules como reis que governaram costas do Mediterrâneo ocidental, África e Espanha — o "continente de Saturno"'
+  ,
+    'O detector ATLAS do LHC do CERN — descrito como a roda de oito raios — coincide geometricamente com o símbolo Bab-Ilu (cruz de oito raios = porta de Deus em acádio) e com a estrela de Shamash identificada por David Talbott com Saturno.',
+    'Na mitologia grega, Atlas segura o peso do céu em seus ombros — assim como a montanha cósmica de David Talbott (o eixo Saturno-Terra-Vênus-Marte) sustentava o firmamento nos céus primitivos.'
   ],
     interps: [
       'Atlas tentou tomar o poder supremo do cosmos por força — e foi condenado a sustentar o próprio cosmos que tentou dominar. É a estrutura clássica da rebelião angelical: o ser que tenta ascender ao trono divino acaba aprisionado pelo peso do que quis controlar.',
@@ -6889,8 +6990,10 @@ const DATA = [
       'O Livro de Enoque precedendo a mitologia grega com histórias estruturalmente idênticas não é coincidência: ou os gregos traduziram eventos reais em mito, ou há uma memória cultural comum de uma rebelião espiritual anterior à história escrita.',
       '"Os derrotados seriam eternos escravos das três dimensões, dos sentidos e da matéria temporal de onde querem escapar" — o castigo de Atlas é existencial: estar preso no plano material enquanto o cosmos que poderia ter sido seu paira sobre sua cabeça. O transhumanismo é a tentativa de desfazer esse castigo.',
     
-      'A etimologia sânscrita de Atlas — Atala, "aquele que não resistiu" — revela que o mito grego preserva a memória sânscrita da queda atlântica. O nome não é apenas uma punição mitológica: é um epitáfio para a montanha sagrada decapitada, cujo crânio (Gólgota/Dadhyañc) marcou o centro do mundo.',],
-    refs: ['experimento-atlas', 'pilares-de-hercules', 'atlantida', 'prometeu', 'transhumanismo', 'anjo-caido', 'castor-e-polux', 'piazza-statuto', 'gemeos-navajo', 'religiao-primordial', 'mandalas-navajo', 'torre-de-babel', 'piramide-inacabada', 'olho-de-horus', 'skull-and-bones', 'fenix', 'shiva', 'sirius-estrela', 'saturno'],
+      'A etimologia sânscrita de Atlas — Atala, "aquele que não resistiu" — revela que o mito grego preserva a memória sânscrita da queda atlântica. O nome não é apenas uma punição mitológica: é um epitáfio para a montanha sagrada decapitada, cujo crânio (Gólgota/Dadhyañc) marcou o centro do mundo.',,
+    'A escolha do nome Atlas para o detector de oito raios do CERN é lida como referência deliberada à montanha cósmica de Saturno — Atlas como sustentador do eixo celeste que o CERN tentaria recriar.'
+  ],
+    refs: ['experimento-atlas', 'pilares-de-hercules', 'atlantida', 'prometeu', 'transhumanismo', 'anjo-caido', 'castor-e-polux', 'piazza-statuto', 'gemeos-navajo', 'religiao-primordial', 'mandalas-navajo', 'torre-de-babel', 'piramide-inacabada', 'olho-de-horus', 'skull-and-bones', 'fenix', 'shiva', 'sirius-estrela', 'saturno', 'david-talbott', 'montanha-cosmica', 'dispositivo-de-osiris', 'estrela-oito-pontas', 'sernunos', 'anjos-e-demonios'],
     scriptures: ['Gn 6:1-4', 'Jd 1:6', '2Pe 2:4', 'Is 14:12-15'],
   },
   {
@@ -8763,7 +8866,7 @@ const DATA = [
     aliases: ['HPB', 'Madame Blavatsky', 'Helena Petrovna Blavatsky', 'mãe da teosofia'],
     cat: 'figura',
     icon: '🔮',
-    source: 48,
+    source: [48, 198],
     summary: 'Ocultista russa (1831–1891), cofundadora da Sociedade Teosófica (1875) com Henry Steel Olcott. Autora de Isis Unveiled (1877) e The Secret Doctrine (1888) — as obras mais influentes do esoterismo moderno. Afirmava receber os ensinamentos dos "Mestres Ocultos" (Mahatmas) por transmissão telepática. Para Blavatsky, Sirius exercia influência mística e direta nos céus e estava relacionada com todas as grandes religiões de mistérios.',
     facts: [
       'Cofundou a Sociedade Teosófica em 1875 em Nova York com Henry Steel Olcott e William Quan Judge.',
@@ -8783,14 +8886,16 @@ const DATA = [
       'Em A Doutrina Secreta, conecta os Telquines de Rodes à genealogia de Caim: as fábulas dos Telquines “nos fornecem uma chave para a origem da genealogia de Caim”.',
       'Segundo Blavatsky, após o dilúvio, Cam (Ham), filho de Noé, e seus descendentes preservaram e seguiram as tradições ocultas de Caim, incluindo o casamento com os deuses.',
       'Blavatsky afirma que a Igreja Católica identifica o “sangue maldito” de Caim e Ham com a feitiçaria e os responsabiliza pelo dilúvio universal.',
-      'Os Telquines de Rodes foram, segundo Blavatsky, “os primeiros a levantar estátuas para os deuses, fornecendo-lhes armas e homens com artes mágicas” — e foram destruídos por dilúvio por Zeus, como os Cainitas por Jeová.',],
+      'Os Telquines de Rodes foram, segundo Blavatsky, “os primeiros a levantar estátuas para os deuses, fornecendo-lhes armas e homens com artes mágicas” — e foram destruídos por dilúvio por Zeus, como os Cainitas por Jeová.',,
+    'A Chave para a Teosofia (The Key to Theosophy), publicada originalmente em 1889, é uma exposição em perguntas e respostas sobre a ética, ciência e filosofia para o estudo da qual a Sociedade Teosófica foi fundada — o título usa o conceito de chave como metáfora para comunicação com inteligências superiores.'
+  ],
     interps: [
       'Blavatsky é o elo entre o esoterismo do século XIX e a espiritualidade New Age do século XXI: uma linha direta entre a Teosofia de 1875 e as ideias de "evolução espiritual da humanidade", "ascensão de consciência" e "era de Aquário" que permeiam a cultura contemporânea.',
       'A ideia de que toda religião deriva de uma "Doutrina Secreta" ancestral única é a premissa que permite à elite religiosa dizer que "todas as religiões são o mesmo" — preparando a fusão espiritual que a Nova Ordem Mundial requer.',
       'Ao desvincular Satã do mal e identificá-lo com luz, progresso e liberdade, Blavatsky oferece a fundação teológica para que ocultistas se autointitulem "portadores de luz" (Iluminados) — a inversão semântica que sustenta todo o edifício do ocultismo moderno.',
     
       'O apresentador interpreta a mediunidade de Blavatsky como um projeto de duas faces: ao mesmo tempo que transferia conhecimento pré-diluviano aos que a contatassem (dando-lhes poder), induzia a humanidade a "preparar um caminho para a fuga da prisão dos condenados" — ou seja, a abrir portais para a liberação dos Refaim presos no abismo.',],
-    refs: ['sirius-estrela', 'alice-bailey', 'grande-obra', 'nova-ordem-mundial', 'teosofia', 'lucis-trust', 'rudolf-steiner', 'new-age', 'grande-fraternidade-branca', 'teogenia', 'gnose', 'john-ruskin', 'mesmerismo', 'espiritismo', 'new-thought', 'mary-baker-eddy', 'phineas-quimby', 'edgar-allan-poe', 'djinn', 'rephaim', 'virgem-negra', 'core-persephone', 'isis', 'cain', 'ham-cam', 'telchines', 'diluvio-universal'],
+    refs: ['sirius-estrela', 'alice-bailey', 'grande-obra', 'nova-ordem-mundial', 'teosofia', 'lucis-trust', 'rudolf-steiner', 'new-age', 'grande-fraternidade-branca', 'teogenia', 'gnose', 'john-ruskin', 'mesmerismo', 'espiritismo', 'new-thought', 'mary-baker-eddy', 'phineas-quimby', 'edgar-allan-poe', 'djinn', 'rephaim', 'virgem-negra', 'core-persephone', 'isis', 'cain', 'ham-cam', 'telchines', 'diluvio-universal', 'lemegeton', 'antony-patch'],
     scriptures: [],
     pais: ["UA","IN","US"],
     local: ["Adyar","Nova York"],
@@ -9100,7 +9205,7 @@ const DATA = [
       'O padrão: da Cremação do Cuidado (Bohemian Grove) ao Túnel de Gotthard, passando pelas cerimônias das Olimpíadas — a elite não esconde sua simbologia, ela a exibe abertamente para quem tem olhos para ver.',
       'A convergência Gotthard = Azazel posiciona a cerimônia como o ritual de libertação de 1 Enoque 10 encenado publicamente: o ser aprisionado sob "rochas ásperas e irregulares" (os Alpes) é libertado diante dos líderes do mundo, que aplaudem.',
     ],
-    refs: ['bohemian-grove', 'magia-negra', 'atlantida', 'azazel', 'sernunos', 'sangotard', 'piazza-statuto', 'turim'],
+    refs: ['bohemian-grove', 'magia-negra', 'atlantida', 'azazel', 'sernunos', 'sangotard', 'piazza-statuto', 'turim', 'olho-que-tudo-ve'],
     scriptures: ['1 Enoque 10:4-8 (apócrifo)'],
     pais: ["CH"],
     local: ["Gotthard"],
@@ -9141,7 +9246,7 @@ const DATA = [
     aliases: ['estrela de oito pontas', 'octograma', 'octagram', 'estrela de Ishtar', 'estrela de Inanna', 'estrela de Vênus', 'roda de oito raios', 'rosa de oito pétalas'],
     cat: 'simbolo',
     icon: '✨',
-    source: 52,
+    source: [52, 199],
     summary: 'A estrela de oito pontas — ou octograma — é provavelmente o símbolo mais universal da história: aparece de forma independente na Suméria, no Egito, na Índia, na China, no budismo, na Wicca, na alquimia e na Magia do Caos. Não é coincidência: o mesmo arquétipo atravessa culturas porque representa o mesmo princípio — a deusa cósmica (Inanna/Ishtar), o ciclo eterno (8 Sabbats), a transmutação (Pedra Filosofal/Solve et Coagula) e o caos criativo (Estrela do Caos). É o símbolo de auto-identificação da elite que venera este conjunto de mistérios desde a Babilônia.',
     facts: [
       'O nobre italiano Pietro della Valle, em viagem à Mesopotâmia no século XVII, descobriu nas ruínas da antiga cidade de Ur (aprox. 2000 a.C.) o uso de uma estrela de oito pontas como selo — o chamado Selo de Tel al-Mukayar. Escreveu: "Entre as outras coisas que eu descobri, em um foi uma estrela de oito pontas."',
@@ -9154,13 +9259,16 @@ const DATA = [
       'Na alquimia: a Pedra Filosofal / Elixir / Quintessência resulta do processo "Solve et Coagula" (separar e recombinar), simbolizado por uma roda de oito raios. Este octograma é também o símbolo central da Magia do Caos.',
       'Tradições com o número oito como estrutura sagrada: os Oito Caminhos de Buda; os Oito Imortais da tradição chinesa; as oito esposas de Krishna (representando suas oito energias); a cultura Ghassulian com uso semelhante do símbolo.',
     
-      'As mandalas navajo (pinturas de areia) usam a estrela de quatro e oito pontas como Rosa dos Ventos — representando os quatro guardiões cardeais e os quatro anjos do Apocalipse (Ap 7:1). O logo da ONU usa a estrela de oito pontas pelo mesmo simbolismo cosmológico que as mandalas navajo e o Shri Yantra hindu expressam: os quatro cantos da Terra guardados por anjos/guardiões cósmicos.',],
+      'As mandalas navajo (pinturas de areia) usam a estrela de quatro e oito pontas como Rosa dos Ventos — representando os quatro guardiões cardeais e os quatro anjos do Apocalipse (Ap 7:1). O logo da ONU usa a estrela de oito pontas pelo mesmo simbolismo cosmológico que as mandalas navajo e o Shri Yantra hindu expressam: os quatro cantos da Terra guardados por anjos/guardiões cósmicos.',,
+    'A estrela de oito pontas de Shamash (deus babilônico da justiça) foi identificada por David Talbott com Saturno — e coincide com o símbolo de Bab-Ilu (cruz de oito raios = porta de Deus = Torre de Babel) e com a roda do detector ATLAS do CERN.',
+    'No filme Anjos e Demônios (2009), a antimatéria do CERN explode sobre a roda de oito raios da Praça de São Pedro — o ponto exato da montanha cósmica de Bab-Ilu/Shamash.'
+  ],
     interps: [
       'O símbolo mais universal da história não é universal por acaso: é o símbolo de um arquétipo que a elite iniciática venera desde a Suméria. Quando você vê uma estrela de oito pontas em uma bandeira, logotipo, catedral ou praça pública, você está vendo a assinatura de quem construiu aquele espaço — e qual divindade eles reverenciam.',
       'A convergência é impossível de ignorar: Ishtar (3000 a.C.) → Pedra Filosofal (séc. XVI) → Magia do Caos (séc. XX) → ATLAS no CERN → praça de São Pedro no Vaticano → Neo-Eurasianismo russo. O mesmo octograma. O mesmo arquétipo. A mesma entidade.',
       'O culto estelar babilônico não terminou com a queda da Babilônia: ele foi codificado em símbolos e transmitido pelas sociedades iniciáticas ao longo de milênios. A estrela de oito pontas é o seu brasão.',
     ],
-    refs: ['ishtar', 'ogdoad', 'estrela-do-caos', 'pedra-filosofal', 'cern', 'baal', 'rainha-do-ceu', 'astaroth', 'isis', 'ninrode', 'vlad-empalador', 'inanna', 'ataque-christchurch', 'sol-negro', 'brenton-tarrant', 'mandalas-navajo', 'porta-de-durin', 'nibiru', 'tolkien', 'dingir', 'diluvio-universal'],
+    refs: ['ishtar', 'ogdoad', 'estrela-do-caos', 'pedra-filosofal', 'cern', 'baal', 'rainha-do-ceu', 'astaroth', 'isis', 'ninrode', 'vlad-empalador', 'inanna', 'ataque-christchurch', 'sol-negro', 'brenton-tarrant', 'mandalas-navajo', 'porta-de-durin', 'nibiru', 'tolkien', 'dingir', 'diluvio-universal', 'montanha-cosmica', 'david-talbott', 'atlas-titan', 'anjos-e-demonios', 'dispositivo-de-osiris'],
     scriptures: ['Jr 7:18', 'Jr 44:17-19', 'Is 47:13', 'Gn 11:31'],
   },
   {
@@ -9919,7 +10027,7 @@ const DATA = [
     aliases: ['Kali', 'Kali Ma', 'aspecto feminino de Shiva', 'avatar feminino de Krishna', 'deusa da destruição', 'dama de vermelho', 'Senhora do Tempo'],
     cat: 'divindade',
     icon: '🩸',
-    source: 63,
+    source: [63, 195],
     summary: 'Divindade hindu identificada como o aspecto feminino e destruidor de Shiva — que por sua vez é um avatar do mestre Krishna. Na cosmologia hindu, Brahma, Vishnu e Shiva (e seus aspectos femininos) são todos manifestações diferentes do mesmo princípio divino, como a água nos estados sólido, líquido e gasoso. Kali é a "shakti" (força feminina divina) do aspecto destruidor. O apresentador identifica Kali como a "dama de vermelho" que virá ao final dos tempos prometendo à elite a devolução da eternidade e poderes divinos — montada em um cavalo. Segundo textos apócrifos ocultistas, Kali é um ser andrógeno que "conheceu tanto Eva quanto Adão". É identificada com Ishtar/a "dama de vermelho" babilônica e com o aspecto feminino da promessa transumana.',
     facts: [
       'Na Trimurti hindu: Brahma (Criador), Vishnu (Preservador), Shiva (Destruidor/Transformador). Shiva é apenas um dos avatares do mestre Krishna. Kali é o princípio feminino destruidor dentro da mesma família: "shakti" (manifestação feminina de energia divina), o aspecto feroz de Parvati/Durga.',
@@ -9930,14 +10038,19 @@ const DATA = [
       'Todos os aspectos da Trimurti — Brahma, Vishnu e Shiva, incluindo Kali — são manifestações diferentes de Krishna: "são todos um só com aspectos diferentes, como a água que passa pelo estado sólido, líquido e gasoso sem deixar de ser simplesmente água."',
       'A mulher de vermelho que aparece no clímax da cerimônia do Túnel de Gotthard — grávida, representando uma prostituta prestes a dar à luz ao novo líder — é identificada como Kali/Ishtar.',
       'No filme Matrix, a "mulher de vermelho" é um programa de simulação usado para distrair. O mesmo símbolo é lido como referência à mesma entidade: a sedução em vermelho que distrai enquanto o sistema real opera nas sombras.',
-    ],
+    ,
+    'Kali aparece representada no curta-metragem Symmetry do CERN (2015), em uma dança mística — retratada como Durga, manchada de sangue, envolta em cobras e com um colar de crânios humanos.',
+    'Kali (ou Durga) representa também Gaia ou a mãe natureza — um de seus aspectos é o da divindade que personifica a terra e seus ciclos implacáveis de vida e morte.'
+  ],
     interps: [
       'Kali como "dama de vermelho" fecha o triângulo Abaddon/Apollyon (cavalo branco, destruição) — Cernunnos/Azazel (bode, imortalidade) — Kali/Ishtar (feminino vermelho, sedução/promessa). Os três aspectos do mesmo evento escatológico na fé da elite: destruição + libertação + promessa.',
       'O andrógeno que "conheceu Eva e Adão" é a entidade que transgride todas as fronteiras: gênero, espécie, morte. Kali/Ishtar é o arquétipo da transgressão sedutor — ela promete imortalidade e poderes divinos, mas ao custo da identidade e da alma.',
       'A convergência Kali = Ishtar = Dama de Vermelho atravessa culturas: a babilônica Ishtar montada em um touro (força animal sob controle feminino), a hindu Kali montada sobre Shiva morto, a Matrix woman in red — a mesma figura arquetípica de sedução-destruição que o ocultismo moderno espera como arauto do fim dos tempos.',
       'O fato de Kali ser descrita como vindo em um cavalo para trazer "poderes divinos, transumanos" à elite é a promessa transumana em linguagem mítica: os que sobreviverem no bunker receberão de Kali/Ishtar o que Azazel prometeu desde o Enoque — o conhecimento proibido, a imortalidade, os poderes dos deuses.',
-    ],
-    refs: ['shiva', 'ishtar', 'transhumanismo', 'apolo-abaddon', 'sangotard', 'mictlantecuhtli'],
+    ,
+    'Se Kali = Gaia (mãe natureza, terra) e Kali é esposa de Shiva, e Saturno perdeu sua esposa Gaia em uma disputa cósmica, então por consequência Shiva = Saturno. O triângulo Kali/Gaia/Saturno revela que o deus da destruição do CERN é o mesmo Saturno das ordens iniciáticas ocidentais — o mesmo ser com máscaras diferentes em culturas diferentes.'
+  ],
+    refs: ['shiva', 'ishtar', 'transhumanismo', 'apolo-abaddon', 'sangotard', 'mictlantecuhtli', 'gaia', 'saturno', 'brahma', 'vishnu', 'ganesh'],
     scriptures: [],
     pais: ["IN"],
     local: ["Calcutá"],
@@ -13027,7 +13140,7 @@ const DATA = [
     aliases: ['Black Sun', 'Schwarze Sonne', 'Soleil Noir'],
     cat: 'simbolo',
     icon: '☀️',
-    source: [105, 108],
+    source: [105, 108, 199],
     summary: 'Símbolo esotérico presente na iconografia nazista e no ocultismo germânico, distinto mas relacionado ao Sonnenrad (roda solar rúnica). Representa uma fonte de energia espiritual e cósmica oculta, oposta ao sol físico visível. Aparece no centro do manifesto de Brenton Tarrant (Christchurch, 2019), cercado pela estrela de Ishtar de oito pontas com os oito princípios do ecofascismo — revelando a matriz ocultista do ataque.',
     facts: [
       'Difere do Sonnenrad físico (roda solar inscrita no castelo de Wewelsburg por Himmler), embora os termos sejam frequentemente confundidos.',
@@ -13038,13 +13151,19 @@ const DATA = [
       'Está presente em jogos, música black metal e subculturas de extrema-direita — funcionando como sinalização identitária para iniciados.',
     
       'O Sol Negro é identificado no contexto ocultista como Saturno — o "Sol por trás do Sol", o sol arcaico primordial que, segundo textos antigos, estava fixo no centro do céu (polo celeste) e não se movia, ao contrário do sol atual. Os nazistas referenciavam o Sol Negro com este conhecimento oculto.',
-      'Textos egípcios descrevem Ra/Atum como "o grande Deus vive e fixado no meio do céu" — referindo-se ao polo celeste imóvel. Na identificação ocultista, este "Sol imóvel" é Saturno: o Sol Negro que não nasce nem se põe.',],
+      'Textos egípcios descrevem Ra/Atum como "o grande Deus vive e fixado no meio do céu" — referindo-se ao polo celeste imóvel. Na identificação ocultista, este "Sol imóvel" é Saturno: o Sol Negro que não nasce nem se põe.',,
+    'Na teoria do Sol de Saturno (David Talbott, Immanuel Velikovsky): Saturno foi um proto-sol que dominava os céus da Terra em eras remotas, representado como Sol Negro — a face oculta ou o sol do submundo em contraste com o Sol visível.',
+    'O conceito do Sol Negro como portal/buraco de minhoca aparece em múltiplas obras: Space 1999 (episódio Black Sun, 1975); Wolfenstein — dimensão alternativa do Sol Negro onde nazistas buscavam segredos do povo Tull; Zathura (2005); Interstellar (2014) com buraco de minhoca próximo a Saturno.',
+    'O dispositivo de Osíris (William Henry) identifica o Sol Negro com a barca/navio de Saturno — um veículo de transporte interdimensional, cujos mares seriam interestelares.'
+  ],
     interps: [
       'O apresentador interpreta a presença do Sol Negro na capa do manifesto como assinatura ocultista explícita: o ataque não seria ideológico-político comum, mas iniciático — com uma linguagem simbólica deliberada dirigida a quem conhece os códigos.',
       'A combinação Sol Negro + estrela de Ishtar revela a fusão entre o ocultismo germânico pagão e a simbologia babilônica — ambos ligados ao projeto da nova ordem mundial pela linha Teosofia → Golden Dawn → SS.',
     
-      'O Sol Negro = Saturno no polo celeste explica porque os nazistas e ordens ocultistas modernas (Fraternitas Saturni, SS) adoravam simultaneamente o Sol e o Sol Negro: o sol visível (amarelo) é o astro atual; o Sol Negro é o sol original de Saturno — o "verdadeiro" sol que governou a Idade de Ouro e que o iniciado busca "reconectar" através da alquimia saturnina.',],
-    refs: ['sonnenrad', 'heinrich-himmler', 'ahnenerbe', 'ecofascismo', 'estrela-oito-pontas', 'ataque-christchurch', 'brenton-tarrant', 'aceleracionismo', 'willigut', 'ishtar', 'guido-von-list', 'odinismo', 'saturno', 'pan', 'irmandade-saturno', 'era-de-ouro'],
+      'O Sol Negro = Saturno no polo celeste explica porque os nazistas e ordens ocultistas modernas (Fraternitas Saturni, SS) adoravam simultaneamente o Sol e o Sol Negro: o sol visível (amarelo) é o astro atual; o Sol Negro é o sol original de Saturno — o "verdadeiro" sol que governou a Idade de Ouro e que o iniciado busca "reconectar" através da alquimia saturnina.',,
+    'A presença do Sol Negro como tema recorrente em games e filmes é lida como disseminação cifrada do conhecimento ocultista sobre Saturno como portal interdimensional — a montanha cósmica de David Talbott recodificada como ficção científica.'
+  ],
+    refs: ['sonnenrad', 'heinrich-himmler', 'ahnenerbe', 'ecofascismo', 'estrela-oito-pontas', 'ataque-christchurch', 'brenton-tarrant', 'aceleracionismo', 'willigut', 'ishtar', 'guido-von-list', 'odinismo', 'saturno', 'pan', 'irmandade-saturno', 'era-de-ouro', 'david-talbott', 'immanuel-velikovsky', 'dispositivo-de-osiris', 'montanha-cosmica', 'olho-que-tudo-ve'],
     scriptures: [],
   },
   {
@@ -14895,17 +15014,21 @@ const DATA = [
     aliases: ['Arthur Llewelyn Jones-Machen'],
     cat: 'figura',
     icon: '🐉',
-    source: [138],
+    source: [138, 196],
     summary: 'Arthur Machen (1863-1947), escritor galês e membro da Ordem Hermética da Golden Dawn. Amigo íntimo de Bram Stoker, escreveu sobre o significado alquímico do dragão e sobre o Tlwyth Teg (as fadas do País de Gales). Símbolo do padrão que une escritores de ficção fantástica ao ocultismo organizado na virada do século XIX-XX.',
     facts: [
       'Arthur Machen (1863-1947) foi escritor galês e membro da Ordem Hermética da Golden Dawn, amigo íntimo de Bram Stoker.',
       'Escreveu numerosas obras de ficção ocultista, incluindo um artigo sobre o significado alquímico do dragão e um romance sobre o Tlwyth Teg (as fadas do País de Gales) — tradição mítica que preserva a memória da aristocracia ubaid-druídica.',
       'Machen transmitia conhecimento esotérico por meio da ficção — padrão que compartilha com Bram Stoker e outros escritores da época associados à Golden Dawn.',
-    ],
+    ,
+    'Em The Secret Glory (1922), Machen descreve o Graal como uma pedra negra caída do céu — a mesma pedra muito densa e com propriedades magnéticas que o arquivista cátaro Antonin Gadal relatou ter visto numa estalactite oca exibida no museu de Tarascon.'
+  ],
     interps: [
       'Machen é parte do padrão "ficção como veículo esotérico": escritores ligados à Golden Dawn que usavam a narrativa fantástica como repositório de conhecimento iniciático. O dragão galês que Machen estudava era o mesmo dragão cita que Stoker embalava em seu Drácula.',
-    ],
-    refs: ['bram-stoker', 'golden-dawn', 'oto', 'druidas', 'tolkien', 'cs-lewis'],
+    ,
+    'A identificação do Graal como pedra magnética e negra em The Secret Glory conecta Arthur Machen ao simbolismo do cubo negro e ao lapsit exillis de Wolfram von Eschenbach — seu livro funcionaria como veículo literário para a transmissão da crença ocultista na pedra caída do céu.'
+  ],
+    refs: ['bram-stoker', 'golden-dawn', 'oto', 'druidas', 'tolkien', 'cs-lewis', 'lapsit-exillis', 'otto-rahn', 'cubo-negro', 'montségur'],
     pais: ['GB'],
     local: ['Caerleon'],
     coords: [51.6086, -2.9124],
@@ -14916,7 +15039,7 @@ const DATA = [
     aliases: ['John Whiteside Parsons', 'Marvel Whiteside Parsons'],
     cat: 'figura',
     icon: '🚀',
-    source: [138],
+    source: [138, 198],
     summary: 'John Whiteside "Jack" Parsons (1914-1952), engenheiro de foguetes americano, cofundador do Jet Propulsion Laboratory (JPL) e da Aerojet Engineering Corporation — cujos propulsores foram usados pela NASA. Membro da OTO de Aleister Crowley, tentou realizar uma variante da "Missa do Vampiro" na década de 1940. Morreu em uma explosão inexplicada na garagem de sua casa na Califórnia.',
     facts: [
       'Jack Parsons (1914-1952) foi um dos principais fundadores do Jet Propulsion Laboratory (JPL) e da Aerojet Engineering Corporation; seus propulsores foram utilizados pela NASA. Era pesquisador de propulsão de foguetes do California Institute of Technology (Caltech).',
@@ -14926,13 +15049,15 @@ const DATA = [
     'Liderou a filial californiana da OTO (Ordo Templi Orientis) de Aleister Crowley em Pasadena',
     'Experimentou extensivamente com o sistema enoquiano de John Dee no deserto de Mojave e em Pasadena, alegando ter encarnado um elemental enoquiano na forma da artista Marjorie Cameron — posteriormente figura importante da contracultura californiana',
     'O apresentador compara Parsons a Dee: como Dee catalysou a colonização do Novo Mundo com espionagem e cartografia, Parsons catalysou a exploração espacial com propulsão de foguetes — ambos unindo prática oculta e ciência de fronteira'
+  ,
+    'Os escritos em pergaminhos exibidos no CERN, que falam de trazer de volta os antigos deuses, aparecem conectados ao trabalho de Crowley e Parsons — os pergaminhos do laboratório replicam a mesma intenção dos rituais de invocação da dupla.'
   ],
     interps: [
       'Parsons ilustra o padrão identificado repetidamente: o ocultismo cobra consequências reais. O mesmo ritual que Crowley realizou e sobreviveu destruiu Parsons — talento científico e pioneirismo não conferem imunidade ao perigo dos rituais da OTO.',
     
     'O paralelo Parsons/Dee é explícito na fonte: Parsons avançou a exploração espacial em seu tempo assim como Dee avançou a colonização do Novo Mundo — o ocultismo como motor de expansão histórica'
   ],
-    refs: ['aleister-crowley', 'oto', 'golden-dawn', 'bram-stoker', 'mk-ultra', 'cabeça-decepada', 'john-dee', 'magia-enoquiana', 'edward-kelley', 'temple-of-set'],
+    refs: ['aleister-crowley', 'oto', 'golden-dawn', 'bram-stoker', 'mk-ultra', 'cabeça-decepada', 'john-dee', 'magia-enoquiana', 'edward-kelley', 'temple-of-set', 'cern', 'lemegeton'],
     pais: ['US'],
     local: ['Pasadena'],
     coords: [34.1478, -118.1445],
@@ -15236,7 +15361,7 @@ const DATA = [
       'A convergência portal/vórtice entre CERN, D&D, Vingadores, Avatar e Terminator não é coincidência narrativa: é a mesma ideia apresentada em linguagens diferentes — o portal como ponto de contato entre esta dimensão e a dimensão dos espíritos. A ficção científica normaliza a ideia; o CERN tenta materializá-la.',
       'O Vingador (Venger) escapa do submundo de D&D disfarçado de policial com estrela de 7 pontas da A∴A∴ — a mensagem implícita: ao se abrirem portais, os espíritos presos retornam e assumem formas físicas neste mundo. O T-1000 de Cameron é a versão científica do mesmo processo.',
     ],
-    refs: ['cern', 'caverna-do-dragao', 'terminator', 'yggdrasil', 'avatar-filme', 'matrix', 'engenharia-social', 'transhumanismo', 'apolo-abaddon', 'anjo-caido', 'galileu-galilei', 'vortice', 'divina-comedia', 'torre-de-babel', 'dwave-computador', 'tartaro', 'stephen-hawking'],
+    refs: ['cern', 'caverna-do-dragao', 'terminator', 'yggdrasil', 'avatar-filme', 'matrix', 'engenharia-social', 'transhumanismo', 'apolo-abaddon', 'anjo-caido', 'galileu-galilei', 'vortice', 'divina-comedia', 'torre-de-babel', 'dwave-computador', 'tartaro', 'stephen-hawking', 'geordie-rose'],
   },
   {
     id: 'terminator',
@@ -16935,7 +17060,7 @@ const DATA = [
     
     'O dilúvio é interpretado como intervenção direta para encerrar o governo dos Nefilins e preservar a linhagem genética pura de Noé — o único humano geneticamente incorrupto de sua geração.'
   ],
-    refs: ['noe', 'ziusudra', 'gilgamesh', 'utnapistin', 'manu-hindu', 'deucaliao', 'nefilins', 'vigilantes', 'atlantida', 'prometeu', 'anunnaki', 'dingir', 'babilonia', 'torre-de-babel', 'rephaim', 'gogue', 'emin', 'zamzummim', 'tartaro', 'querubim', 'flavio-josefo', 'stephen-hawking'],
+    refs: ['noe', 'ziusudra', 'gilgamesh', 'utnapistin', 'manu-hindu', 'deucaliao', 'nefilins', 'vigilantes', 'atlantida', 'prometeu', 'anunnaki', 'dingir', 'babilonia', 'torre-de-babel', 'rephaim', 'gogue', 'emin', 'zamzummim', 'tartaro', 'querubim', 'flavio-josefo', 'stephen-hawking', 'immanuel-velikovsky'],
     scriptures: ['Gn 6:1-8', 'Gn 7:1-24', 'Gn 6:11-13'],
   },
   {
@@ -17473,20 +17598,23 @@ const DATA = [
     aliases: ['vórtex', 'vortex', 'espiral iniciática', 'portal espiral'],
     cat: 'simbolo',
     icon: '🌀',
-    source: [164],
+    source: [164, 197],
     summary: 'Estrutura espiral recorrente na simbologia esotérica e na cosmologia de Dante: os círculos decrescentes do Inferno, a montanha ascendente do Purgatório e as esferas do Paraíso formam vórtices espirais. O mesmo padrão aparece nas representações da Torre de Babel, no tornado do Mágico de Oz e nos experimentos do CERN — todos interpretados como portais entre dimensões.',
     facts: [
       'Na Divina Comédia de Dante, os círculos do Inferno formam um vórtice descendente (afunilando para o centro da terra), o Purgatório é uma montanha espiral ascendente, e o Paraíso é organizado em esferas concêntricas — todos seguindo a geometria do vórtice.',
       'A maioria das representações pictóricas da Torre de Babel (incluindo a famosa pintura de Pieter Bruegel) a retrata como uma estrutura espiral em vórtice — a mesma geometria do furacão que leva Dorothy de Kansas ao mundo de Oz no Mágico de Oz.',
       'Galileu Galilei, ao calcular matematicamente a topografia do Inferno de Dante em 1588, foi o primeiro a aplicar método científico a um vórtice esotérico — inaugurando, segundo Einstein, o método empírico da física moderna.',
       'No CERN, os aceleradores de partículas fazem as partículas girar em espirais a velocidades próximas à da luz — o mesmo padrão geométrico do vórtice esotérico, agora implementado com investimentos bilionários.',
-    ],
+    ,
+    'A espiral norueguesa de dezembro de 2009 — vórtice de luz azul que apareceu sobre a Noruega coincidindo com a ativação do CERN e a visita de Obama à Noruega para o Nobel da Paz — é interpretada como manifestação de uma corrente de Birkeland ou vórtice de plasma.',
+    'A espiral do polo sul de Saturno é geometricamente idêntica à espiral norueguesa e à hélice dupla do DNA humano — a mesma estrutura se manifesta em escalas cósmicas, planetárias e moleculares.'
+  ],
     interps: [
       'O apresentador identifica o vórtice espiral como o símbolo unificador entre a cosmologia esotérica de Dante (séc. XIV), a ciência de Galileu (séc. XVII), os portais fictícios do Mágico de Oz e do CERN contemporâneo — um mesmo arquétipo espiral que perpassa séculos de ocultismo e ciência.',
       'Para o apresentador, o furacão do Mágico de Oz e os círculos do Inferno de Dante são expressões do mesmo arquétipo iniciático: o vórtice como portal para um mundo além da realidade ordinária — o que ele chama de "mundo surreal" que embasa parcialmente a realidade, conforme Einstein teria dito ao comentar Galileu.',
       'O vórtice espiral conecta Alice caindo na toca do coelho, o labirinto do Minotauro, o Túnel de São Gotardo, os portais dimensionais do CERN e as espirais dos crop circles — todos variações do mesmo padrão de acesso a dimensões alternativas que os "autointitulados iluminados" buscam há séculos.',
     ],
-    refs: ['galileu-galilei', 'divina-comedia', 'dante-alighieri', 'torre-de-babel', 'mago-de-oz', 'cern', 'labirinto', 'portais-dimensionais', 'alice-pais-maravilhas', 'crop-circles', 'surrealismo', 'academia-florentina'],
+    refs: ['galileu-galilei', 'divina-comedia', 'dante-alighieri', 'torre-de-babel', 'mago-de-oz', 'cern', 'labirinto', 'portais-dimensionais', 'alice-pais-maravilhas', 'crop-circles', 'surrealismo', 'academia-florentina', 'espiral-norueguesa', 'correntes-birkeland', 'saturno'],
   },
 
   {
@@ -17495,7 +17623,7 @@ const DATA = [
     aliases: ['Rephaim', 'Os mortos', 'Gigantes do Sheol'],
     cat: 'biblico',
     icon: '💀',
-    source: [165, 166],
+    source: [165, 166, 196],
     summary: 'Raça lendária de gigantes nas escrituras hebraicas — a aristocracia dos condenados ao abismo. Espíritos conscientes dos mortos que aguardam julgamento no Sheol, identificados como o arquétipo do profético Gog de Ezequiel.',
     facts: [
       'Escritos antigos do Oriente Médio identificam os Refaim como habitantes do submundo: espíritos falecidos conscientes, com conhecimento de sua condição.',
@@ -17510,13 +17638,15 @@ const DATA = [
       'Os equivalentes islâmicos dos Refaim são os djinn (gênios) — seres extraterrestres (de fora desta dimensão) que perderam seus corpos físicos e foram aprisionados na quarta dimensão.',
       'Drogas psicoativas são descritas como portais que dão acesso à dimensão dos Refaim — "os mortos do 2 de novembro" — muitas vezes trazendo consigo espíritos que "co-possuem" o corpo do usuário no retorno da experiência psicoativa.',
       'A conclusão de Edgar Allan Poe em "Os Fatos no Caso de M. Valdemar" — de que a mente sobrevive à morte mas não pode existir sem o corpo, e que presa num corpo morto experimenta tortura indescritível — é interpretada como documentação literária do estado dos Refaim: almas entre dimensões que necessitam de um receptáculo físico vivo para manifestar existência no mundo de três dimensões.',
-      'Helena Blavatsky praticava mediunidade especificamente para contatar os Refaim — "os mortos do 2 de novembro", identificados como os vencedores das ciências do mundo pré-diluviano, detentores de conhecimento oculto. Através do transe mesmério e da ativação da pineal, eles transfeririam esse conhecimento ao mundo atual enquanto seriam induzidos a "abrir o caminho para a fuga de sua prisão no abismo".',],
+      'Helena Blavatsky praticava mediunidade especificamente para contatar os Refaim — "os mortos do 2 de novembro", identificados como os vencedores das ciências do mundo pré-diluviano, detentores de conhecimento oculto. Através do transe mesmério e da ativação da pineal, eles transfeririam esse conhecimento ao mundo atual enquanto seriam induzidos a "abrir o caminho para a fuga de sua prisão no abismo".',,
+    'Em uma era de edição genética, coloca-se a hipótese de que o DNA humano poderia ser editado para recriar corpos gigantescos ao estilo Nefilim/Refaim — e que esses corpos poderiam ser infundidos com os espíritos aprisionados desde o dilúvio.'
+  ],
     interps: [
       'O apresentador interpreta os Refaim como a "aristocracia dos condenados ao abismo" — entidades que formam uma hierarquia de poder no mundo espiritual dos mortos.',
       'A elite mundial é interpretada como planejando resgatar os espíritos Refaim do abismo e reeditar a genética humana para que corpos clonados possam abrigar essas entidades ao serem liberadas.',
     
       'O filme Vingadores Ultimato (2019) mostra heróis da antiguidade que haviam sido mortos retornando do abismo através de portais para fazer guerra contra Deus — interpretado como alegoria da crença de que os Refaim retornarão do Tártaro para liderar a batalha final.',],
-    refs: ['gog-magog', 'nefilins', 'vigilantes', 'anakim', 'emin', 'zamzummim', 'tartaro', 'gogue', 'baalbek', 'diluvio-universal', 'cern', 'dante-alighieri', 'mago-de-oz', 'alice-pais-maravilhas', 'quimera-genetica', 'hermes-trismegistus', 'andre-breton', 'djinn', 'materia-escura', 'chave-de-davi', 'thanatos', 'ligo', 'teoria-das-cordas', 'mesmerismo', 'charles-dickens', 'svengali', 'glandula-pineal', 'edgar-allan-poe', 'valdemar', 'helena-blavatsky', 'espiritismo', 'phineas-quimby', 'new-thought', 'johann-gassner', 'flavio-josefo', 'querubim', 'dwave-computador', 'stephen-hawking'],
+    refs: ['gog-magog', 'nefilins', 'vigilantes', 'anakim', 'emin', 'zamzummim', 'tartaro', 'gogue', 'baalbek', 'diluvio-universal', 'cern', 'dante-alighieri', 'mago-de-oz', 'alice-pais-maravilhas', 'quimera-genetica', 'hermes-trismegistus', 'andre-breton', 'djinn', 'materia-escura', 'chave-de-davi', 'thanatos', 'ligo', 'teoria-das-cordas', 'mesmerismo', 'charles-dickens', 'svengali', 'glandula-pineal', 'edgar-allan-poe', 'valdemar', 'helena-blavatsky', 'espiritismo', 'phineas-quimby', 'new-thought', 'johann-gassner', 'flavio-josefo', 'querubim', 'dwave-computador', 'stephen-hawking', 'projeto-awake', 'correntes-birkeland'],
     scriptures: ['Is 14:9-11', 'Jd 6', '1Pe 3:18-19'],
   },
   {
@@ -17573,7 +17703,7 @@ const DATA = [
     aliases: ['Tartarus', 'Abismo das trevas', 'Prisão dos anjos'],
     cat: 'biblico',
     icon: '⛓️',
-    source: [165],
+    source: [165, 196],
     summary: 'A parte mais profunda e segura do Hades — prisão de segurança máxima para os anjos rebeldes que abandonaram seu primeiro estado. Mencionado em 2 Pedro 2:4 e Judas 6 como o lugar onde aguardam o juízo do grande dia.',
     facts: [
       'O nome grego "Tártaro" vem de "tartaroô" (prisão sombria). É a parte mais profunda e mais segura do Hades — um presídio de segurança máxima.',
@@ -17586,6 +17716,9 @@ const DATA = [
   ,
     'A palavra grega Tártaro aparece apenas uma única vez nas escrituras do Novo Testamento, em Judas versículo 6, referindo-se ao local onde os anjos que não guardaram seu primeiro estado estão reservados em cadeias eternas para o juízo.',
     'O Tártaro é descrito como entreposto temporário — não o destino final dos seres —, aguardando o julgamento do grande dia.'
+  ,
+    'O National 9/11 Memorial em Nova York — cubo dentro de cubo — é interpretado como símbolo do Tártaro (cubo interno = prisão dos rebeldes caídos) e do plano terrestre (cubo externo = segunda camada de cativeiro).',
+    'Na crença ocultista descrita: o Tártaro e o campo cúbico de Saturno seriam abertos simultaneamente pelo eixo CERN/D-Wave via correntes de Birkeland — liberando as entidades de ambos os pontos ao mesmo tempo.'
   ],
     interps: [
       'O apresentador interpreta o Tártaro como a dimensão-prisão onde os espíritos dos Refaim e dos anjos rebeldes aguardam julgamento — o mesmo "abismo" que a ciência ocultista e o CERN tentariam reabrir.',
@@ -17594,7 +17727,7 @@ const DATA = [
     'O objetivo oculto de certos grupos seria abrir o Tártaro como um grande poço do abismo, liberando matéria negra e, junto com ela, os seres aprisionados há milênios.',
     'O CERN é interpretado como o instrumento moderno para essa abertura — uma torre de Babel invertida que desce ao subsolo em direção ao abismo em vez de subir ao céu.'
   ],
-    refs: ['rephaim', 'vigilantes', 'gogue', 'cern', 'nefilins', 'emin', 'zamzummim', 'materia-escura', 'ligo', 'djinn', 'chave-de-davi', 'thanatos', 'teoria-das-cordas', 'cubo-negro', 'stephen-hawking', 'dwave-computador', 'torre-de-babel', 'querubim', 'flavio-josefo'],
+    refs: ['rephaim', 'vigilantes', 'gogue', 'cern', 'nefilins', 'emin', 'zamzummim', 'materia-escura', 'ligo', 'djinn', 'chave-de-davi', 'thanatos', 'teoria-das-cordas', 'cubo-negro', 'stephen-hawking', 'dwave-computador', 'torre-de-babel', 'querubim', 'flavio-josefo', 'geordie-rose', 'correntes-birkeland', 'projeto-awake', 'numero-911'],
     scriptures: ['2Pe 2:4', 'Jd 6'],
   },
   {
@@ -19036,7 +19169,7 @@ const DATA = [
     interps: [
       'Para o apresentador, o Languedoc é o laboratório histórico onde a elite merovíngia plantou a heresia do sangue real de Cristo — combinando linhagem oculta, comunidades gnóstico-cátaras e reinos independentes sob controle de famílias Rex Deus.',
     ],
-    refs: ['septimania', 'cataros', 'merovingios', 'maria-madalena', 'guilhem-gellone', 'sigisbert-iv', 'priorado-de-siao', 'graal'],
+    refs: ['septimania', 'cataros', 'merovingios', 'maria-madalena', 'guilhem-gellone', 'sigisbert-iv', 'priorado-de-siao', 'graal', 'otto-rahn', 'lapsit-exillis'],
     scriptures: [],
     pais: ['FR'],
     local: ['Languedoc'],
@@ -19059,7 +19192,7 @@ const DATA = [
     interps: [
       'Para o apresentador, os Cátaros eram guardiões consciosos ou inconscientes da narrativa merovíngia do sangue real — sua independência política no Languedoc protegia a região onde a linhagem oculta de Guilhem de Gellone sobrevivia.',
     ],
-    refs: ['linguedoc', 'septimania', 'merovingios', 'maria-madalena', 'graal', 'priorado-de-siao', 'gnose', 'guilhem-gellone'],
+    refs: ['linguedoc', 'septimania', 'merovingios', 'maria-madalena', 'graal', 'priorado-de-siao', 'gnose', 'guilhem-gellone', 'otto-rahn', 'lapsit-exillis'],
     scriptures: [],
     pais: ['FR'],
     local: ['Languedoc'],
@@ -19281,7 +19414,7 @@ const DATA = [
     interps: [
       'Para o apresentador, a busca de Hitler pelas relíquias templários confirma que o conhecimento do poder desses artefatos corria em círculos iniciáticos do ocultismo nazista — e que a crença no poder material do Graal não é apenas lenda, mas doutrina operacional de grupos que buscam o domínio mundial.',
     ],
-    refs: ['lanca-do-destino', 'nova-ordem-mundial', 'bill-cooper', 'cavaleiros-templarios', 'graal', 'rennes-le-chateau'],
+    refs: ['lanca-do-destino', 'nova-ordem-mundial', 'bill-cooper', 'cavaleiros-templarios', 'graal', 'rennes-le-chateau', 'otto-rahn'],
     scriptures: [],
     pais: ['AT'],
     local: ['Viena'],
@@ -19423,18 +19556,22 @@ const DATA = [
     aliases: ['Howard Phillips Lovecraft', 'HP Lovecraft'],
     cat: 'figura',
     icon: '📖',
-    source: [180],
+    source: [180, 194, 195],
     summary: 'Escritor americano de horror cósmico (1890–1937), criador dos Grandes Antigos e do Necronomicon; ocultistas interpretam sua obra como transmissão codificada da mitologia atlante-Nefilim para gerações populares.',
     facts: [
       'Lovecraft concebeu os antigos deuses atlantes ou Nefilins como possuidores de poder sobrenatural vindo das estrelas — paralelo direto com Enoque e os Nefilins bíblicos.',
       'Segundo Lovecraft, os seres dos Grandes Antigos vieram das próprias estrelas e são metafisicamente afetados pelo movimento delas, podendo ressuscitar quando as estrelas estão em determinada posição.',
       'A tradição do Necronomicon de Lovecraft, junto com D&D e jogos de computador, é citada como veículo de transmissão da doutrina secreta dos Anunnaki/Nefilins para gerações jovens.',
       'Tracy Twyman conecta os Grandes Antigos lovecraftianos com reis sumeriano-atlantes no artigo “Dead But Dreaming: The Great Old Ones of Lovecraftian Legend Reinterpreted as Sumerian or Atlantean Kings”.',
-    ],
+    ,
+    'Geordie Rose, fundador da D-Wave, citou Lovecraft explicitamente em palestra pública sobre o computador quântico, usando o conceito de Indiferença Cósmica para descrever as entidades que o D-Wave acessaria: seres inteligentes que não são bons nem maus, apenas indiferentes ao ser humano — como os Grandes Antigos de Lovecraft.'
+  ],
     interps: [
       'O apresentador interpreta a obra de Lovecraft como veículo de transmissão da mitologia Nefilim — intencional ou não — programando gerações jovens para aceitar a cosmologia da linhagem do Graal.',
-    ],
-    refs: ['necronomicon', 'cthulhu', 'tracy-twyman', 'nefilins', 'atlantida', 'anunnaki', 'kenneth-grant', 'livro-de-enoque'],
+    ,
+    'O fato de um dos principais tecnologistas de computação quântica citar Lovecraft como referência conceitual para seu produto indica que a mitologia dos Grandes Antigos não é ficção de nicho — é o framework mental de uma parcela da elite tecnológica para descrever o que acredita estar acessando.'
+  ],
+    refs: ['necronomicon', 'cthulhu', 'tracy-twyman', 'nefilins', 'atlantida', 'anunnaki', 'kenneth-grant', 'livro-de-enoque', 'geordie-rose', 'dwave-computador'],
     pais: ['US'],
     local: ['Providence'],
     coords: [41.8240, -71.4128],
@@ -19647,7 +19784,7 @@ const DATA = [
     aliases: ['Black Cube', 'cubo de Saturno', 'Kaaba', 'cubo occultista'],
     cat: 'simbolo',
     icon: '⬛',
-    source: [182, 183],
+    source: [182, 183, 196, 199],
     summary: 'Símbolo occultista fundamental associado a Saturno e ao mundo material. O cubo representa o elemento Terra na cosmologia platônica e pitagórica — a forma mais estável da matéria. Na tradição esotérica, Saturno governa a matéria tridimensional; o cubo é sua expressão geométrica. A Kaaba em Meca é um cubo; o polo norte de Saturno exibe tempestade em forma de hexágono — geometricamente um cubo achatado em 3D.',
     facts: [
       'O elemento Terra, na cosmologia platônica, é representado pelo cubo — a forma mais estável entre os sólidos. Platão afirma isto no Timeu.',
@@ -19679,6 +19816,20 @@ const DATA = [
   ,
     'O computador quântico D-Wave (The Wave), ligado ao CERN como dispositivo de comunicação interdimensional, é literalmente uma caixa preta de formato cúbico.',
     'O D-Wave opera por recozimento quântico — técnica baseada no recozimento metalúrgico (aquecimento e resfriamento controlado) que utiliza fenômenos de tunelamento quântico para aproximar o ótimo global de funções complexas.'
+  ,
+    'A escultura Alamo (1967) em Nova York está localizada no meio da Astor Place — cubo negro em posição de equilíbrio, rotacionável pelo público, cujo nome remete à fortaleza impenetrável do Texas.',
+    'Em Praga, o cubo negro mede 7x7x7 metros e possui internamente uma projeção com sinais visuais que transmitem som num ambiente que remete a dados computacionais — interpretado como portal para um mundo virtual.',
+    'Na cidade de Brno (República Tcheca), o cubo de granito preto tem borda de 3,14 metros (número π) e serve como monumento às vítimas judaicas e ciganas da Segunda Guerra Mundial. Um fluxo de água corre sob o cubo como símbolo de catarse.',
+    'Em Hamburgo, o Hamburg Cube 2007 foi construído com tecido e posicionado em frente ao museu mais antigo da cidade.',
+    'No Discovery Science Center de Santa Ana, Califórnia — pertencente a uma fundação não governamental dedicada à educação do novo cérebro — há outro cubo negro.',
+    'O National 9/11 Memorial em Nova York apresenta piscinas em formato de cubo dentro de cubo — o cubo interno representando o Inferno e o Tártaro (prisão dos rebeldes caídos), o externo representando o plano terrestre como segunda camada de cativeiro.',
+    'A sala de meditação no prédio da ONU em Nova York apresenta o mesmo simbolismo do cubo negro.',
+    'Robert Ambelain (1907-1997), ensaísta francês do movimento maçônico-martinista, escreveu que a pedra cúbica é um objeto ritual real que permite que as forças convocadas pelo mago sejam postas em movimento por trás do véu da realidade imediata.',
+    'O termo black ballot (cubo negro como voto de condenação) tem origem na prática romana e maçônica de condenar candidatos por votação secreta usando pedras negras (condenar) ou brancas (absolver).',
+    'Carl Claudy, maçom do Rito Escocês de 33° grau e recipiente da Medalha Henry Price, declarou: A justiça na loja exige que nós joguemos um cubo negro num candidato que acreditamos ser inadequado.',
+    'Anthony Peratt, físico de plasma, propôs que o campo de força interno de Saturno é composto por correntes de Birkeland em arranjo cúbico — convergindo com a representação mística do cubo como prisão dos deuses titânicos.'
+  ,
+    'A elite luciferiana conhece a natureza prisionista do cubo negro e o retrata em películas cinematográficas de forma discreta e cifrada — sempre como uma prisão num pesadelo controlado por um deus do infortúnio e da morte.'
   ],
     interps: [
       'O cubo negro é o símbolo de Saturno porque as crenças ocultas identificam o mundo tridimensional com a matéria — e Saturno governa a matéria. O "cubo negro" é ao mesmo tempo o planeta, o mundo material e a prisão do espírito.',
@@ -19687,8 +19838,12 @@ const DATA = [
     
     'O apresentador interpreta o cubo negro como "prisão mental do materialismo" — o sistema que mantém a humanidade presa ao ciclo saturnino de dinheiro, poder hierárquico e consumo, impedindo o acesso ao conhecimento espiritual',
     'A proliferação do cubo na cultura pop (Xbox, GameCube, Apple Store, Tesseract, Avengers) seria a "linguagem simbólica" da elite inserida à vista de todos e invisível ao analfabeto simbólico'
+  ,
+    'A disseminação global de cubos negros em espaços públicos — de Nova York a Praga, de Hamburgo a Meca, de Santa Ana ao memorial do 11 de setembro — é lida como instalação deliberada de símbolos de poder saturnino em pontos estratégicos das principais cidades, invisível para a maioria.'
+  ,
+    'O cubo negro é descrito como cubo da danação e pedra de tropeço — a pedra rejeitada para o fundamento da edificação humana seria o destino final da elite que o adora.'
   ],
-    refs: ['saturno', 'kepler', 'irmandade-saturno', 'pitagoras', 'geometria-sagrada', 'el-canaanita', 'onfalo', 'era-de-aquario', 'maconaria', 'transhumanismo', 'saturnalia', 'pan', 'georgia-guidestones', 'nova-ordem-mundial', 'tartaro', 'carl-jung', 'set-egipcio', 'borg-star-trek', 'tesseract-marvel', 'azazel', 'numero-88', 'ouroboros', 'tabuleiro-xadrez', 'ixxi', 'numero-911', 'numerologia', 'cern', 'dwave-computador', 'stephen-hawking'],
+    refs: ['saturno', 'kepler', 'irmandade-saturno', 'pitagoras', 'geometria-sagrada', 'el-canaanita', 'onfalo', 'era-de-aquario', 'maconaria', 'transhumanismo', 'saturnalia', 'pan', 'georgia-guidestones', 'nova-ordem-mundial', 'tartaro', 'carl-jung', 'set-egipcio', 'borg-star-trek', 'tesseract-marvel', 'azazel', 'numero-88', 'ouroboros', 'tabuleiro-xadrez', 'ixxi', 'numero-911', 'numerologia', 'cern', 'dwave-computador', 'stephen-hawking', 'geordie-rose', 'projeto-awake', 'otto-rahn', 'lapsit-exillis', 'correntes-birkeland'],
   },
   {
     id: 'kepler',
@@ -19825,7 +19980,7 @@ const DATA = [
     
     'O apresentador considera a Fraternitas Saturni o exemplo mais extremo de sociedade secreta que abertamente incorpora e adora o princípio maligno de Saturno, distinguindo-a de ordens que ocultam tal adoração'
   ],
-    refs: ['saturno', 'telema', 'aleister-crowley', 'maconaria', 'era-de-aquario', 'eon-de-horus', 'cubo-negro', 'golden-dawn', 'pan', 'saturnalia', 'sol-invictus'],
+    refs: ['saturno', 'telema', 'aleister-crowley', 'maconaria', 'era-de-aquario', 'eon-de-horus', 'cubo-negro', 'golden-dawn', 'pan', 'saturnalia', 'sol-invictus', 'olho-que-tudo-ve', 'david-talbott', 'immanuel-velikovsky'],
     pais: ['DE'],
     local: ['Berlim'],
     coords: [52.5200, 13.4050],
@@ -20386,7 +20541,7 @@ const DATA = [
     aliases: ['9/11', '11 de Setembro', 'Nove-Um-Um', 'Negação de Deus'],
     cat: 'simbolo',
     icon: '9️⃣',
-    source: [191],
+    source: [191, 196],
     summary: 'Na numerologia sagrada da elite, 911 representa a negação de Deus: salta do 9 diretamente ao 11, ignorando o 10 e negando a necessidade do auxílio divino. Também o código de emergência norte-americano e a data dos ataques de setembro de 2001.',
     facts: [
       'Na numerologia sagrada da elite: o 9 pula direto para o 11, ignorando o 10, configurando a negação de Deus — pois vai além do divino sem passar por ele',
@@ -20395,12 +20550,14 @@ const DATA = [
       'No filme Terminator, o protagonista passa por um túnel com a inscrição Caltrain 911 durante a cena de fuga',
       'No filme Minority Report, logo após prometer realizar os sonhos do protagonista, um cientista insere o personagem em um tubo com a inscrição J. Underton 1109',
       'No filme Matrix, filmado em 1999 (que é o 666 invertido), o passaporte do personagem Neo exibe a data 11 de setembro de 2001 — dois anos antes dos ataques reais'
-    ],
+    ,
+    'O National 9/11 Memorial em Nova York apresenta piscinas em formato de cubo dentro de cubo — interpretado como símbolo de duas camadas de cativeiro: o cubo interno representando o Inferno e o Tártaro, o externo o plano terrestre como prisão adicional.'
+  ],
     interps: [
       'A instituição do 911 como número de emergência nos EUA é interpretada como a materialização da negação de Deus: substituir a busca pelo divino pela busca pelo Estado nos momentos de maior vulnerabilidade',
       'A presença do 9/11 em filmes anteriores a 2001 é interpretada como programação preditiva deliberada: o inconsciente coletivo é condicionado a aceitar o evento traumático antes que ele ocorra'
     ],
-    refs: ['numerologia', 'programacao-preditiva', 'livro-da-lei', 'aleister-crowley', 'ixxi', 'cubo-negro', 'saturno', 'transhumanismo', 'nova-ordem-mundial', 'mega-ritual', 'quarto-101', '322']
+    refs: ['numerologia', 'programacao-preditiva', 'livro-da-lei', 'aleister-crowley', 'ixxi', 'cubo-negro', 'saturno', 'transhumanismo', 'nova-ordem-mundial', 'mega-ritual', 'quarto-101', '322', 'tartaro']
   },
   {
     id: 'ixxi',
@@ -20448,18 +20605,20 @@ const DATA = [
     aliases: ['Poeira Inteligente', 'Matéria Negra Programavel', 'Nanobots'],
     cat: 'moderno',
     icon: '🔬',
-    source: [191],
+    source: [191, 199],
     summary: 'Protótipo de nanotecnologia de matéria programável em escala microscópica. Precursor conceitual da chamada matéria negra programável, que segundo a interpretação esotérica seria usada para a regeneração perpétua e controle do corpo transumano.',
     facts: [
       'Smart Dust é descrito como apenas um protótipo da chamada matéria negra programável',
       'A matéria negra programável aparece em inúmeros filmes hollywoodianos, onde envolve personagens para torná-los mais poderosos ou os transforma',
       'O projeto transumano prevê o uso da nanotecnologia programável para a regeneração perpétua do corpo humano, como alternativa à imortalidade divina'
-    ],
+    ,
+    'A matéria negra (Smart Dust) promete regeneração celular imediata — tornando potencialmente impossível a morte biológica natural, algo visto apenas em ficção científica avançada.'
+  ],
     interps: [
       'O Smart Dust é interpretado como o primeiro passo concreto para a criação de uma nanotecnologia de controle corporal que permitiria a imortalidade física buscada pela elite como substituto a Deus',
       'Sua aparição recorrente em filmes hollywoodianos é interpretada como programação preditiva: normalizar a aceitação da tecnologia de controle biológico antes de sua aplicação real'
     ],
-    refs: ['transhumanismo', 'ia-como-besta', 'engenharia-social', 'programacao-preditiva', 'grande-obra', 'po-neural', 'mega-ritual']
+    refs: ['transhumanismo', 'ia-como-besta', 'engenharia-social', 'programacao-preditiva', 'grande-obra', 'po-neural', 'mega-ritual', 'singularidade']
   },
   {
     id: 'michael-hoffman',
@@ -20553,7 +20712,7 @@ const DATA = [
     aliases: ['D-Wave', 'The Wave', 'computador quântico adiabático'],
     cat: 'moderno',
     icon: '⬛',
-    source: [193],
+    source: [193, 194, 197],
     summary: 'Computador quântico adiabático desenvolvido pela empresa D-Wave Systems; identificado como um cubo negro literal e descrito como dispositivo de comunicação interdimensional conectado ao CERN.',
     facts: [
       'O D-Wave opera através do recozimento quântico — técnica baseada no recozimento metalúrgico (aquecimento e resfriamento controlado de material) que utiliza fenômenos de tunelamento quântico.',
@@ -20561,15 +20720,402 @@ const DATA = [
       'Fisicamente, o dispositivo é uma caixa preta de formato cúbico — literalmente um cubo negro.',
       'É desenvolvido pela empresa canadense D-Wave Systems, sediada em Burnaby, Colúmbia Britânica.',
       'Empresas como Google, NASA e Lockheed Martin utilizaram computadores D-Wave em seus laboratórios.'
-    ],
+    ,
+    'O chip da segunda versão do D-Wave II (512 qubits) foi chamado Vesúvio — nome do vulcão italiano que destruiu as cidades romanas de Pompeia, Herculano, Oplonte e Estábia em 79 d.C., associado historicamente à feitiçaria. Escavações em Pompeia encontraram baús com artefatos de bruxaria: cristais, âmbar, ametistas, bonecos e crânios.',
+    'A D-Wave Systems recebeu US$10 milhões de financiamento inicial da DARPA; em seguida migrou para capital de risco privado de aproximadamente US$20 milhões.',
+    'Geordie Rose afirmou publicamente que ficar perto de um computador D-Wave parece estar ao lado de um altar para um deus alienígena.'
+  ,
+    'Na teoria ocultista descrita: o D-Wave poderia gerar uma corrente de Birkeland composta de formas cúbicas voltada ao polo norte de Saturno, com o objetivo de quebrar o campo de energia cúbico que aprisionaria os deuses titânicos.',
+    'O design do D-Wave em formato de cubo negro replica geometricamente o cubo de Birkeland proposto no polo norte de Saturno — coincidência ou projeto intencional, segundo a interpretação apresentada.'
+  ],
     interps: [
       'É interpretado como dispositivo de comunicação interdimensional conectado ao projeto CERN — ambos seriam instrumentos complementares na tentativa de abrir a dimensão-prisão do Tártaro.',
       'O formato cúbico negro do D-Wave ressoa simbolicamente com o Cubo Negro de Saturno, conectando tecnologia moderna ao simbolismo ocultista da prisão material.'
-    ],
-    refs: ['cern', 'cubo-negro', 'portais-dimensionais', 'tartaro', 'materia-escura'],
+    ,
+    'A nomeação do chip como Vesúvio conecta dois simbolismos de destruição: o vulcão que apagou cidades inteiras dá nome ao processador de um computador cujo criador descreve como portal dimensional — destruição física e destruição da fronteira entre dimensões aparecem juntas no mesmo projeto.'
+  ],
+    refs: ['cern', 'cubo-negro', 'portais-dimensionais', 'tartaro', 'materia-escura', 'geordie-rose', 'lovecraft', 'correntes-birkeland', 'saturno', 'projeto-awake'],
     pais: ['CA'],
     local: ['Burnaby'],
     coords: [49.2488, -122.9805]
+  },
+  {
+    id: 'brahma',
+    name: 'Brahma (Deus Criador da Trimurti)',
+    aliases: ['Brahmã', 'Prajapati'],
+    cat: 'divindade',
+    icon: '🪷',
+    source: [194, 195],
+    summary: 'Brahma é o Deus Criador da Trimurti hindu — primeiro dos três que governam a existência: Brahma cria, Vishnu preserva e Shiva destrói. O CERN escolheu Shiva, não Brahma, para presidir seu complexo.',
+    facts: [
+      'Brahma integra a Trimurti hindu: Brahma (Criador), Vishnu (Preservador) e Shiva (Destruidor/Transformador) — o ciclo cósmico completo de existência.',
+      'Na simbologia binária apresentada: Brahma e Vishnu representam o número 1 (aquilo que existe, que está ligado), enquanto Shiva representa o 0 (aquilo que não é, o vazio, o abismo).',
+      'Na mitologia hindu, Brahma é descrito como tendo quatro cabeças, uma em cada direção cardinal, simbolizando o conhecimento que abrange todo o cosmos.',
+      'Brahma é menos cultuado que Vishnu e Shiva no hinduísmo moderno — há relativamente poucos templos dedicados exclusivamente a Brahma na Índia.'
+    ],
+    interps: [
+      'Se Brahma e Vishnu são o 1 e Shiva é o 0, o número binário 101 revela a estrutura da Trimurti: criação-destruição-preservação como código digital. O CERN, ao escolher Shiva, escolheu o zero — o buraco negro, o portal, o colapso que separa o que existia do que virá.',
+      'A ausência de templos para Brahma no hinduísmo moderno é lida como sinal de que a criação é o ato menos venerado pela elite — o que importa é a destruição (Shiva) e a manutenção do caos (Kali).'
+    ],
+    refs: ['vishnu', 'shiva', 'ganesh', 'cern']
+  },
+  {
+    id: 'vishnu',
+    name: 'Vishnu (Deus Preservador da Trimurti)',
+    aliases: ['Visnu', 'Narayana', 'Hari'],
+    cat: 'divindade',
+    icon: '🔵',
+    source: [194, 195],
+    summary: 'Vishnu é o Deus Preservador da Trimurti hindu — responsável pela manutenção do universo criado por Brahma. Suas encarnações (avatares) incluem Krishna e Rama. O CERN elegeu Shiva, não Vishnu.',
+    facts: [
+      'Vishnu integra a Trimurti hindu: Brahma (Criador), Vishnu (Preservador) e Shiva (Destruidor/Transformador).',
+      'Vishnu possui dez avatares principais (Dashavatara), incluindo Krishna (da Bhagavad Gita) e Rama (do Ramayana).',
+      'Na simbologia binária exposta: Brahma e Vishnu representam o 1 (o que existe, o que está ligado), enquanto Shiva representa o 0 — o nada entre os pilares, o buraco negro, o Stargate.',
+      'O símbolo de Vishnu é o disco (Sudarshana Chakra), a concha, a flor de lótus e a maça — todos representando soberania cósmica.'
+    ],
+    interps: [
+      'A escolha do CERN de exibir Shiva — e não Vishnu — sinaliza que o projeto se alinha ao princípio da destruição, não da preservação. Numa organização que alega preservar o conhecimento científico, a ironia é calculada.',
+      'Se Krishna (avatar de Vishnu) é a consciência suprema da Bhagavad Gita, e Shiva e Kali são manifestações do mesmo princípio, a Trimurti inteira serve como sistema cosmológico que o ocultismo moderno recodifica como física de partículas.'
+    ],
+    refs: ['brahma', 'shiva', 'ganesh', 'cern']
+  },
+  {
+    id: 'ganesh',
+    name: 'Ganesh (Senhor dos Começos)',
+    aliases: ['Ganesha', 'Ganapati', 'Vinayaka', 'Pilayar', 'Ganapat'],
+    cat: 'divindade',
+    icon: '🐘',
+    source: [195],
+    summary: 'Ganesh é o filho de Shiva na mitologia hindu — Senhor dos Começos, da Inteligência e da Boa Sorte, removedor de obstáculos materiais e espirituais. Sua presença no panteão de Shiva conecta inteligência e destruição.',
+    facts: [
+      'Ganesh é filho de Shiva e Parvati na mitologia hindu, intimamente relacionado ao deus da destruição.',
+      'É o Senhor da Boa Sorte que proporciona prosperidade, fortuna e sucesso, além de Senhor dos Começos e removedor de obstáculos tanto materiais quanto espirituais.',
+      'Seus nomes alternativos incluem Ganapati, Vinayaka e Pilayar, dependendo da tradição regional hindu.',
+      'É associado à inteligência, à sabedoria e à educação — representado com cabeça de elefante, símbolo de memória e discernimento.',
+      'Também está associado a divindades que, por sua vez, estão ligadas a planetas do sistema solar — integrando a rede simbólica de Shiva que aparece no contexto do CERN.'
+    ],
+    interps: [
+      'O fato de o deus da inteligência e dos novos começos ser filho do deus da destruição revela a cosmologia oculta: o verdadeiro conhecimento nasce da destruição do que existia antes — o mesmo princípio que o CERN aplica ao tentar destruir a matéria para revelar o que está dentro.'
+    ],
+    refs: ['shiva', 'brahma', 'vishnu', 'cern']
+  },
+  {
+    id: 'geordie-rose',
+    name: 'Geordie Rose (Fundador D-Wave)',
+    aliases: ['Jordan Rose', 'Jordie Rose'],
+    cat: 'figura',
+    icon: '👤',
+    source: [194, 195],
+    summary: 'Geordie Rose, fundador da D-Wave Systems, fez declarações públicas descrevendo o computador quântico como altar para um deus alienígena e sua operação como extração de recursos de dimensões paralelas — citando Lovecraft para descrever as entidades acessadas.',
+    facts: [
+      'Em 2013, fez declaração pública para cientistas e líderes empresariais afirmando que ficar perto de um computador D-Wave parece estar ao lado de um altar para um deus alienígena.',
+      'Declarou: os mundos paralelos se sobrepõem ao nosso. Se formos espertos o suficiente, podemos mergulhar neles, pegar seus recursos e trazê-los de volta para o nosso para fazer um efeito em nosso mundo.',
+      'Em palestra, citou H.P. Lovecraft e o conceito de Indiferença Cósmica para descrever as entidades que o D-Wave acessaria: seres inteligentes que não são bons nem maus, apenas indiferentes ao ser humano.',
+      'A D-Wave Systems recebeu US$10 milhões de financiamento inicial da DARPA antes de migrar para capital de risco privado de aproximadamente US$20 milhões.',
+      'Rose descreveu o D-Wave como um equipamento não apenas quântico, mas interdimensional — uma espécie de Stargate que abre entrada para outra realidade.'
+    ],
+    interps: [
+      'O fundador de uma empresa de computação quântica multimilionária descrevendo seu produto como altar para um deus alienígena e sua operação como extração de recursos de dimensões paralelas não é metáfora de marketing — é declaração de intenção. O apresentador interpreta Rose como representante de uma elite tecnológica que sabe exatamente o que está fazendo.',
+      'Ao usar a linguagem de Lovecraft — entidades indiferentes ao ser humano, os Grandes Antigos — Rose revela que a cosmovisão da elite tecnológica converge com a mitologia lovecraftiana: seres que não têm interesse no bem-estar humano, convocados por tecnologia em vez de magia ritual.'
+    ],
+    refs: ['dwave-computador', 'lovecraft', 'cern', 'portais-dimensionais', 'cubo-negro', 'tartaro', 'shiva'],
+    pais: ['CA'],
+    local: ['Burnaby'],
+    coords: [49.2488, -122.9805]
+  },
+  {
+    id: 'projeto-awake',
+    name: 'Projeto AWAKE (Despertai)',
+    aliases: ['AWAKE', 'Advanced Wakefield Experiment', 'Despertai CERN'],
+    cat: 'moderno',
+    icon: '⚡',
+    source: 196,
+    summary: 'Experimento do CERN que acelerou elétrons pela primeira vez via Wakefield de prótons em plasma — cujo nome (Despertai) coincide com a disseminação global de esculturas de gigantes emergindo da terra.',
+    facts: [
+      'Em 24 de janeiro de 2016, uma formação bizarra de nuvens apareceu diretamente sobre o LHC do CERN no mesmo dia em que os cientistas iniciaram o experimento AWAKE (Despertai), descrito oficialmente como projeto para mudar a forma como os átomos são partidos.',
+      'Em 26 de maio de 2018, o projeto AWAKE acelerou com êxito elétrons pela primeira vez usando um Wakefield gerado por prótons passando por plasma. Resultado publicado na revista Nature.',
+      'A escultura The Awakening (O Despertar), representando um gigante emergindo do chão, originalmente em Haines Point, Washington D.C., foi transferida para o condado de Prince George, Maryland, às margens do Rio Potomac.',
+      'Na praça central de Budapeste, Hungria, existe escultura de um gigante rastejando por uma abertura no solo, criada pelo artista Ervin Herve e chamada Feltámadó (O Surgido).',
+      'Na Sicília, outro gigante emerge do abismo em escultura pública.',
+      'Em uma era de edição genética, levanta-se a hipótese de que o DNA humano poderia ser editado para recriar corpos gigantescos ao estilo Nefilim — unidos aos espíritos aprisionados desde o dilúvio.'
+    ],
+    interps: [
+      'O nome AWAKE (Despertai) do experimento do CERN, combinado com a proliferação global de esculturas de gigantes emergindo da terra, é lido como dupla sinalização — científica e simbólica — do mesmo objetivo ocultista: o despertar das entidades aprisionadas no abismo.',
+      'A formação de nuvens sobre o CERN no dia do início do projeto AWAKE é interpretada como evidência de que o experimento envolveu muito mais do que mudar a forma como os átomos são partidos.'
+    ],
+    refs: ['cern', 'dwave-computador', 'nefilins', 'rephaim', 'correntes-birkeland', 'cubo-negro', 'tartaro']
+  },
+  {
+    id: 'otto-rahn',
+    name: 'Otto Rahn (O Caçador do Graal)',
+    aliases: ['Otto Wilhelm Rahn'],
+    cat: 'figura',
+    icon: '🔎',
+    source: 196,
+    pais: ['DE', 'FR'],
+    local: ['Montségur'],
+    coords: [42.8766, 1.8314],
+    summary: 'Explorador e escritor nazista, membro das SS, que pesquisou o Santo Graal como missão oficial do regime nacional-socialista — acreditando que era uma pedra negra caída do céu preservada pelos cátaros de Montségur.',
+    facts: [
+      'Otto Rahn (1904-1939) foi explorador, escritor e membro das SS nazistas (Obersturmführer sob Heinrich Himmler). A busca pelo Santo Graal era missão oficial dentro do regime nacional-socialista.',
+      'Escreveu Cruzada Contra o Graal (1933) e A Corte de Lúcifer (1937), obras que identificam o Graal com a heresia cátara da região de Languedoc, sul da França.',
+      'Acreditava que o Graal era uma pedra negra caída do céu — o lapsit exillis de Wolfram von Eschenbach — preservada pelos cátaros de Montségur até o século XIII.',
+      'Pesquisou as cavernas de Tarascon guiado por informações do arquivista cátaro Antonin Gadal, que descreveu ter visto um meteorito numa estalactite oca exibido no museu de Tarascon.',
+      'Morreu misteriosamente em março de 1939 nas montanhas do Tirol, Áustria — versão oficial: hipotermia; suspeita: assassinato pelos próprios SS ou suicídio forçado após perda de favor no regime.'
+    ],
+    interps: [
+      'A missão de Otto Rahn pelo Graal como pedra negra caída do céu revela, na leitura do apresentador, que o regime nazista buscava não apenas poder político mas o controle do mesmo objeto ritual que a tradição ocultista identifica como cubo negro — a pedra que liga planos de existência.'
+    ],
+    refs: ['lapsit-exillis', 'wolfram-von-eschenbach', 'cubo-negro', 'cavaleiros-templarios', 'montségur', 'arthur-machen', 'hitler', 'linguedoc', 'cataros', 'graal']
+  },
+  {
+    id: 'wolfram-von-eschenbach',
+    name: 'Wolfram von Eschenbach (O Poeta do Graal)',
+    aliases: ['Wolfram', 'autor de Parzival'],
+    cat: 'figura',
+    icon: '📜',
+    source: 196,
+    pais: ['DE'],
+    local: ['Eschenbach in Bayern'],
+    coords: [49.2364, 10.5695],
+    summary: 'Poeta épico alemão medieval, autor de Parzival — o maior romance do ciclo do Graal na literatura alemã — que descreveu o Graal não como cálice mas como pedra caída do céu chamada lapsit exillis.',
+    facts: [
+      'Wolfram von Eschenbach (c. 1170-c. 1220) foi poeta épico medieval alemão, autor de Parzival — o mais importante romance do ciclo do Graal na literatura alemã.',
+      'Em Parzival, o Graal não é um cálice mas uma pedra chamada lapsit exillis (possivelmente do latim lapis ex caelis, pedra do céu) — descrita como fonte da vida eterna para quem a vê.',
+      'A descrição do Graal como pedra do céu em Parzival foi a base principal das pesquisas de Otto Rahn, que identificou a pedra cátara de Montségur com o lapsit exillis.'
+    ],
+    interps: [
+      'A tradição que identifica o Graal como pedra caída do céu e não como cálice é lida como preservação codificada do simbolismo do cubo negro — a pedra celeste como objeto de poder ritual capaz de conectar mundos.'
+    ],
+    refs: ['lapsit-exillis', 'otto-rahn', 'montségur', 'graal', 'cavaleiros-templarios', 'parzival']
+  },
+  {
+    id: 'lapsit-exillis',
+    name: 'Lapsit Exillis (A Pedra do Graal)',
+    aliases: ['Pedra do Céu', 'Pedra Negra do Graal', 'lapis ex caelis', 'Graal de Wolfram'],
+    cat: 'simbolo',
+    icon: '🪨',
+    source: 196,
+    summary: 'O Graal como pedra negra caída do céu, descrito por Wolfram von Eschenbach em Parzival — identificado por Otto Rahn e Arthur Machen com um meteorito magnético preservado pelos cátaros de Montségur.',
+    facts: [
+      'Lapsit exillis é o nome dado por Wolfram von Eschenbach em Parzival (c. 1210) ao Santo Graal — não um cálice, mas uma pedra de origem celestial. O nome deriva possivelmente do latim lapis ex caelis (pedra do céu) ou lapis exilii (pedra do exílio).',
+      'Arthur Machen em The Secret Glory (1922) descreve a pedra encontrada em uma estalactite oca, muito densa e com propriedades magnéticas, exibida no museu de Tarascon pelo arquivista cátaro Antonin Gadal.',
+      'Otto Rahn, SS nazista e pesquisador do Graal, acreditava que o lapsit exillis era um meteorito preservado pelos cátaros de Montségur e pesquisou exaustivamente as cavernas do Languedoc francês.',
+      'Segundo a tradição cátara relatada por Gadal: quem vê o lapsit exillis terá a vida eterna — eco direto do texto de Wolfram von Eschenbach escrito séculos antes.'
+    ],
+    interps: [
+      'A convergência lapsit exillis = meteorito = cubo negro = Pedra da Caaba revela, na leitura do apresentador, que a mesma pedra negra caída do céu é venerada em múltiplas tradições com nomes diferentes — o Graal cátaro dos cavaleiros medievais seria o mesmo objeto que o cubo negro da Meca.',
+      'A propriedade magnética da pedra descrita por Gadal/Machen conecta diretamente o lapsit exillis ao simbolismo do cubo negro como campo de força — objeto que aprisionaria e liberaria energias do além-plano.'
+    ],
+    refs: ['otto-rahn', 'wolfram-von-eschenbach', 'cubo-negro', 'arthur-machen', 'montségur', 'cavaleiros-templarios', 'pedra-filosofal', 'graal', 'cataros']
+  },
+  {
+    id: 'correntes-birkeland',
+    name: 'Correntes de Birkeland',
+    aliases: ['cordas magnéticas', 'pontes elétricas', 'Birkeland currents'],
+    cat: 'simbolo',
+    icon: '🌩️',
+    source: 197,
+    summary: 'Fluxos de corrente elétrica ao longo de campos magnéticos no espaço que ligam planetas e estrelas — e que, na teoria ocultista, comporiam o campo-prisão cúbico de Saturno, replicável pelo CERN e D-Wave para libertar entidades aprisionadas.',
+    facts: [
+      'Correntes de Birkeland (também chamadas cordas magnéticas ou pontes elétricas) são fluxos de corrente elétrica que fluem ao longo de campos magnéticos no espaço — batizadas em homenagem ao físico norueguês Kristian Birkeland (1867-1917).',
+      'A missão THEMIS da NASA (satélites lançados em 2007) confirmou em 20 de maio de 2007 a existência de gigantescas cordas magnéticas ligando a Terra ao Sol, conforme declarado por David Sibeck, responsável científico da missão, na Conferência Anual da União Geofísica Americana.',
+      'Correntes de Birkeland foram fotografadas pelo Telescópio Espacial Hubble, onde se verificou que se estendem por distâncias de anos-luz no cosmos.',
+      'Anthony Peratt, físico de plasma, propôs que o campo de força interno de Saturno é composto por correntes de Birkeland em arranjo cúbico — o que explicaria geometricamente o hexágono polar do planeta.',
+      'Na teoria ocultista descrita: CERN e D-Wave seriam capazes de gerar uma corrente de Birkeland voltada ao polo norte de Saturno para quebrar o campo-prisão cúbico onde estariam aprisionadas sete divindades titânicas.',
+      'O movimento de nuvens no polo norte de Saturno é contra-rotativo — dois anéis em direções opostas — estrutura idêntica ao LHC do CERN com dois fluxos de prótons contra-girantes. Um colisor de hádrons seria uma imitação física do polo norte de Saturno.',
+      'Conectando o polo norte (hexágono sincrotrônico) ao polo sul (espiral) de Saturno, as correntes de Birkeland formam uma hélice torcida idêntica à hélice dupla do DNA humano.'
+    ],
+    interps: [
+      'A identificação polo norte de Saturno = sincrotron (LHC) + polo sul de Saturno = espiral (espiral norueguesa) — conectados por correntes de Birkeland — é lida como a mesma estrutura replicada em escalas cósmica e terrestre: o CERN seria uma imitação física do polo norte do planeta.',
+      'Na crença ocultista descrita: CERN + D-Wave + correntes de Birkeland formam o sistema completo para conectar a Terra ao polo norte de Saturno por um canal de plasma — e liberar os deuses aprisionados de ambos os pontos (Saturno e o Tártaro terrestre) simultaneamente.'
+    ],
+    refs: ['saturno', 'cern', 'dwave-computador', 'cubo-negro', 'geometria-sagrada', 'vortice', 'espiral-norueguesa', 'tartaro', 'rephaim', 'nefilins', 'projeto-awake', 'david-talbott', 'immanuel-velikovsky']
+  },
+  {
+    id: 'espiral-norueguesa',
+    name: 'Espiral Norueguesa (O Portal de Plasma)',
+    aliases: ['Norwegian Spiral', 'espiral da Noruega 2009'],
+    cat: 'moderno',
+    icon: '🌀',
+    source: 197,
+    pais: ['NO'],
+    local: ['Tromsø'],
+    coords: [69.6489, 18.9551],
+    summary: 'Espiral luminosa azul-branca que apareceu no céu norueguês em dezembro de 2009, coincidindo com a ativação do CERN e a visita de Obama à Noruega para o Nobel da Paz — interpretada como manifestação de corrente de Birkeland ou vórtice de plasma.',
+    facts: [
+      'Em dezembro de 2009, uma espiral luminosa azul e branca apareceu no céu sobre a Noruega, visível por vários minutos e fotografada e filmada por centenas de pessoas na Noruega e Suécia. O evento se tornou viral mundialmente.',
+      'A explicação oficial: falha no terceiro estágio do foguete russo Bulava durante teste naval, causando uma espiral de combustível queimando na atmosfera.',
+      'O fenômeno ocorreu no mesmo período em que o CERN estava sendo ativado e coincidiu com a chegada do presidente Obama à Noruega para receber o Prêmio Nobel da Paz.',
+      'A estrutura da espiral norueguesa é geometricamente idêntica à espiral do polo sul de Saturno e à estrutura da hélice dupla do DNA humano.'
+    ],
+    interps: [
+      'A espiral norueguesa é interpretada como manifestação visível de uma corrente de Birkeland ou vórtice de plasma — a mesma estrutura do polo sul de Saturno — sugerindo que a ativação do CERN gerou um efeito atmosférico idêntico à espiral polar saturnina.',
+      'A coincidência temporal com o Nobel de Obama é lida como mais um elemento da cadeia de sincronicidades que o apresentador associa à elite ocultista e ao projeto CERN.'
+    ],
+    refs: ['cern', 'saturno', 'correntes-birkeland', 'vortice']
+  },
+  {
+    id: 'olho-que-tudo-ve',
+    name: 'Olho que Tudo Vê (O Olho de Saturno)',
+    aliases: ['all-seeing eye', 'olho de Saturno', 'olho de Hórus', 'olho do dólar'],
+    cat: 'simbolo',
+    icon: '👁️',
+    source: 198,
+    summary: 'O olho que tudo vê — símbolo central do ocultismo luciferiano cuja origem, na leitura do apresentador, estaria ligada ao olho (tempestade polar) do polo sul de Saturno, descoberto pela sonda Cassini da NASA.',
+    facts: [
+      'A NASA/Cassini descobriu no polo sul de Saturno uma gigantesca tempestade em forma de furacão com um olho bem definido, rodeado por nuvens imponentes — preso ao polo e imóvel, diferente de furacões terrestres que se movem.',
+      'Andrew Ingersoll, membro da equipe de imagens da Cassini no Instituto de Tecnologia da Califórnia (Caltech) em Pasadena, declarou: parece um furacão, mas não se comporta como um furacão.',
+      'Kevin H. Baines, da equipe do espectrômetro de mapeamento visual e infravermelho da Cassini no JPL/NASA em Pasadena, declarou que os céus claros sobre o olho aparentam se estender até um nível aproximadamente duas vezes mais profundo que o nível usual de nuvens em Saturno, revelando um misterioso conjunto de nuvens escuras no fundo do olho.',
+      'O olho da tempestade aparece escuro em comprimentos de onda infravermelhos, onde o gás metano absorve a luz e apenas as nuvens mais altas são visíveis.',
+      'O símbolo do olho que tudo vê aparece com alta frequência na indústria do entretenimento. O filme CERN Symmetry (estreado em 14 de março de 2015) teve suas primeiras exibições de vanguarda no Museu de Cinema EYE em Amsterdam. Durante a cerimônia de inauguração do Túnel Gotthard, a imagem do olho foi exibida na tela.'
+    ],
+    interps: [
+      'O olho do polo sul de Saturno — fixo, imóvel, vendo tudo a partir do polo — é lido como a origem do símbolo ocultista do olho que tudo vê: os adoradores de Saturno reproduziriam em seus rituais e símbolos o que observaram fisicamente no planeta.'
+    ],
+    refs: ['saturno', 'cern', 'sol-negro', 'irmandade-saturno', 'tunel-gotthard', 'correntes-birkeland']
+  },
+  {
+    id: 'lemegeton',
+    name: 'Lemegeton (A Chave Menor de Salomão)',
+    aliases: ['Clavicula Salomonis Regis', 'Chave Menor de Salomão', 'Ars Goetia'],
+    cat: 'simbolo',
+    icon: '📖',
+    source: 198,
+    summary: 'Grimório de demonologia do século XVII compilado principalmente por Aleister Crowley — dividido em cinco livros de invocação e magia ritual, incluindo o Ars Goetia com os 72 demônios e seus selos.',
+    facts: [
+      'A Chave Menor de Salomão (Lemegeton, também conhecido como Clavicula Salomones Regis) é um livro de feitiços anônimos sobre demonologia compilado em meados do século XVII a partir de materiais mais antigos, e publicado em versão moderna por Aleister Crowley.',
+      'Está dividido em cinco livros: Ars Goetia (72 demônios e seus selos), Ars Theurgia-Goetia, Ars Paulina, Ars Almadel e Ars Notória.',
+      'Anthony Patch, pesquisador dos projetos do CERN, afirma que o abismo será aberto com a quadragésima nona chave — número significativo na estrutura esotérica da obra e do sistema enoquiano.'
+    ],
+    interps: [
+      'O Lemegeton e A Chave para a Teosofia de Blavatsky fazem parte de um padrão identificado pelo apresentador onde o ocultismo luciferiano usa o conceito de chave como metáfora para a comunicação com inteligências aprisionadas — a mesma chave que o CERN tentaria fisicamente replicar com seus experimentos.'
+    ],
+    refs: ['aleister-crowley', 'cern', 'helena-blavatsky', 'antony-patch', 'jack-parsons']
+  },
+  {
+    id: 'antony-patch',
+    name: 'Anthony Patch (O Pesquisador do CERN)',
+    aliases: ['Antony Patch'],
+    cat: 'figura',
+    icon: '🔬',
+    source: [198, 199],
+    summary: 'Anthony Patch — pesquisador independente e comentarista bíblico norte-americano especializado nos projetos secretos do CERN, que afirma que o abismo será aberto com a quadragésima nona chave e conecta os experimentos do LHC à profecia de Apocalipse 9.',
+    facts: [
+      'Anthony Patch é pesquisador independente, blogueiro e comentarista bíblico norte-americano que publica análises sobre o CERN, D-Wave e a agenda transhumanista à luz das profecias bíblicas.',
+      'Revelou que, segundo sua análise, o abismo será aberto com a quadragésima nona chave — afirmação vinculada à estrutura do Lemegeton/Enoquiano e ao experimento do CERN.',
+      'É um dos pesquisadores que conectou o experimento AWAKE do CERN à agenda ocultista da abertura do abismo descrito em Apocalipse 9.'
+    ],
+    interps: [
+      'Anthony Patch é citado como um dos poucos pesquisadores que unificaram a dimensão científica do CERN com a dimensão ocultista e profética — cruzando dados do projeto AWAKE, do computador D-Wave e da simbologia saturnina numa interpretação coerente.'
+    ],
+    refs: ['cern', 'dwave-computador', 'lemegeton', 'projeto-awake', 'correntes-birkeland', 'torre-de-babel']
+  },
+  {
+    id: 'david-talbott',
+    name: 'David Talbott (A Mitologia de Saturno)',
+    aliases: ['Thunderbolts Project', 'The Saturn Myth'],
+    cat: 'figura',
+    icon: '🪐',
+    source: 199,
+    pais: ['US'],
+    local: ['Portland'],
+    coords: [45.5051, -122.6750],
+    summary: 'David Talbott — pesquisador norte-americano, fundador do Projeto Thunderbolts e autor de The Saturn Myth (1980), que propôs que Saturno foi um sol primitivo que dominava os céus da Terra e que seu alinhamento com Vênus e Marte gerou a montanha cósmica — identificada com a Torre de Babel.',
+    facts: [
+      'David Talbott publicou The Saturn Myth em 1980, propondo que Saturno ocupou a posição de proto-sol ou estrela polar em relação à Terra em eras remotas, dominando visualmente os céus — fenômeno denominado Sol de Saturno.',
+      'Propôs que Vênus e Marte se alinharam com Saturno formando uma montanha cósmica (eixo mundi) registrada em mitos e imagens de todas as civilizações antigas como coluna celeste, árvore do mundo e torre sagrada.',
+      'Associou a montanha cósmica de Saturno à Torre de Babel bíblica — Bab-Ilu em acádio, que significa porta de Deus — e ao símbolo de oito raios conhecido como a cruz de Bab-Ilu, coincidente com a estrela de Ishtar.',
+      'Identificou o deus do Sol egípcio Rá com Saturno (não com o Sol atual), citando um ostrakon grego que o classicista Franz Boll utilizou para fazer essa identificação.',
+      'Associou o crescente de Saturno — o navio do grande pai — com representações modernas de buracos de minhoca e com o dispositivo de Osíris descrito por William Henry: um veículo de transporte interdimensional.',
+      'Identificou Shamash (deus babilônico da justiça, estrela de oito pontas) com Saturno.',
+      'As teorias de David Talbott baseadas em plasma cósmico e correntes de Birkeland encontraram confirmação parcial nos dados da missão THEMIS da NASA.'
+    ],
+    interps: [
+      'A associação de Saturno com a Torre de Babel e com o portal de Deus revela, na leitura do apresentador, que o CERN estaria replicando fisicamente a montanha cósmica de Talbott — o detector ATLAS (roda de oito raios = cruz de Bab-Ilu) sendo a porta de Deus reconstruída com tecnologia moderna.'
+    ],
+    refs: ['saturno', 'immanuel-velikovsky', 'montanha-cosmica', 'torre-de-babel', 'sol-negro', 'dispositivo-de-osiris', 'osiris', 'cern', 'correntes-birkeland', 'estrela-oito-pontas', 'ishtar', 'babilonia', 'atlas-titan']
+  },
+  {
+    id: 'immanuel-velikovsky',
+    name: 'Immanuel Velikovsky (Mundos em Colisão)',
+    aliases: ['Velikovsky', 'Worlds in Collision', 'Saturn Sun Theory'],
+    cat: 'figura',
+    icon: '💥',
+    source: 199,
+    pais: ['US'],
+    local: ['Princeton'],
+    coords: [40.3573, -74.6672],
+    summary: 'Immanuel Velikovsky (1895-1979) — médico e pesquisador russo-americano, autor de Worlds in Collision (1950), que propôs que colisões entre planetas produziram os eventos cataclísmicos das escrituras — e popularizou a teoria do Sol de Saturno.',
+    facts: [
+      'Immanuel Velikovsky (1895-1979) foi médico e pesquisador russo-americano, autor de Worlds in Collision (1950) — obra que propôs que Vênus foi originalmente um cometa expulso de Júpiter que perturbou a órbita da Terra e de Marte, produzindo eventos cataclísmicos descritos no Êxodo bíblico.',
+      'Popularizou a Teoria do Sol de Saturno (Saturn Sun Theory), segundo a qual em eras remotas Saturno ocupou a posição de proto-sol ou estrela polar próxima à Terra, dominando visualmente os céus antes do sistema solar atual.',
+      'Apesar do ostracismo inicial da comunidade científica, alguns elementos de suas teorias sobre catastrofismo planetário encontraram suporte subsequente em dados de física de plasma e nas correntes de Birkeland.'
+    ],
+    interps: [
+      'A teoria do Sol de Saturno de Velikovsky é lida como base científica heterodoxa que a elite ocultista usa para justificar o poder sagrado de Saturno — não como deus mitológico distante, mas como antigo dominador físico dos céus da Terra.'
+    ],
+    refs: ['saturno', 'david-talbott', 'montanha-cosmica', 'sol-negro', 'correntes-birkeland', 'torre-de-babel', 'diluvio-universal']
+  },
+  {
+    id: 'dispositivo-de-osiris',
+    name: 'Dispositivo de Osíris (O Portal de Saturno)',
+    aliases: ['Osiris Device', 'navio de Saturno', 'barca de Rá', 'Barco de Osíris'],
+    cat: 'simbolo',
+    icon: '⛵',
+    source: 199,
+    summary: 'Conceito do pesquisador William Henry: o navio/barca de Osíris como dispositivo de transporte interdimensional — um buraco de minhoca saturnino que permitiria viajar instantaneamente pelo espaço-tempo, replicado em inúmeras obras de ficção científica e no próprio projeto do CERN.',
+    facts: [
+      'O pesquisador esotérico William Henry denomina dispositivo de Osíris o conceito do crescente/navio de Saturno como buraco de minhoca — um veículo de transporte interdimensional cujos mares seriam interestelares.',
+      'Na cosmologia egípcia, a Barca de Rá (Barco de Osíris) é o navio solar que transporta o deus pelo céu — identificado por David Talbott com o crescente de Saturno e com representações modernas de buracos de minhoca.',
+      'O filme 2001: Uma Odisseia no Espaço localizou originalmente o portal estelar (Monólito) na órbita de Saturno — transferido para Júpiter por Stanley Kubrick por dificuldades técnicas de renderização.',
+      'Outros filmes e séries com o portal saturnino: Space 1999 (episódio Black Sun, 1975); Wolfenstein — dimension do Sol Negro onde nazistas buscavam segredos do povo Tull; Zathura (2005) — protagonista entra em buraco negro perto de Saturno; Interstellar (2014) — buraco de minhoca perto de Saturno; Planeta dos Macacos (2001) — portal eletromagnético perto de Saturno.',
+      'A estrela de oito pontas de Shamash (identificada por David Talbott com Saturno) coincide com o símbolo de Bab-Ilu (cruz de oito raios = porta de Deus) e com a roda do detector ATLAS do CERN.'
+    ],
+    interps: [
+      'O dispositivo de Osíris é lido como a tradução esotérica do objetivo real do CERN: não apenas colidir partículas, mas recriar fisicamente a montanha cósmica/barca de Saturno e abrir um portal para outra dimensão — exatamente o que Sergio Bertolucci, diretor de pesquisa do CERN, afirmou ser possível com o LHC.',
+      'A presença do buraco de minhoca saturnino em múltiplas obras de ficção científica é lida como disseminação cifrada do conhecimento ocultista: o portal de Saturno recodificado como entretenimento popular.'
+    ],
+    refs: ['osiris', 'saturno', 'sol-negro', 'david-talbott', 'cern', 'atlas-titan', 'torre-de-babel', 'montanha-cosmica', 'estrela-oito-pontas']
+  },
+  {
+    id: 'montanha-cosmica',
+    name: 'Montanha Cósmica (O Eixo de Saturno)',
+    aliases: ['axis mundi', 'Bab-Ilu', 'montanha sagrada', 'coluna celeste', 'Monte Meru'],
+    cat: 'simbolo',
+    icon: '⛰️',
+    source: 199,
+    summary: 'Eixo cósmico formado pelo alinhamento Saturno-Vênus-Marte em eras remotas, proposto por David Talbott como origem universal do simbolismo da torre sagrada, Torre de Babel, pirâmide e buraco de fechadura — reproduzido no detector ATLAS do CERN e na Praça de São Pedro.',
+    facts: [
+      'A montanha cósmica é o eixo vertical formado pelo alinhamento de Saturno, Vênus e Marte, visível da Terra em eras remotas — proposto por David Talbott como explicação para o simbolismo universal do axis mundi em todas as culturas.',
+      'É representada em civilizações antigas como coluna celeste, árvore do mundo, Torre de Babel e Monte Meru — em formatos que incluem a pirâmide, a espiral ascendente e o buraco de fechadura.',
+      'David Talbott associa a montanha cósmica à Torre de Babel bíblica e ao símbolo Bab-Ilu (porta de Deus em acádio), representado pela cruz de oito raios coincidente com a estrela de Ishtar e a estrela de Shamash.',
+      'A Praça de São Pedro do Vaticano apresenta formato de buraco de fechadura — interpretado como reprodução da montanha cósmica — com obelisco egípcio de granito vermelho de Assuã (40 metros, instalado por Calígula, reposicionado por Papa Sisto V com relíquia da Cruz de Cristo no topo).',
+      'No filme Stargate (1994), o portal para outra dimensão tem forma de buraco de fechadura e conduz a Rá — identificado por David Talbott com Saturno. A capa do filme exibe a estrela de Ishtar.',
+      'No filme Anjos e Demônios (2009), a antimatéria do CERN explode diretamente acima da roda do sol de oito raios da Praça de São Pedro — a mesma posição da montanha cósmica de Talbott.'
+    ],
+    interps: [
+      'A convergência Praça de São Pedro (buraco de fechadura + obelisco egípcio) + detector ATLAS do CERN (roda de oito raios) + símbolo de Bab-Ilu (cruz de oito raios = porta de Deus = Torre de Babel) é lida como evidência de que a elite ocultista construiu deliberadamente esses espaços para reproduzir a montanha cósmica de Saturno em escala terrestre.'
+    ],
+    refs: ['saturno', 'torre-de-babel', 'david-talbott', 'estrela-oito-pontas', 'osiris', 'dispositivo-de-osiris', 'cern', 'atlas-titan', 'ishtar', 'babilonia', 'anjos-e-demonios', 'immanuel-velikovsky']
+  },
+  {
+    id: 'anjos-e-demonios',
+    name: 'Anjos e Demônios (CERN e o Portal Vaticano)',
+    aliases: ['Angels and Demons', 'Angels & Demons'],
+    cat: 'cinema',
+    icon: '🎬',
+    source: 199,
+    summary: 'Filme de 2009 baseado no CERN: a antimatéria produzida no LHC é roubada e levada ao Vaticano, onde explode sobre a roda de oito raios da Praça de São Pedro — cena lida como representação do CERN abrindo o portal da montanha cósmica de Saturno.',
+    facts: [
+      'Anjos e Demônios (Angels & Demons, 2009, dir. Ron Howard) inicia com o CERN ativando o LHC para produzir antimatéria, que é então roubada e levada ao Vaticano como dispositivo explosivo.',
+      'A antimatéria é carregada num helicóptero e levada a sobrevoar o Vaticano, onde explode diretamente acima da roda do sol de oito raios dentro do buraco de fechadura da Praça de São Pedro.',
+      'A roda de oito raios no centro da Praça de São Pedro coincide com a estrela de oito pontas de Shamash/Ishtar — identificada por David Talbott com Saturno e com o símbolo Bab-Ilu (porta de Deus = Torre de Babel).'
+    ],
+    interps: [
+      'A cena final de Anjos e Demônios é lida como representação cinematográfica do objetivo real do CERN: rasgar o véu entre dimensões (antimatéria do LHC) e acessar a montanha cósmica de Saturno (roda de oito raios da Praça de São Pedro = Bab-Ilu = Torre de Babel = dispositivo de Osíris).'
+    ],
+    refs: ['cern', 'saturno', 'montanha-cosmica', 'estrela-oito-pontas', 'atlas-titan', 'dispositivo-de-osiris', 'david-talbott']
   }
 
 ];
