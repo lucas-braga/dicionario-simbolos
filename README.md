@@ -29,7 +29,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 - **Referências cruzadas bidirecionais** — cada entrada mostra o que referencia e quem a referencia
 - **Deep linking** — a URL atualiza com o `#id` da entrada aberta, permitindo compartilhar um link direto para qualquer símbolo
 - **Trilha de navegação** — ao navegar pelas referências, um breadcrumb aparece no modal mostrando o caminho percorrido, clicável
-- **Jornadas** — 45 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
+- **Jornadas** — 68 trilhas de leitura guiada com progresso persistido; cada jornada tem um conjunto curado de entradas em sequência temática; acessíveis via `jornadas.html` (página dedicada)
 
 ## Categorias
 
@@ -70,71 +70,78 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (61)
+## Jornadas temáticas (68)
 
 | # | ID | Título |
 |---|---|---|
-| 1 | `gotthard` | A saga do Túnel de Gotthard |
-| 2 | `cern` | CERN: o portal do abismo |
-| 3 | `linhagem` | A linhagem proibida |
-| 4 | `deusa` | A deusa de mil nomes |
-| 5 | `deus-verde` | O Deus Verde |
-| 6 | `babel` | A nova Torre de Babel |
-| 7 | `guerra-oculta` | A guerra oculta dos aliados |
-| 8 | `codigo-007` | O código 007 |
-| 9 | `cainitas-lenda` | A lenda dos Cainitas |
-| 10 | `misterio-babilonico` | O Mistério de Babilônia |
-| 11 | `asia-secreta` | A guerra oculta do Oriente |
-| 12 | `malta` | Os mistérios de Malta |
-| 13 | `sacerdotes-serpente` | A raça dos sacerdotes-serpente |
-| 14 | `guerra-fria-oculta` | A Guerra Fria por trás da cortina |
-| 15 | `feticao-tempo` | O feitiço do tempo |
-| 16 | `samhain-mortos` | O Samhain e o culto dos mortos |
-| 17 | `nova-babel` | A Nova Babel: da Teosofia à Era de Aquário |
-| 18 | `retorno-pagan` | O Retorno do Paganismo |
-| 19 | `ocultismo-nazista` | O Ocultismo por Trás da Suástica |
-| 20 | `mk-mente` | A Guerra Invisível Contra a Mente |
-| 21 | `islam-oculto` | O Islã das Sombras |
-| 22 | `eugenismo` | A Ciência dos Eleitos |
-| 23 | `cidade-diabo` | A Cidade do Diabo: Turim |
-| 24 | `eurasia-oculta` | Eurasia Oculta: O Czar, Dugin e o Quarto Império |
-| 25 | `napoleon-oculto` | O Homem Vermelho de Napoleão |
-| 26 | `paises-nao-integrados` | O Mapa do Pentágono e a Grande Guerra Final |
-| 27 | `choque-civilizacoes` | O Choque de Civilizações |
-| 28 | `hollywood-oculto` | A Varinha Mágica de Hollywood |
-| 29 | `tolkien-oculto` | Tolkien, The Inklings e a Golden Dawn |
-| 30 | `linhagem-do-dragao` | Linhagem do Dragão: dos Ubaid à Ordem de Vlad |
-| 31 | `vampirismo-iniciático` | Vampirismo Iniciático: Sangue, Cabeça e Glândula Pineal |
-| 32 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
-| 33 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
-| 34 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
-| 35 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
-| 36 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
-| 37 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
-| 38 | `transhumanismo-silicio` | Transhumanismo no Vale do Silício: da Gnose ao Deus de Silício |
-| 39 | `triangulo-poder-global` | O Triângulo do Poder Global: CFR, Bilderberg e Comissão Trilateral |
-| 40 | `cartel-bancario` | O Cartel Bancário: dos Rothschilds à Reserva Federal |
-| 41 | `imperialismo-britanico` | Do Imperialismo ao Governo Mundial: Rhodes, Ruskin e a Mesa Redonda |
-| 42 | `nobreza-negra-trail` | A Nobreza Negra: de Veneza ao Comitê dos 300 |
-| 43 | `diluvio-trail` | O Dilúvio Universal: Memória ou Evento Real? |
-| 44 | `jung-eneagrama-trail` | Jung, Eneagrama e a Psicologia Oculta |
-| 45 | `dante-hermetico-trail` | Dante e o Hermetismo Medieval |
-| 46 | `rephaim-gigantes-trail` | Os Refaim: Gigantes, Abismo e o Retorno de Gog |
-| 47 | `fisica-abismo-trail` | Física Quântica e o Abismo: da Matéria Escura aos Refaim |
-| 48 | `literatura-oculta-trail` | Literatura Ocultista: de Dickens ao Controle de Mentes |
-| 49 | `mesmerismo-espiritismo-trail` | Mesmerismo e Espiritismo: da Hipnose ao Portal dos Mortos |
-| 50 | `merovingios-trail` | Os Merovíngios: Do Quinotauro ao Priorado de Sião |
-| 51 | `catedral-misterios-trail` | A Catedral dos Mistérios: Chartres, o Graal e a Virgem Oculta |
-| 52 | `saturno-trail` | Saturno: O Verdadeiro Senhor dos Anéis |
-| 53 | `dee-enoquiana-trail` | A Tradição Enoquiana: de John Dee à Ficção Científica |
-| 54 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
-| 55 | `numerologia-sagrada-trail` | Numerologia Sagrada: 911, IXXI e o Projeto Transumano |
-| 56 | `inferno-abismo-trail` | O Inferno e o Abismo: do Tártaro ao CERN |
-| 57 | `graal-pedra-negra-trail` | O Graal como Pedra Negra: de Wolfram a Otto Rahn |
-| 58 | `sol-saturno-portal-trail` | O Sol de Saturno: Mito, Portal e CERN |
-| 59 | `marduk-jupiter-trail` | Marduk e Júpiter: A Guerra das Elites Pagãs |
-| 60 | `squatter-man-trail` | O Squatter Man: Plasma, Petroglifos e a Memória do Céu Antigo |
-| 61 | `tartaria-trail` | A Tartária: O Império Apagado e a Linhagem do Tártaro |
+| 1 | `hermetismo-88-trail` | O Segredo do 88: Hermetismo, Baphomet e a Magia Profunda |
+| 2 | `gotthard` | A saga do Túnel de Gotthard |
+| 3 | `cern` | CERN: o portal do abismo |
+| 4 | `marduk-jupiter-trail` | Marduk e Júpiter: A Guerra das Elites Pagãs |
+| 5 | `sol-saturno-portal-trail` | O Sol de Saturno: Mito, Portal e CERN |
+| 6 | `graal-pedra-negra-trail` | O Graal como Pedra Negra: de Wolfram a Otto Rahn |
+| 7 | `linhagem` | A linhagem proibida |
+| 8 | `deusa` | A deusa de mil nomes |
+| 9 | `deus-verde` | O Deus Verde |
+| 10 | `babel` | A nova Torre de Babel |
+| 11 | `guerra-oculta` | A guerra oculta dos aliados |
+| 12 | `codigo-007` | O código 007 |
+| 13 | `cainitas-lenda` | A lenda dos Cainitas |
+| 14 | `misterio-babilonico` | O Mistério de Babilônia |
+| 15 | `asia-secreta` | A guerra oculta do Oriente |
+| 16 | `malta` | Os mistérios de Malta |
+| 17 | `sacerdotes-serpente` | A raça dos sacerdotes-serpente |
+| 18 | `guerra-fria-oculta` | A Guerra Fria por trás da cortina |
+| 19 | `feticao-tempo` | O feitiço do tempo |
+| 20 | `samhain-mortos` | O Samhain e o culto dos mortos |
+| 21 | `nova-babel` | A Nova Babel: da Teosofia à Era de Aquário |
+| 22 | `retorno-pagan` | O Retorno do Paganismo |
+| 23 | `ocultismo-nazista` | O Ocultismo por Trás da Suástica |
+| 24 | `mk-mente` | A Guerra Invisível Contra a Mente |
+| 25 | `islam-oculto` | O Islã das Sombras |
+| 26 | `eugenismo` | A Ciência dos Eleitos |
+| 27 | `cidade-diabo` | A Cidade do Diabo: Turim |
+| 28 | `eurasia-oculta` | Eurasia Oculta: O Czar, Dugin e o Quarto Império |
+| 29 | `napoleon-oculto` | O Homem Vermelho de Napoleão |
+| 30 | `paises-nao-integrados` | O Mapa do Pentágono e a Grande Guerra Final |
+| 31 | `choque-civilizacoes` | O Choque de Civilizações |
+| 32 | `hollywood-oculto` | A Varinha Mágica de Hollywood |
+| 33 | `tolkien-oculto` | Tolkien, The Inklings e a Golden Dawn |
+| 34 | `linhagem-do-dragao` | Linhagem do Dragão: dos Ubaid à Ordem de Vlad |
+| 35 | `vampirismo-iniciático` | Vampirismo Iniciático: Sangue, Cabeça e Glândula Pineal |
+| 36 | `sementes-da-matrix` | Sementes da Matrix: Engenharia Social e o Ocultismo Pop |
+| 37 | `surrealismo-elite` | O Surrealismo como Ocultismo de Elite |
+| 38 | `nove-ocultos` | Os Nove: do Imperador Ashoka ao Conselho dos Deuses |
+| 39 | `sufi-diretoria` | A Diretoria Oculta: Sufismo, Rosacruz e a Tradição Primordial |
+| 40 | `deusa-proibida` | A Deusa Proibida: Asherah, o Sagrado Feminino e o Feminismo |
+| 41 | `religiao-primordial-trail` | A Religião Primordial: Navajos, Gêmeos e o Paraíso Perdido |
+| 42 | `triangulo-poder-global` | O Triângulo do Poder Global |
+| 43 | `transhumanismo-silicio` | A Mente da Máquina: Transhumanismo no Vale do Silício |
+| 44 | `cartel-bancario` | O Cartel Bancário: dos Rothschilds à Reserva Federal |
+| 45 | `imperialismo-britanico` | Do Imperialismo ao Governo Mundial: Rhodes, Ruskin e a Mesa Redonda |
+| 46 | `nobreza-negra-trail` | A Nobreza Negra: de Veneza ao Comitê dos 300 |
+| 47 | `diluvio-trail` | O Dilúvio Universal: Memória ou Evento Real? |
+| 48 | `jung-eneagrama-trail` | Jung, Eneagrama e a Psicologia Oculta |
+| 49 | `dante-hermetico-trail` | Dante e o Hermetismo Medieval |
+| 50 | `rephaim-gigantes-trail` | Os Refaim: Gigantes, Abismo e o Retorno de Gog |
+| 51 | `fisica-abismo-trail` | Física Quântica e o Abismo: da Matéria Escura aos Refaim |
+| 52 | `literatura-oculta-trail` | Literatura Ocultista: de Dickens ao Controle de Mentes |
+| 53 | `mesmerismo-espiritismo-trail` | Mesmerismo e Espiritismo: da Hipnose ao Portal dos Mortos |
+| 54 | `merovingios-trail` | Os Merovíngios: Do Quinotauro ao Priorado de Sião |
+| 55 | `catedral-misterios-trail` | A Catedral dos Mistérios: Chartres, o Graal e a Virgem Oculta |
+| 56 | `saturno-trail` | Saturno: O Verdadeiro Senhor dos Anéis |
+| 57 | `numerologia-sagrada-trail` | Numerologia Sagrada: 911, IXXI e o Projeto Transumano |
+| 58 | `dee-enoquiana-trail` | A Linhagem Enoquiana: de John Dee ao JPL da NASA |
+| 59 | `inferno-abismo-trail` | O Inferno e o Abismo: do Tártaro ao CERN |
+| 60 | `squatter-man-trail` | O Squatter Man: Plasma Cósmico e os Petróglifos Universais |
+| 61 | `seres-hibridos-trail` | Seres Híbridos Antes do Dilúvio: dos Nommos ao Homem-Leão |
+| 62 | `monarca-trail` | Controle Mental Monarca: MKUltra e os Escravos da Borboleta |
+| 63 | `coruja-trail` | A Coruja de MOLOK: do Sacrifício de Crianças ao Bohemian Grove |
+| 64 | `esferas-labirinto-trail` | Esferas, Labirintos e a Prisão do Homem Perfeito |
+| 65 | `tartaria-trail` | A Tartária: O Império Apagado e a Linhagem do Tártaro |
+| 66 | `pi-216-trail` | Pi, 216 e os Portais Numéricos: a Linguagem Secreta da Elite |
+| 67 | `renascer-101-trail` | Renascido do Inferno: o Código 101 e a Prisão da Consciência no Cinema |
+| 68 | `codigo-216-trail` | O Código 216: Gematria, a Besta e a Matemática do Fim dos Tempos |
 
 ## Como transcrever com Whisper
 
