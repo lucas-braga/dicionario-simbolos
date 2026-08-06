@@ -1,6 +1,6 @@
 # Dicionário de Símbolos e Crenças Bíblicas
 
-Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **780 entradas · 199 fontes · 58 jornadas temáticas · geo em 430 entradas.**
+Sistema de referência cruzada de símbolos, entidades e conceitos identificados em séries de estudos sobre simbologia bíblica e profética. **853 entradas · 221 fontes · 68 jornadas temáticas · geo em 466 entradas.**
 
 ## Estrutura
 
@@ -70,7 +70,7 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 }
 ```
 
-## Jornadas temáticas (58)
+## Jornadas temáticas (61)
 
 | # | ID | Título |
 |---|---|---|
@@ -132,6 +132,9 @@ open ~/Documents/dicionario-simbolos/jornadas.html
 | 56 | `inferno-abismo-trail` | O Inferno e o Abismo: do Tártaro ao CERN |
 | 57 | `graal-pedra-negra-trail` | O Graal como Pedra Negra: de Wolfram a Otto Rahn |
 | 58 | `sol-saturno-portal-trail` | O Sol de Saturno: Mito, Portal e CERN |
+| 59 | `marduk-jupiter-trail` | Marduk e Júpiter: A Guerra das Elites Pagãs |
+| 60 | `squatter-man-trail` | O Squatter Man: Plasma, Petroglifos e a Memória do Céu Antigo |
+| 61 | `tartaria-trail` | A Tartária: O Império Apagado e a Linhagem do Tártaro |
 
 ## Como transcrever com Whisper
 
@@ -153,6 +156,12 @@ Audit de facts e interps ausentes — os TXTs em anexo já foram processados ant
 - focar especialmente em entradas que naquela sessão receberam só refs e nenhum fact ou interp novo
 - ao terminar: audit de refs quebradas via Node.js e apresentar simbolos.js
 ```
+
+## Nota técnica: helper addToFacts / addToInterps
+
+**CRÍTICO:** os helpers `addToFacts` e `addToInterps` usam o regex `[^\\]]*?`, que termina no **primeiro `]` literal** dentro do conteúdo existente. Se qualquer fact ou interp já gravado na entrada contiver `[` seguido de `]` — por exemplo `[...]`, `[por tal poder]`, citações bíblicas como `[Jo 3:16]`, reticências `[…]` — o helper corrompe o array, inserindo o novo conteúdo no meio da string em vez de no final.
+
+**Regra:** antes de chamar `addToFacts` ou `addToInterps` para uma entrada, verificar se o bloco dessa entrada contém `]` dentro de strings. Entradas de risco conhecidas: qualquer entrada com scriptures (citações bíblicas frequentemente usam `[...]`), citações literárias com reticências, ou entries com colchetes explicativos no texto. Nesses casos, **usar Python com substituição literal exata** para localizar o fechamento real do array via `re.search` com `re.DOTALL` e então annexar os novos itens — em vez do helper Node.js.
 
 ## Prompt padrão para adicionar TXTs
 

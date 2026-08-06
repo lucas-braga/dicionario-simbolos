@@ -8,7 +8,7 @@ OUTPUTS="/Users/lucasbraga/Library/Application Support/Claude/local-agent-mode-s
 if [ -n "$1" ]; then
   MSG="$1"
 else
-  MSG="Add: INFERNO Caps 07-08 - olho-que-tudo-ve, lemegeton, antony-patch, david-talbott, immanuel-velikovsky, dispositivo-de-osiris, montanha-cosmica, anjos-e-demonios + trilha sol-saturno-portal - 780 entradas, 199 fontes, 58 jornadas"
+  MSG="Add: Phi π Cap 03 — shem-hamephorash, numero-108, abraao + 7 enriquecimentos (numero-216, numero-pi, pi-filme, nova-jerusalem, numero-666, gematria, geometria-sagrada) + extensão pi-216-trail e codigo-216-trail — 853 entradas, 221 fontes, 68 jornadas"
 fi
 
 echo "📦 Copiando arquivos..."
